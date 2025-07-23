@@ -11,6 +11,3 @@ Definitions and abreviations:
 
     heist
         as an abreviation for 10 minute HEIST
-
-    term
-        as an abreviation for terminal, the place where information will be sent to and from the user of this program.
