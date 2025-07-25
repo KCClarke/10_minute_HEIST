@@ -9,7 +9,7 @@
 #ifndef CARD_DEFINITIONS_H
 #define CARD_DEFINITIONS_H
 
-#define MAX_NAME_LENGTH 27
+#include <stdint.h>
 
 typedef enum
 {
@@ -24,11 +24,27 @@ typedef enum
 
 typedef enum
 {
-    full_moon,
-    crescent_moon,
+    crescent,
+    full,
     none
 } special_set_t;
 
+typedef enum
+{
+    light,
+    dark
+} back_t;
+
+typedef struct
+{
+    char*   name;
+    uint8_t value;
+    suit_t  suit;
+    uint8_t curse;
+    set_t   set;
+    char*   power;
+    back_t  back;
+} card_t;
 
 #endif /* CARD_DEFINITIONS_H */
 

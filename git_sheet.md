@@ -26,8 +26,4 @@ git push                  # later pushes
 
 ## 8 Pull Updates (when needed)
 git pull
-
-## 9 Undo / Go Back
-git log
-
-✅ Commit offline → push when online → stay in control.
+ 
