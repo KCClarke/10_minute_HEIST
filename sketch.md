@@ -138,7 +138,6 @@ H| Sunstone Phoenix Feather   |                            |                    
 
   (heist) 1a
   (heist) x
-  
 
   Results
     You
