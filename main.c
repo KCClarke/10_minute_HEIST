@@ -6,8 +6,9 @@
  * @par
  * Written July 16 2025 Kasey Clarke
  */
- 
-#include "terminal/io.h"
+
+ #include "game.h"
+ #include "terminal/io.h"
 
 int main()
 {
@@ -17,55 +18,80 @@ int main()
         greeting();
     #endif
     
-    print_row();
-    print_instructions();
+    print_sizing_row();
 
-    char command[COMMAND_LENGTH];
+    game_t game;
+    game.command[0] = 'M';
+    print_tower(game);
 
-    for(;;) 
+    for (;;) 
     {
-        get_input(command);
-
-        switch (command[0])
+        switch (game.command[0])
         {
+            case 'A':
+            case 'B':
+            case 'C':
+            case 'D':
+            case 'E':
+            case 'F':
+            case 'G':
+            case 'H':
+            { // Above cases (A through H) correspond to floors of the tower.
+              // Fallthrough behavior of this switch statement is intentional.
+              
+              // TODO: impliment moving through the tower.
+            }
+            break;
+
             case 'I':
             {
                 print_instructions();
-                break;
             }
-            case 'P': // view other Player's haul
-            {
-                break;
+            break;
+            
+            case 'P': 
+            { // TODO: view other Player's haul
             }
-            case 'Q': // Quit game
-            {
+            break;
+
+            case 'Q': 
+            { // Quit game
                 return 0;
             }
-            case 'R': // view Rules
-            {
-                break;
+
+            case 'R': 
+            { // TODO: view Rules
             }
-            case 'S': // view Scoring
-            {
-                break;
+            break;
+
+            case 'S': 
+            { // TODO: view Scoring
             }
-            case 'V': // View your haul
-            {
-                break;
+            break;
+
+            case 'V': 
+            { // TODO: View your haul
             }
-            case 'X': // eXit tower
-            {
-                break;
+            break;
+
+            case 'X': 
+            { // TODO: eXit tower
             }
-            default:
-            {
-                break;
+            break;
+
+            default: 
+            { // TODO: define default behavior
             }
+            break;
+
         } /* end switch */
         
-        clear_input(command);
+        clear_input(game.command);
+        get_input(game.command);
 
-    } /* end for (;;) */
+        print_tower(game);
+
+    }
 }
 
 /*** end of file ***/

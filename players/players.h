@@ -9,16 +9,19 @@
 #ifndef PLAYERS_H
 #define PLAYERS_H
 
+#define MAX_PLAYERS 5
+
 typedef enum
 {
-    player_none,
+    no_player,
     player_1,
     player_2,
     player_3,
     player_4,
     player_5,
-    player_all
-} player_number_t;
+    all_players
+
+} player_ID_t;
 
 #endif /* PLAYERS_H */
 

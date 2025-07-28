@@ -34,7 +34,7 @@ their Haul, if possible.
 
 
 # game sketch
-
+# zoom out until the astricks are all on one line to view sketch properly
 Welcome to 10 minute HEIST
 
                                 Please adjust your terminal to fit all of the ***s.
@@ -61,7 +61,10 @@ To play the game:
     a1 through h5
     to move yourself through the Wizard's Tower
 
+
+
 TOWER MAP
+  ______________3_____________
   ______________1_____________ ______________2_____________ ______________3_____________ ______________4_____________ ______________5_____________ 
 A| Bone Crown                 | Distillation of Pressience |           ( You )          |          (Player 2)        |        (Player 3)          |
  | 5                          | 1 wild                     |                            |                            |                            |

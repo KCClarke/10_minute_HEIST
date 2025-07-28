@@ -10,7 +10,7 @@
 #ifndef INPUT_H
 #define INPUT_H
 
-#define COMMAND_LENGTH 2
+#include "game.h"
 
 void get_input(char command[]);
 void clear_input(char command[]);

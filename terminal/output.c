@@ -12,10 +12,47 @@
 
 #include "output.h"
 
+#define CHARACTERS_PER_ROOM 28
+
+//private function prototypes
+static inline void print_room_numbers();
+static inline void print_floor_seperator();
+static inline void print_blank_room_line();
+
+
 /*
  * The desired width of the terminal.
  */
 #define TERMINAL_WIDTH 148
+
+/*!
+ * @brief Prints the whole tower.
+ *
+ * @param[in] The pointer to the game struct
+ *
+ * @return void.
+ */
+void
+print_tower(game_t game)
+{
+    printf("TOWER MAP\n");
+    print_room_numbers();
+
+    for (uint8_t floor = 0; floor < TOWER_DEPTH; ++floor)
+    {
+        printf("%c|", 'A' + floor);
+        
+        for(uint8_t room = 0; room < TOWER_WIDTH; ++room)
+        {
+            print_blank_room_line();
+            putchar('|');
+        }
+
+        putchar('\n');
+        print_floor_seperator();
+        
+    }
+}
 
 /*!
  * @brief Prints a row of **** for the user to adjust their terminal size
@@ -25,7 +62,7 @@
  * @return void.
  */
 void
-print_row()
+print_sizing_row()
 {
     printf("\nPlease adjust your terminal to fit all of the ***s.\n");
 
@@ -36,7 +73,6 @@ print_row()
 
     putchar('\n');
 }
-
 
 /*!
  * @brief Prints a greeting for the game.
@@ -82,9 +118,9 @@ print_instructions()
     printf("\tX : eXit tower\n");
     printf("\n");
     printf("To play:\n");
-    printf("\tenter a letter number combination \n");
+    printf("\tEnter a letter number combination \n");
     printf("\ta1 through h5\n");
-    printf("\tto move yourself through the Wizard's Tower\n");
+    printf("\tto move yourself through the Wizard's Tower.\n");
     printf("\n");
 
 }
@@ -96,6 +132,71 @@ void
 prompt()
 {
     printf("(heist) ");
+}
+
+
+// private function bodies
+
+/*!
+ * @brief Prints the room numbers for the tower.
+ *
+ * @param void.
+ *
+ * @return void
+ */
+static inline void
+print_room_numbers()
+{
+   printf("  ");
+
+   for (uint8_t room_number = 0; room_number < TOWER_WIDTH; ++room_number)
+   {
+       printf("______________%d_____________", 1 + room_number);
+       putchar(' ');
+   }
+   
+   putchar('\n');
+}
+
+/*!
+ * @brief Prints the room numbers for the tower.
+ *
+ * @param void.
+ *
+ * @return void
+ */
+static inline void
+print_floor_seperator()
+{
+   printf("  ");
+
+   for (uint8_t rooms = 0; rooms < TOWER_WIDTH; ++rooms)
+   {
+       for (uint8_t dashes = 0; dashes < CHARACTERS_PER_ROOM; ++dashes)
+       {
+           putchar('-');
+       }
+       
+       putchar(' ');
+   }
+   
+   putchar('\n');
+}
+
+/*!
+ * @brief Prints a bunch of spaces for a blank line of a card in the tower.
+ *
+ * @param void
+ *
+ * @return void
+ */
+static inline void
+print_blank_room_line()
+{
+    for (uint8_t spaces = 0; spaces < CHARACTERS_PER_ROOM; ++spaces)
+    {
+        putchar(' ');
+    }
 }
 
 /*** end of file ***/
