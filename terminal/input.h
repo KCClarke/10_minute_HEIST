@@ -13,7 +13,6 @@
 #include "game.h"
 
 void get_input(char command[]);
-void clear_input(char command[]);
 
 #endif /* INPUT_H */
 

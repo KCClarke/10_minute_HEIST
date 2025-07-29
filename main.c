@@ -21,8 +21,7 @@ int main()
     print_sizing_row();
 
     game_t game;
-    game.command[0] = 'M';
-    print_tower(game);
+    game.command[0] = 'I';
 
     for (;;) 
     {
@@ -48,7 +47,7 @@ int main()
                 print_instructions();
             }
             break;
-            
+
             case 'P': 
             { // TODO: view other Player's haul
             }
@@ -59,13 +58,19 @@ int main()
                 return 0;
             }
 
-            case 'R': 
+            case 'R':
             { // TODO: view Rules
             }
             break;
 
             case 'S': 
             { // TODO: view Scoring
+            }
+            break;
+
+            case 'T':
+            {
+                print_tower(game);
             }
             break;
 
@@ -85,12 +90,7 @@ int main()
             break;
 
         } /* end switch */
-        
-        clear_input(game.command);
         get_input(game.command);
-
-        print_tower(game);
-
     }
 }
 

@@ -109,20 +109,23 @@ print_instructions()
 {
     printf("\n");
     printf("Commands\n");
+
     printf("\tI : view Instructions\n");
     printf("\tP : view other Player's haul\n");
     printf("\tQ : Quit game\n");
     printf("\tR : view Rules\n");
     printf("\tS : view Scoring\n");
+    printf("\tT : print Tower\n");
     printf("\tV : View your haul\n");
     printf("\tX : eXit tower\n");
+
     printf("\n");
     printf("To play:\n");
     printf("\tEnter a letter number combination \n");
-    printf("\ta1 through h5\n");
+    printf("\tsuch as a1 through h5\n");
     printf("\tto move yourself through the Wizard's Tower.\n");
-    printf("\n");
 
+    printf("\n");
 }
 
 /*!

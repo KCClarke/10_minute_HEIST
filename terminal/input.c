@@ -14,6 +14,7 @@
 #include <ctype.h>
 #include <stdint.h>
 
+static inline void clear_input(char command[]);
 
 /*!
  * @brief Gets user input to be used by the switch statement
@@ -23,6 +24,7 @@
 void
 get_input(char command[])
 {
+    clear_input(command);
     prompt();
 
     uint8_t index = 0;
@@ -38,7 +40,7 @@ get_input(char command[])
     }
 }
 /**/
-void
+static inline void
 clear_input(char command[])
 {
     for (uint8_t index = 0; index < COMMAND_LENGTH; ++index)
