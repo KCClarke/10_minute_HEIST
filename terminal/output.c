@@ -33,7 +33,7 @@ static inline void print_blank_room_line();
  * @return void.
  */
 void
-print_tower(game_t game)
+print_tower(game_t * game)
 {
     printf("TOWER MAP\n");
     print_room_numbers();
@@ -97,7 +97,7 @@ greeting()
 void
 debug_greeting()
 {
-    printf("\n%s\n", "Welcome to DEBUG mode");
+    printf("\n%s\n", "Welcome to DEBUG mode.");
 }
 
 /*!
@@ -135,6 +135,26 @@ void
 prompt()
 {
     printf("(heist) ");
+}
+
+/*!
+ * @brief To verify the test harness function is working in main.
+ *
+ * @param[in] result a boolean sent from tests/harness.c
+ *
+ * @return void
+ */
+void
+print_result(const bool result)
+{
+    if (result)
+    {
+        printf("All tests passing.\n");
+    }
+    else
+    {
+        printf("Test failure.\n");
+    }
 }
 
 

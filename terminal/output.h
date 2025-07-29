@@ -9,14 +9,16 @@
 #ifndef OUTPUT_H
 #define OUTPUT_H
 
-#include "game.h"
+#include "game/game.h"
+#include <stdbool.h>
 
 void greeting();
 void debug_greeting();
 void print_sizing_row();
 void print_instructions();
 void prompt();
-void print_tower(game_t game);
+void print_tower(game_t * game);
+void print_result(const bool result);
 
 #endif /* OUTPUT_H */
 

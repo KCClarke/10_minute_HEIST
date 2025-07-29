@@ -14,17 +14,21 @@
 #include <ctype.h>
 #include <stdint.h>
 
-static inline void clear_input(char command[]);
+// private functions
+static inline void clear_input(game_t * p_game);
 
 /*!
  * @brief Gets user input to be used by the switch statement
  * in main.
  *
+ * @param[in] p_game pointer to our game struct fromm main.
+ *
+ * @return void
  */
 void
-get_input(char command[])
+get_input(game_t * p_game)
 {
-    clear_input(command);
+    clear_input(p_game);
     prompt();
 
     uint8_t index = 0;
@@ -34,18 +38,26 @@ get_input(char command[])
     {
         if ((index < COMMAND_LENGTH) && ch != '\n')
         {
-            command[index] = toupper(ch);
+            p_game->command[index] = toupper(ch);
         }
         ++index;
     }
 }
-/**/
+
+// private function bodies
+/*!
+ * @brief Sets our command array to null.
+ *
+ * @param[in] p_game the location of our game struct
+ *
+ * @return void.
+ */
 static inline void
-clear_input(char command[])
+clear_input(game_t * p_game)
 {
     for (uint8_t index = 0; index < COMMAND_LENGTH; ++index)
     {
-        command[index] = '\0';
+        p_game->command[index] = '\0';
     }
 }
 

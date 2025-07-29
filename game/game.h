@@ -9,7 +9,9 @@
 #ifndef GAME_H
 #define GAME_H
 
+// Command length pertains to commands from the terminal.
 #define COMMAND_LENGTH 2
+
 #define TOWER_WIDTH 5
 #define TOWER_DEPTH 8
 
@@ -30,6 +32,8 @@ typedef struct
 
 } game_t;
 
+
+void initialize(game_t * p_game);
 
 #endif /* GAME_H */
 

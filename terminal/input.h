@@ -10,9 +10,9 @@
 #ifndef INPUT_H
 #define INPUT_H
 
-#include "game.h"
+#include "game/game.h"
 
-void get_input(char command[]);
+void get_input(game_t * p_game);
 
 #endif /* INPUT_H */
 
