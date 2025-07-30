@@ -15,6 +15,9 @@
 #define TOWER_WIDTH 5
 #define TOWER_DEPTH 8
 
+#define FLOOR 0
+#define ROOM  1
+
 #include "cards/cards.h"
 #include "players/players.h"
 
@@ -26,8 +29,9 @@ typedef struct
 
 typedef struct
 {
-    char command[COMMAND_LENGTH]; 
-    
+    char command[COMMAND_LENGTH];
+
+    uint8_t move[COMMAND_LENGTH];
     room_t tower[TOWER_DEPTH][TOWER_WIDTH];
 
 } game_t;

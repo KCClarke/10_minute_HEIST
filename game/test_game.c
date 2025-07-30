@@ -6,6 +6,7 @@
  * Written July 29 2025 Kasey Clarke
  */
 
+ #include "game.h"
  #include "test_game.h"
  #include <assert.h>
 
@@ -23,7 +24,11 @@ test_game()
 
     initialize(&test_game);
     assert('I' == test_game.command[0]);
-    
+
+    // testing out translating commands in to moves
+    test_game.command[0] = 'A';
+    test_game.command[1] = '1';
+   
 }
 
 /*** end of file ***/

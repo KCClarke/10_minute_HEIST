@@ -46,7 +46,7 @@ typedef struct
     uint8_t value;
     suit_t  suit;
     uint8_t curse;
-    set_t set;
+    set_t   set;
     char*   power;
     back_t  back;
     

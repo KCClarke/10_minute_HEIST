@@ -9,8 +9,6 @@
 #ifndef TEST_GAME_H
 #define TEST_GAME_H
 
-#include "game.h"
-
 void test_game();
 
 #endif /* TEST_GAME_H */

@@ -38,7 +38,8 @@ int main()
 
         for (;;) 
         {
-            command_handler(&game);
+            command_handler(&game); 
+
             get_input(&game);
 
             if ('Q' == game.command[0])
