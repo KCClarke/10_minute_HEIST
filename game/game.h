@@ -9,17 +9,20 @@
 #ifndef GAME_H
 #define GAME_H
 
-// Command length pertains to commands from the terminal.
+// Command length plantains to commands from the terminal.
 #define COMMAND_LENGTH 2
 
-#define TOWER_WIDTH 5
-#define TOWER_DEPTH 8
+#define NUM_FLOORS 8
+#define NUM_ROOMS 5
 
 #define FLOOR 0
 #define ROOM  1
 
 #include "cards/cards.h"
 #include "players/players.h"
+
+#include <stdint.h>
+#include <stdbool.h>
 
 typedef struct
 {
@@ -31,13 +34,13 @@ typedef struct
 {
     char command[COMMAND_LENGTH];
 
-    uint8_t move[COMMAND_LENGTH];
-    room_t tower[TOWER_DEPTH][TOWER_WIDTH];
+    uint8_t location[COMMAND_LENGTH];
+    room_t tower[NUM_FLOORS][NUM_ROOMS];
 
 } game_t;
 
-
 void initialize(game_t * p_game);
+bool command_to_location(game_t * p_game);
 
 #endif /* GAME_H */
 

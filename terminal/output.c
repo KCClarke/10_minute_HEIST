@@ -38,11 +38,11 @@ print_tower(game_t * game)
     printf("TOWER MAP\n");
     print_room_numbers();
 
-    for (uint8_t floor = 0; floor < TOWER_DEPTH; ++floor)
+    for (uint8_t floor = 0; floor < NUM_FLOORS; ++floor)
     {
         printf("%c|", 'A' + floor);
         
-        for(uint8_t room = 0; room < TOWER_WIDTH; ++room)
+        for(uint8_t room = 0; room < NUM_ROOMS; ++room)
         {
             print_blank_room_line();
             putchar('|');
@@ -172,7 +172,7 @@ print_room_numbers()
 {
    printf("  ");
 
-   for (uint8_t room_number = 0; room_number < TOWER_WIDTH; ++room_number)
+   for (uint8_t room_number = 0; room_number < NUM_ROOMS; ++room_number)
    {
        printf("______________%d_____________", 1 + room_number);
        putchar(' ');
@@ -193,7 +193,7 @@ print_floor_seperator()
 {
    printf("  ");
 
-   for (uint8_t rooms = 0; rooms < TOWER_WIDTH; ++rooms)
+   for (uint8_t rooms = 0; rooms < NUM_ROOMS; ++rooms)
    {
        for (uint8_t dashes = 0; dashes < CHARACTERS_PER_ROOM; ++dashes)
        {

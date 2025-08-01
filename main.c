@@ -22,9 +22,8 @@ static inline void command_handler(game_t * game);
  * Otherwise the user is asked to adjust their terminal to the correcct size and 
  * the game is run.
  */
-int main()
+int main() 
 {
-    
     #if DEBUG
         debug_greeting();
         print_result(all_tests());
@@ -36,7 +35,7 @@ int main()
         game_t game;
         initialize(&game);
 
-        for (;;) 
+        for (;;)
         {
             command_handler(&game); 
 
