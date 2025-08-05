@@ -13,6 +13,7 @@
 #endif
 
  #include "game/game.h"
+ #include "move/move.h"
  #include "terminal/io.h"
 
 static inline void command_handler(game_t * game);
@@ -26,7 +27,7 @@ int main()
 {
     #if DEBUG
         debug_greeting();
-        print_result(all_tests());
+        all_tests();
     
     #else
         print_sizing_row();
@@ -34,11 +35,11 @@ int main()
 
         game_t game;
         initialize(&game);
+        print_tower(&game);
 
         for (;;)
         {
             command_handler(&game); 
-
             get_input(&game);
 
             if ('Q' == game.command[0])
@@ -77,6 +78,12 @@ command_handler(game_t * p_game)
           // Fallthrough behavior of this switch statement is intentional.
 
           // TODO: impliment moving through the tower.
+          if(translate_command_to_location(p_game))
+          {
+            move(p_game);
+            print_tower(p_game);
+          }
+        
         }
         break;
 

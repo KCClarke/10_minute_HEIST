@@ -6,10 +6,11 @@
  * Written July 29 2025 Kasey Clarke
  */
 
-#include <stdbool.h>
+#include <stdio.h>
 
 #include "harness.h"
 #include "game/test_game.h"
+#include "move/test_move.h"
 
 /*!
  * @brief Prints the function's name to the terminal to verify connection
@@ -19,12 +20,13 @@
  *
  * @return void.
  */
-bool
+void
 all_tests()
 {
     test_game();
-    
-    return (true);
+    test_move();
+
+    printf("Passed %s.\n", __func__);
 }
 
 /*** end of file ***/

@@ -9,7 +9,7 @@
 
 #include <stdio.h>
 #include <stdint.h>
-
+#include <assert.h>
 #include "output.h"
 
 #define CHARACTERS_PER_ROOM 28
@@ -18,6 +18,9 @@
 static inline void print_room_numbers();
 static inline void print_floor_seperator();
 static inline void print_blank_room_line();
+static inline void
+print_first_line(const game_t * game, const uint8_t floor, const uint8_t room);
+static inline void print_remaining_spaces(uint8_t printed);
 
 
 /*
@@ -33,7 +36,7 @@ static inline void print_blank_room_line();
  * @return void.
  */
 void
-print_tower(game_t * game)
+print_tower(game_t * p_game)
 {
     printf("TOWER MAP\n");
     print_room_numbers();
@@ -44,13 +47,13 @@ print_tower(game_t * game)
         
         for(uint8_t room = 0; room < NUM_ROOMS; ++room)
         {
-            print_blank_room_line();
+            print_first_line(p_game, floor, room);
             putchar('|');
         }
 
         putchar('\n');
+
         print_floor_seperator();
-        
     }
 }
 
@@ -137,26 +140,6 @@ prompt()
     printf("(heist) ");
 }
 
-/*!
- * @brief To verify the test harness function is working in main.
- *
- * @param[in] result a boolean sent from tests/harness.c
- *
- * @return void
- */
-void
-print_result(const bool result)
-{
-    if (result)
-    {
-        printf("All tests passing.\n");
-    }
-    else
-    {
-        printf("Test failure.\n");
-    }
-}
-
 
 // private function bodies
 
@@ -217,6 +200,47 @@ static inline void
 print_blank_room_line()
 {
     for (uint8_t spaces = 0; spaces < CHARACTERS_PER_ROOM; ++spaces)
+    {
+        putchar(' ');
+    }
+}
+
+/*!
+ * @brief Prints the first line for a room
+ *
+ * @param[in] p_game, the pointer to the game
+ * @param[in] floor, the index of the floor.
+ * @param[in] room, the index of the room.
+ *
+ *@return void;
+ */
+static inline void
+print_first_line(const game_t * game, const uint8_t floor, const uint8_t room)
+{
+    const player_ID_t occupant = game->tower[floor][room].occupant;
+    if (no_player == occupant)
+    {
+        print_blank_room_line();
+    }
+    else
+    {
+        uint8_t printed = printf(" player %d", (uint8_t) occupant);
+        print_remaining_spaces(printed);
+    }
+
+}
+
+/*!
+ * @brief Prints the remaining spaces for a line of a room.
+ *
+ * @param[in] printed, the number already printed for the line.
+ *
+ * @return void.
+ */
+static inline void
+print_remaining_spaces(uint8_t printed)
+{
+    for (; printed < CHARACTERS_PER_ROOM; ++printed)
     {
         putchar(' ');
     }

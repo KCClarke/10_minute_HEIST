@@ -1,16 +1,17 @@
 /** @file game.c
  *
- * @brief game.c handles the function for initializing and playing the game.
+ * @brief game.c handles the function for initializing the game struct.
+ * Handles translating between the terminal in to a location coordinate.
  *
  * @par
  * Written July 19 2025 Kasey Clarke
  */
 
- #include "game.h"
+#include "game.h"
 
- // private func prototypes
- static inline bool location_in_tower(game_t * p_game);
- static inline void everybody_out(game_t * p_game);
+// private func prototypes
+static inline void everybody_out(game_t * p_game);
+static inline void initialize_players(game_t * p_game);
 
 /*!
  * @brief Initializes the master game struct with starting conditions
@@ -25,8 +26,8 @@ initialize(game_t * p_game)
 {
     p_game->command[0] = 'I'; // Start the game by printing the instructions.
     everybody_out(p_game);
+    initialize_players(p_game);
 }
-
 
 /*!
  * @brief Translates player readable tower coordinates A1 through H5
@@ -39,9 +40,9 @@ initialize(game_t * p_game)
  * @return true if the location is within the bounds of the tower
  */
 bool
-command_to_location(game_t * p_game)
+translate_command_to_location(game_t * p_game)
 {
-   const bool in_tower = location_in_tower(p_game);
+   const bool in_tower = is_location_in_tower(p_game);
 
    if(in_tower)
    {
@@ -53,6 +54,31 @@ command_to_location(game_t * p_game)
    }
 
    return (in_tower);
+}
+
+/*!
+ * @brief Checks to see if our command is a location coordinate.
+ *
+ * @param[in] p_game a pointer to our master struct.
+ *
+ * @return true if and only if the command is between A1 and H5
+ */
+bool
+is_location_in_tower(game_t * game)
+{
+    bool in_tower = true;
+
+    if ((game->command[FLOOR] < 'A') || (game->command[FLOOR] > 'H'))
+    {
+        in_tower = false;
+    }
+
+    if ((game->command[ROOM] < '1') || (game->command[ROOM] > '5'))
+    {
+        in_tower = false;
+    }
+
+    return (in_tower);
 }
 
 // Private function definitions.
@@ -76,27 +102,17 @@ everybody_out(game_t * p_game)
 }
 
 /*!
- * @brief Checks to see if our command is a location coordinate.
+ * @brief Initializes the players.
  *
- * @param[in] p_game a pointer to our master struct.
+ * @param[in] p_game the pointer to the game.
  *
- * @return true if and only if the command is between A1 and H5
+ * @return void
  */
-static inline bool
-location_in_tower(game_t * game)
+static inline void
+initialize_players(game_t * p_game)
 {
-    bool in_tower = true;
-
-    if ((game->command[FLOOR] < 'A') || (game->command[FLOOR] > 'H'))
-    {
-        in_tower = false;
-    }
-
-    if ((game->command[ROOM] < '1') || (game->command[ROOM] > '5'))
-    {
-        in_tower = false;
-    }
-
-    return (in_tower);
+    p_game->player.player_ID = player_1;
+    p_game->player.is_in_tower = false;
 }
+
 /*** end of file ***/

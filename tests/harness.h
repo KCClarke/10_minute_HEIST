@@ -12,7 +12,7 @@
 
 #include <stdbool.h>
 
-bool all_tests();
+void all_tests();
 
 #endif /* HARNESS_H */
 

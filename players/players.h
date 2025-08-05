@@ -10,6 +10,10 @@
 #define PLAYERS_H
 
 #define MAX_PLAYERS 5
+#define LOCATION_LENGTH 2
+
+#include <stdint.h>
+#include <stdbool.h>
 
 typedef enum
 {
@@ -22,6 +26,14 @@ typedef enum
     all_players
 
 } player_ID_t;
+
+typedef struct
+{
+    player_ID_t player_ID;
+    bool is_in_tower;
+    uint8_t location[LOCATION_LENGTH];
+
+} player_t;
 
 #endif /* PLAYERS_H */
 

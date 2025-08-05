@@ -18,7 +18,6 @@ void print_sizing_row();
 void print_instructions();
 void prompt();
 void print_tower(game_t * game);
-void print_result(const bool result);
 
 #endif /* OUTPUT_H */
 

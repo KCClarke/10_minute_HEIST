@@ -25,8 +25,8 @@
 COMPILER = gcc -std=c99
 FLAGS = -g -I. -Wall
 
-CORE_OBJECTS = terminal/output.o terminal/input.o game/game.o
-DEBUG_OBJECTS = debug_main.o tests/harness.o game/test_game.o
+CORE_OBJECTS = terminal/output.o terminal/input.o game/game.o move/move.o
+DEBUG_OBJECTS = debug_main.o tests/harness.o game/test_game.o move/test_move.o
 
 
 ### debug
