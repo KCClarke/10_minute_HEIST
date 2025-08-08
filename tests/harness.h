@@ -10,8 +10,6 @@
 #ifndef HARNESS_H
 #define HARNESS_H
 
-#include <stdbool.h>
-
 void all_tests();
 
 #endif /* HARNESS_H */

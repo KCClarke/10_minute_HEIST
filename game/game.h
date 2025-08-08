@@ -36,7 +36,9 @@ typedef struct
     uint8_t location[COMMAND_LENGTH];  // The index location of a room in a tower.
     room_t  tower[NUM_FLOORS][NUM_ROOMS];
 
-    player_t player;
+    uint8_t total_players;
+    uint8_t current_player;
+    player_t players[MAX_PLAYERS];
 
 } game_t;
 

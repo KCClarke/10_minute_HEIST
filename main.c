@@ -13,6 +13,7 @@
 #endif
 
  #include "game/game.h"
+ #include "random/random.h"
  #include "move/move.h"
  #include "terminal/io.h"
 
@@ -25,6 +26,7 @@ static inline void command_handler(game_t * game);
  */
 int main() 
 {
+    seed_random();
     #if DEBUG
         debug_greeting();
         all_tests();
@@ -40,6 +42,7 @@ int main()
         for (;;)
         {
             command_handler(&game); 
+            
             get_input(&game);
 
             if ('Q' == game.command[0])

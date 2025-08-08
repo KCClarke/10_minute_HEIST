@@ -10,4 +10,7 @@ Definitions and abreviations:
     Throughout this projects I will use...
 
     heist
-        as an abreviation for 10 minute HEIST
+        as an abreviation for 10 minute HEIST.
+
+    you
+        You! Dear reader, and user of this program.

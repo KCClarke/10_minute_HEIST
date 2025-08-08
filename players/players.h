@@ -29,6 +29,7 @@ typedef enum
 
 typedef struct
 {
+    bool is_you;
     player_ID_t player_ID;
     bool is_in_tower;
     uint8_t location[LOCATION_LENGTH];

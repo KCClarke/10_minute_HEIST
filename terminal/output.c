@@ -215,9 +215,9 @@ print_blank_room_line()
  *@return void;
  */
 static inline void
-print_first_line(const game_t * game, const uint8_t floor, const uint8_t room)
+print_first_line(const game_t * p_game, const uint8_t floor, const uint8_t room)
 {
-    const player_ID_t occupant = game->tower[floor][room].occupant;
+    const player_ID_t occupant = p_game->tower[floor][room].occupant;
     if (no_player == occupant)
     {
         print_blank_room_line();
@@ -225,9 +225,11 @@ print_first_line(const game_t * game, const uint8_t floor, const uint8_t room)
     else
     {
         uint8_t printed = printf(" player %d", (uint8_t) occupant);
+        bool is_you = p_game->players[(uint8_t) (occupant -1)].is_you;
+        
+        printed += printf("%s", is_you? " (you)" : "");
         print_remaining_spaces(printed);
     }
-
 }
 
 /*!

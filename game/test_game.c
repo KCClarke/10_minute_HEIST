@@ -73,8 +73,8 @@ test_player_initialization()
     game_t game;
     initialize(&game);
 
-    assert(false == game.player.is_in_tower);
-    assert(player_1 == game.player.player_ID);
+    assert(false == game.players[0].is_in_tower);
+    assert(player_1 == game.players[0].player_ID);
 }
 
 

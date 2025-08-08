@@ -71,15 +71,17 @@ move(game_t * p_game)
 static inline void
 leave_previous_room(game_t * p_game)
 {
-    if (p_game->player.is_in_tower)
+    const uint8_t current = p_game->current_player;
+
+    if (p_game->players[current].is_in_tower)
     {
-        uint8_t floor = p_game->player.location[FLOOR];
-        uint8_t room  = p_game->player.location[ROOM];
+        uint8_t floor = p_game->players[current].location[FLOOR];
+        uint8_t room  = p_game->players[current].location[ROOM];
         
         p_game->tower[floor][room].occupant = no_player;
     }
     
-    p_game->player.is_in_tower = true;
+    p_game->players[current].is_in_tower = true;
 }
 
 /*!
@@ -93,8 +95,10 @@ leave_previous_room(game_t * p_game)
 static inline void
 update_player_location(game_t * p_game)
 {
-    p_game->player.location[FLOOR] = p_game->location[FLOOR];
-    p_game->player.location[ROOM]  = p_game->location[ROOM];
+    const uint8_t current = p_game->current_player;
+
+    p_game->players[current].location[FLOOR] = p_game->location[FLOOR];
+    p_game->players[current].location[ROOM]  = p_game->location[ROOM];
 }
 
 /*** end of file ***/

@@ -25,6 +25,9 @@ void
 initialize(game_t * p_game)
 {
     p_game->command[0] = 'I'; // Start the game by printing the instructions.
+    p_game->total_players  = 1;
+    p_game->current_player = 0;
+
     everybody_out(p_game);
     initialize_players(p_game);
 }
@@ -103,6 +106,7 @@ everybody_out(game_t * p_game)
 
 /*!
  * @brief Initializes the players.
+ * TODO: Later make it so user of program isn't always player_1
  *
  * @param[in] p_game the pointer to the game.
  *
@@ -110,9 +114,15 @@ everybody_out(game_t * p_game)
  */
 static inline void
 initialize_players(game_t * p_game)
-{
-    p_game->player.player_ID = player_1;
-    p_game->player.is_in_tower = false;
+{    
+    for (uint8_t index = 0; index < p_game->total_players; ++index)
+    {
+        // cast 1 + index to our player_ID_t...I'm suprised it worked!
+        p_game->players[index].player_ID = (player_ID_t) (1 + index);
+        p_game->players[index].is_in_tower = false;
+    }
+
+    p_game->players[0].is_you = true;
 }
 
 /*** end of file ***/
