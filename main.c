@@ -16,6 +16,7 @@
  #include "random/random.h"
  #include "move/move.h"
  #include "terminal/io.h"
+ #include "bots/bot.h"
 
 static inline void command_handler(game_t * game);
 
@@ -43,7 +44,15 @@ int main()
         {
             command_handler(&game); 
             
-            get_input(&game);
+            if(game.players[0 /*current player*/].is_player_you)
+            {
+                get_input_from_terminal(&game);
+            }
+            else
+            {
+                get_input_from_bot(&game);
+            }
+
 
             if ('Q' == game.command[0])
             {

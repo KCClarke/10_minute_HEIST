@@ -12,7 +12,7 @@
 
 #include "game/game.h"
 
-void get_input(game_t * p_game);
+void get_input_from_terminal(game_t * p_game);
 
 #endif /* INPUT_H */
 

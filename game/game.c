@@ -14,6 +14,10 @@ static inline void everybody_out(game_t * p_game);
 static inline void initialize_players(game_t * p_game);
 
 /*!
+ * @brief In main, updates the current player to the next player
+ **/
+
+/*!
  * @brief Initializes the master game struct with starting conditions
  * in main.
  *
@@ -122,7 +126,7 @@ initialize_players(game_t * p_game)
         p_game->players[index].is_in_tower = false;
     }
 
-    p_game->players[0].is_you = true;
+    p_game->players[0].is_player_you = true;
 }
 
 /*** end of file ***/

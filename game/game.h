@@ -32,12 +32,12 @@ typedef struct
 
 typedef struct
 {
-    char    command[COMMAND_LENGTH];   // The command taken from the terminal. 
-    uint8_t location[COMMAND_LENGTH];  // The index location of a room in a tower.
-    room_t  tower[NUM_FLOORS][NUM_ROOMS];
+    char     command[COMMAND_LENGTH];   // The command taken from the terminal. 
+    uint8_t  location[COMMAND_LENGTH];  // The index location of a room in a tower.
+    room_t   tower[NUM_FLOORS][NUM_ROOMS];
 
-    uint8_t total_players;
-    uint8_t current_player;
+    uint8_t  total_players;
+    uint8_t  current_player;
     player_t players[MAX_PLAYERS];
 
 } game_t;
@@ -45,6 +45,7 @@ typedef struct
 void initialize(game_t * p_game);
 bool translate_command_to_location(game_t * p_game);
 bool is_location_in_tower(game_t * game);
+void advance_player(game_t * p_game);
 
 #endif /* GAME_H */
 

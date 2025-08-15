@@ -26,7 +26,7 @@ static inline void clear_input(game_t * p_game);
  * @return void
  */
 void
-get_input(game_t * p_game)
+get_input_from_terminal(game_t * p_game)
 {
     clear_input(p_game);
     prompt();
