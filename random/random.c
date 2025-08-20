@@ -1,7 +1,7 @@
 /** @file random.c
  *
- * @brief A c file for generating non zero true random
- * numbers within a range of 0 to n.
+ * @brief A c file for generating non zero random
+ * numbers within a range of 0 to n without modulo bias.
  *
  * @par
  * Kasey Clarke June 25 2025
@@ -18,7 +18,7 @@
   *
   * @param void
   *
-  * @return void
+  * @return void.
   */
 void
 seed_random ()
@@ -27,14 +27,14 @@ seed_random ()
 }
 
 /*!
- * @brief A true random number generator that avoids the bias introduced
+ * @brief A random number generator that avoids the bias introduced
  * by using the modulo operator. For the purpose of this project
  * uint8_t is large enough.
  *
  * @param[in] range The range of random numbers possible from
  * 0 to (range - 1).
  *
- * @return a true random number.
+ * @return a random number.
  */
 uint8_t
 random_number (const uint8_t range)
@@ -46,7 +46,7 @@ random_number (const uint8_t range)
   {
     number = (uint8_t) rand(); // casting raw output from rand to our type.
   }
-  return (number % range); //returns true random number
+  return (number % range); //returns a random number.
 }
 
 /*** end of file ***/

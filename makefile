@@ -3,22 +3,22 @@
 # In the terminal, if you type:
 #
 # 	make
-#		you build the debug version of heist
+#		You build the debug version of heist.
 #
 # 	make debug_run
-# 		you run the debug version
+# 		You run the debug version.
 #
 #
 # 	make heist
-# 		you build the playable version of heist
+# 		You build the playable version of heist.
 #
 # 	make run
-#		you run the playable version of heist
+#		You run the playable version of heist.
 #
 #
 # 	make clean
-# 		deletes the object files generated and
-# 		clears the terminal
+# 		You deletee the object files generated
+#       and clear the terminal.
 #
 ###############################################
 
@@ -29,7 +29,7 @@ CORE_OBJECTS = terminal/output.o terminal/input.o game/game.o move/move.o random
 DEBUG_OBJECTS = debug_main.o tests/harness.o game/test_game.o move/test_move.o
 
 
-### debug
+### debug commands
 debug_heist: $(CORE_OBJECTS) $(DEBUG_OBJECTS)
 	$(COMPILER) -o $@ $(CORE_OBJECTS) $(DEBUG_OBJECTS)
 
@@ -40,7 +40,7 @@ debug_run:
 	./debug_heist
 
 
-### playable
+### playable commands
 heist: main.o $(CORE_OBJECTS)
 	$(COMPILER) -o $@ main.o $(CORE_OBJECTS)
 
@@ -51,7 +51,7 @@ run:
 	./heist
 
 ### The following horrible looking grawlix tells the 
-# compiler to make .o files from our .c files
+### compiler to make .o files from our .c files.
 %.o: %.c
 	$(COMPILER) $(FLAGS) -c $< -o $@
 

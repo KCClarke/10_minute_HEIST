@@ -1,6 +1,6 @@
 /** @file harness.c
  *
- * @brief Runs tests from all other modules
+ * @brief Runs tests from all other modules.
  *
  * @par
  * Written July 29 2025 Kasey Clarke

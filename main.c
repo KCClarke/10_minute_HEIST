@@ -2,7 +2,6 @@
 /** @file main.c
  *
  * @brief Welcome to 10 MINUTE HEIST
- * The purpose of this file
  *
  * @par
  * Written July 16 2025 Kasey Clarke
@@ -21,24 +20,26 @@
 static inline void command_handler(game_t * game);
 
 /*!
- * @brief The main function runs the test code if the program is run in debug mode,
- * Otherwise the user is asked to adjust their terminal to the correcct size and 
- * the game is run.
+ * @brief The main function runs test code if the program is run in debug mode,
+ * Otherwise, the user is asked to adjust their terminal to the correcct size
+ * and the game is run.
  */
 int main() 
 {
     seed_random();
+
     #if DEBUG
+
         debug_greeting();
         all_tests();
-    
+
     #else
+
         print_sizing_row();
         greeting();
 
         game_t game;
         initialize(&game);
-        print_tower(&game);
 
         for (;;)
         {
@@ -58,16 +59,17 @@ int main()
             {
                 break;
             }
+
         }
 
     #endif
 
-    return 0;
+    return (0);
 }
 
 /*!
- * @brief This function combines user input and output with game logic.
- * It is in main.c to be easily found and eddited.
+ * @brief This function handles the character type commands
+ * as defined in game.h.
  *
  * @param[in] p_game a pointer to our master game struct.
  *
@@ -88,12 +90,16 @@ command_handler(game_t * p_game)
         case 'H':
         { // The above cases (A through H) correspond to floors of the tower.
           // Fallthrough behavior of this switch statement is intentional.
-
-          // TODO: impliment moving through the tower.
+          
           if(translate_command_to_location(p_game))
           {
-            move(p_game);
-            print_tower(p_game);
+            if(is_move_valid(p_game))
+            {
+                move(p_game);
+                advance_player(p_game);
+                print_tower(p_game);
+            }
+            
           }
         
         }
@@ -141,6 +147,7 @@ command_handler(game_t * p_game)
         }
         break;
     }
+    
 }
 
 /*** end of file ***/

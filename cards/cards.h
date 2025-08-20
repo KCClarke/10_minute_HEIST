@@ -42,12 +42,12 @@ typedef enum
 
 typedef struct
 {
-    char*   name;
+    char *  name;
     uint8_t value;
     suit_t  suit;
     uint8_t curse;
     set_t   set;
-    char*   power;
+    char *  power;
     back_t  back;
     
 } card_t;

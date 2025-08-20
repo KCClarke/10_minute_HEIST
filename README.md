@@ -14,3 +14,6 @@ Definitions and abreviations:
 
     you
         You! Dear reader, and user of this program.
+
+    main
+        The main function in the file main.c

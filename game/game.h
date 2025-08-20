@@ -32,8 +32,12 @@ typedef struct
 
 typedef struct
 {
-    char     command[COMMAND_LENGTH];   // The command taken from the terminal. 
-    uint8_t  location[COMMAND_LENGTH];  // The index location of a room in a tower.
+    // The command taken from the terminal.
+    char     command[COMMAND_LENGTH];
+
+    // The index location of a room of the tower.
+    uint8_t  location[COMMAND_LENGTH];
+    
     room_t   tower[NUM_FLOORS][NUM_ROOMS];
 
     uint8_t  total_players;

@@ -1,6 +1,6 @@
 Cards shall be organized in fhe following way:
     
-    1. Light cards precede dark cards.
+    1. All light cards precede dark cards.
 
     2. Then, by special set,
     cards go from crescent to full to no moon. 

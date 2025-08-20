@@ -18,9 +18,9 @@ static inline void update_player_location(game_t * p_game);
  *
  * TODO: once cards are implimented check that there is a card at the location.
  *
- * @param p_game, is every function going to take p_game as a param?
+ * @param p_game
  *
- * @return true if the proposed location is a valid , false otherwise
+ * @return true if the proposed location is a valid, false otherwise.
  */
 bool
 is_move_valid(game_t * p_game)
@@ -37,14 +37,11 @@ is_move_valid(game_t * p_game)
 }
 
 /*!
- * @brief Checks to see if the proposed location would be a valid move.
- * For now it just checks to see if there isn't a player.
+ * @brief Moves the player to the new location.
  *
- * TODO: once cards are implimented check that there is a card at the location.
+ * @param p_game
  *
- * @param p_game, is every function going to take p_game as a param?
- *
- * @return true if the proposed location is a valid , false otherwise
+ * @return void.
  */
 void
 move(game_t * p_game)
@@ -64,9 +61,9 @@ move(game_t * p_game)
  * @brief If the player is in the tower they need to 
  * Leave their current place before entering the next
  *
- * @param[in] p_game pointer to the game.
+ * @param[in] p_game.
  *
- * @return void
+ * @return void.
  */
 static inline void
 leave_previous_room(game_t * p_game)
@@ -90,8 +87,8 @@ leave_previous_room(game_t * p_game)
  * 
  * @param[in] p_game pointer to the game.
  *
-* @return void
-*/
+ * @return void.
+ */
 static inline void
 update_player_location(game_t * p_game)
 {

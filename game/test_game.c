@@ -15,6 +15,7 @@
 static inline void test_initialization();
 static inline void test_player_initialization();
 static inline void test_translate_command_to_location();
+static inline void test_advance_player();
 
 /*!
  * @brief Runs the tests for the master game struct
@@ -29,8 +30,33 @@ test_game()
     test_initialization();
     test_player_initialization();
     test_translate_command_to_location();
+    test_advance_player();
 
     printf("Passed %s.\n", __func__);
+}
+
+/*!
+ * @brief Tests advancing to the next player.
+ * 
+ * @param[in] void.
+ *
+ * @return void.
+ */
+static inline void
+test_advance_player()
+{
+    game_t test_game;
+    test_game.total_players = 3;
+    test_game.current_player = 0;
+
+    advance_player(&test_game);
+    assert(1 == test_game.current_player);
+    
+    advance_player(&test_game);
+    assert(2 == test_game.current_player);
+    
+    advance_player(&test_game);
+    assert(0 == test_game.current_player);
 }
 
 /*!
@@ -39,7 +65,7 @@ test_game()
  *
  * @param void
  *
- * @return void
+ * @return void.
  */
 static inline void test_initialization()
 {
@@ -56,7 +82,6 @@ static inline void test_initialization()
            assert(no_player == game.tower[floor][room].occupant);
         }
     }
-
 
 }
 
@@ -77,14 +102,13 @@ test_player_initialization()
     assert(player_1 == game.players[0].player_ID);
 }
 
-
 /*!
- * @brief tests the translation from a command to move from the terminal
+ * @brief Tests the translation from a command to move from the terminal
  * to a location in the tower.
  *
  * @param void
  *
- *@ return void
+ * @return void
  */
 static inline void test_translate_command_to_location()
 {

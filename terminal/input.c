@@ -1,6 +1,6 @@
 /** @file input.c
  *
- * @brief This module holds the function bodies for printing 
+ * @brief This module holds the function bodies for printing and
  * getting input from the user via the terminal.
  *
  * @par
@@ -19,7 +19,7 @@ static inline void clear_input(game_t * p_game);
 
 /*!
  * @brief Gets user input to be used by the switch statement
- * in main.
+ * in main.c.
  *
  * @param[in] p_game pointer to our game struct fromm main.
  *

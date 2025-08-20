@@ -1,6 +1,6 @@
 /** @file output.h
  *
- * @brief A description of the module's purpose.
+ * @brief Contains the public functions for printing to the terminal.
  *
  * @par
  * Written July 19 2025 Kasey Clarke

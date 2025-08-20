@@ -9,7 +9,6 @@
 
 #include <stdio.h>
 #include <stdint.h>
-#include <assert.h>
 #include "output.h"
 
 #define CHARACTERS_PER_ROOM 28
@@ -18,6 +17,7 @@
 static inline void print_room_numbers();
 static inline void print_floor_seperator();
 static inline void print_blank_room_line();
+
 static inline void
 print_first_line(const game_t * game, const uint8_t floor, const uint8_t room);
 static inline void print_remaining_spaces(uint8_t printed);
@@ -132,7 +132,7 @@ print_instructions()
 }
 
 /*!
- * @brief To print something to prompt the user for input
+ * @brief To print "(heist)" to prompt the user for input
  */
 void
 prompt()
@@ -142,13 +142,12 @@ prompt()
 
 
 // private function bodies
-
 /*!
  * @brief Prints the room numbers for the tower.
  *
- * @param void.
+ * @param void
  *
- * @return void
+ * @return void.
  */
 static inline void
 print_room_numbers()
@@ -225,7 +224,7 @@ print_first_line(const game_t * p_game, const uint8_t floor, const uint8_t room)
     else
     {
         uint8_t printed = printf(" player %d", (uint8_t) occupant);
-        bool is_you = p_game->players[(uint8_t) (occupant -1)].is_you;
+        bool is_you = p_game->players[(uint8_t) (occupant -1)].is_player_you;
         
         printed += printf("%s", is_you? " (you)" : "");
         print_remaining_spaces(printed);
