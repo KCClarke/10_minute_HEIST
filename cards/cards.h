@@ -17,4 +17,6 @@ typedef struct card_s
     
 } card_t;
 
+const card_t * get_master_card_list();
+
 #endif

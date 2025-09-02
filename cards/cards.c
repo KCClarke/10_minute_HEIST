@@ -1,4 +1,4 @@
-/* master_card_list.c */
+/* cards.c */
 
 #include "cards.h"
 
@@ -11,7 +11,7 @@ static card_t g_master_card_list[] =
     }
 };
 
-card_t * get_master_card_list()
+const card_t * get_master_card_list()
 {
     return (g_master_card_list);
 }

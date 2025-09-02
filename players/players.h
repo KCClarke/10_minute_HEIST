@@ -4,10 +4,14 @@
 #define PLAYERS_H
 
 #define MAX_PLAYERS 5
+#define MAX_HAUL 40
+
+typedef struct card_s card_t;
 
 typedef struct player_s
 {
     int num_threes;
+    card_t * haul[MAX_HAUL];
 
 } player_t;
 

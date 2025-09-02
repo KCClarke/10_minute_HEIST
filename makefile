@@ -1,24 +1,43 @@
-# makefile
+# Makefile
 
-COMPILER = gcc -std=c99
-FLAGS = -g -I. -Wall
+COMPILER = gcc
+CFLAGS   = -std=c99 -g -I. -Wall -MMD -MP
 
-OBJECTS = tests/tests.o cards/master_card_list.o players/players.o
+# Source files
+SRC = main.c \
+      cards/cards.c \
+      players/players.c \
+      tests/tests.c \
+      tests/test_players.c \
+      tests/test_cards.c
 
-heist: main.o $(OBJECTS)
-	$(COMPILER) -o $@ main.o $(OBJECTS)
+# Object files in build/ maintaining folder structure
+OBJ = $(patsubst %.c,build/%.o,$(SRC))
+DEP = $(patsubst %.c,build/deps/%.d,$(SRC))
 
-main.o: main.c
-	$(COMPILER) $(FLAGS) -c main.c -o main.o
+# Executable
+TARGET = build/heist
 
-run:
-	./heist
+# Default target
+all: $(TARGET)
 
-%.o: %.c
-	$(COMPILER) $(FLAGS) -c $< -o $@
+# Link
+$(TARGET): $(OBJ)
+	$(COMPILER) $(CFLAGS) -o $@ $(OBJ)
 
+# Compile rule for objects
+build/%.o: %.c
+	@mkdir -p $(dir $@) build/deps/$(dir $*) 2>/dev/null || true
+	$(COMPILER) $(CFLAGS) -c $< -o $@
+
+# Include dependency files
+-include $(DEP)
+
+# Run
+run: $(TARGET)
+	./$(TARGET)
+
+# Clean
 clean:
-	find . -name "*.o" -delete
-	rm -f heist
-	rm -f debug_heist
+	rm -rf build
 	clear
