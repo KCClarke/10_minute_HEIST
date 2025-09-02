@@ -1,4 +1,4 @@
-/* master_card_list.h */
+/* master_card_list.c */
 
 #include "cards.h"
 

@@ -1,3 +1,5 @@
+/* cards.h */
+
 #ifndef CARDS_H
 #define CARDS_H
 
@@ -15,5 +17,4 @@ typedef struct card_s
     
 } card_t;
 
-
-#endif // CARDS_H
+#endif

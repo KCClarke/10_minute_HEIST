@@ -7,4 +7,4 @@
 
 card_t * get_master_card_list();
 
-#endif /* MASTER_CARD_LIST_H */
+#endif
