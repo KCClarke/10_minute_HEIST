@@ -2,13 +2,6 @@
 #
 # In the terminal, if you type:
 #
-# 	make
-#		You build the debug version of heist.
-#
-# 	make debug_run
-# 		You run the debug version.
-#
-#
 # 	make heist
 # 		You build the playable version of heist.
 #
@@ -25,24 +18,11 @@
 COMPILER = gcc -std=c99
 FLAGS = -g -I. -Wall
 
-CORE_OBJECTS = terminal/output.o terminal/input.o game/game.o move/move.o random/random.o bots/bot.o
-DEBUG_OBJECTS = debug_main.o tests/harness.o game/test_game.o move/test_move.o
-
-
-### debug commands
-debug_heist: $(CORE_OBJECTS) $(DEBUG_OBJECTS)
-	$(COMPILER) -o $@ $(CORE_OBJECTS) $(DEBUG_OBJECTS)
-
-debug_main.o: main.c
-	$(COMPILER) $(FLAGS) -DDEBUG=1 -c main.c -o debug_main.o
-
-debug_run:
-	./debug_heist
-
+OBJECTS = tests/tests.o cards/master_card_list.o
 
 ### playable commands
-heist: main.o $(CORE_OBJECTS)
-	$(COMPILER) -o $@ main.o $(CORE_OBJECTS)
+heist: main.o $(OBJECTS)
+	$(COMPILER) -o $@ main.o $(OBJECTS)
 
 main.o: main.c
 	$(COMPILER) $(FLAGS) -c main.c -o main.o

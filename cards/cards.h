@@ -1,57 +1,19 @@
-/** @file cards.h
- *
- * @brief This file describes the cards, and the concepts that define them.
- *
- * @par
- * Written July 20 2025 Kasey Clarke
- */
-
-#ifndef CARD_DEFINITIONS_H
-#define CARD_DEFINITIONS_H
-
-#include <stdint.h>
-
-#define TOTAL_CARDS 57
+#ifndef CARDS_H
+#define CARDS_H
 
 typedef enum
 {
-    potion,
-    fossil,
-    artifact,
-    jewel,
-    tome,
-    wild,
-    no_suit
+    POTION
 
 } suit_t;
 
-typedef enum
+typedef struct card_s
 {
-    crescent,
-    full,
-    no_set
-
-} set_t;
-
-typedef enum
-{
-    light,
-    dark
-
-} back_t;
-
-typedef struct
-{
-    char *  name;
-    uint8_t value;
-    suit_t  suit;
-    uint8_t curse;
-    set_t   set;
-    char *  power;
-    back_t  back;
+    char *   name;
+    int      value;
+    suit_t   suit;
     
 } card_t;
 
-#endif /* CARD_DEFINITIONS_H */
 
-/*** end of file ***/
+#endif // CARDS_H

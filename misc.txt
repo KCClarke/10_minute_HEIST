@@ -1,0 +1,3 @@
+
+The following will 'find .' my files but ignore the .git stuff
+    find . -path ./\.git -prune -o -type f -print
