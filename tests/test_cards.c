@@ -7,16 +7,17 @@
 #include <stdio.h>
 #include <assert.h>
 
-
 static inline void test_love_potion();
+
 
 void test_cards()
 {
     test_love_potion();
 
-    printf("%s passed\n.", __func__);
+    printf("%s passed.\n", __func__);
 
 }
+
 
 static inline void test_love_potion()
 {

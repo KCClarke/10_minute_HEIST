@@ -9,7 +9,8 @@ SRC = main.c \
       players/players.c \
       tests/tests.c \
       tests/test_players.c \
-      tests/test_cards.c
+      tests/test_cards.c \
+	  tests/test_copying.c
 
 # Object files in build/ maintaining folder structure
 OBJ = $(patsubst %.c,build/%.o,$(SRC))

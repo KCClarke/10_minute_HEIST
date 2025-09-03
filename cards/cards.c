@@ -9,7 +9,9 @@ static card_t g_master_card_list[] =
         3,
         POTION
     }
+    
 };
+
 
 const card_t * get_master_card_list()
 {
