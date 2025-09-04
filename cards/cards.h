@@ -3,11 +3,7 @@
 #ifndef CARDS_H
 #define CARDS_H
 
-typedef enum
-{
-    POTION
-
-} suit_t;
+#include "constants.h"
 
 typedef struct card_s
 {
