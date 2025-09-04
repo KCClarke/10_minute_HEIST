@@ -4,6 +4,7 @@
 #include "test_cards.h"
 #include "test_players.h"
 #include "test_copying.h"
+#include "test_tower.h"
 
 #include <stdio.h>
 
@@ -16,6 +17,7 @@ void all_tests()
     test_cards();
     test_players();
     test_copying();
-
+    test_tower();
+    
     printf("\n%s passed.\n", __func__);
 }

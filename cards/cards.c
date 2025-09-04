@@ -2,6 +2,7 @@
 
 #include "cards.h"
 
+
 static card_t g_master_card_list[] = 
 {
     {

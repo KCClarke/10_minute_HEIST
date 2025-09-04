@@ -8,7 +8,7 @@
 #define MAX_HAUL TOTAL_CARDS
 #define SCORING_TILES 13
 #define TOWER_WIDTH 5
-#define TOWER_DEPTH 8
+#define TOWER_HEIGHT 8
 
 typedef enum
 {
