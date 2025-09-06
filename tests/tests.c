@@ -14,10 +14,11 @@
  */
 void all_tests()
 {
+    printf("\n");
     test_cards();
     test_players();
     test_copying();
     test_tower();
     
-    printf("\n%s passed.\n", __func__);
+    printf("\n%s passed.\n\n", __func__);
 }
