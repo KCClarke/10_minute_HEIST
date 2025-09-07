@@ -10,10 +10,16 @@
 #define TOWER_WIDTH 5
 #define TOWER_HEIGHT 8
 #define TOTAL_ROOMS TOWER_HEIGHT * TOWER_WIDTH
+#define UNIQUE_SUITS 5
 
 typedef enum
 {
-    POTION
+    POTION,
+    FOSSIL,
+    ARTIFACT,
+    JEWEL,
+    TOME,
+    WILD
 
 } suit_t;
 

@@ -10,6 +10,7 @@ typedef struct card_s card_t;
 typedef struct player_s
 {
     int num_threes;
+    suit_t num_suits[UNIQUE_SUITS];
     card_t * haul[MAX_HAUL];
 
 } player_t;

@@ -6,13 +6,18 @@ CFLAGS   = -std=c99 -g -I. -Wall -MMD -MP
 # Source files
 SRC = main.c \
       cards/cards.c \
+	  cards/powers.c \
       players/players.c \
 	  tower/tower.c \
       tests/tests.c \
+	  turn/turn.c \
+	  game/game.c \
+	  \
       tests/test_players.c \
       tests/test_cards.c \
 	  tests/test_copying.c \
-	  tests/test_tower.c
+	  tests/test_tower.c \
+	  tests/test_game.c
 
 # Object files in build/ maintaining folder structure
 OBJ = $(patsubst %.c,build/%.o,$(SRC))

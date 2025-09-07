@@ -1,6 +1,7 @@
 /* tests.c */
 
 #include "tests.h"
+#include "test_game.h"
 #include "test_cards.h"
 #include "test_players.h"
 #include "test_copying.h"
@@ -19,6 +20,7 @@ void all_tests()
     test_players();
     test_copying();
     test_tower();
+    test_game();
     
     printf("\n%s passed.\n\n", __func__);
 }

@@ -1,4 +1,5 @@
 /* main.c */
+
 #include "tests/tests.h"
 
 int main()
