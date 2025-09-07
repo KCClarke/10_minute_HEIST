@@ -4,8 +4,8 @@
 #define TOWER_H
 
 // Forward declared structs.
-typedef struct card_s card_t;
-typedef struct player_s player_t;
+#include "cards/cards.h"
+#include "players/players.h"
 
 typedef struct room_s
 {

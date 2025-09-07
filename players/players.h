@@ -5,7 +5,7 @@
 
 #include "constants.h"
 
-typedef struct card_s card_t;
+#include "cards/cards.h"
 
 typedef struct player_s
 {
