@@ -3,7 +3,6 @@
 #ifndef TOWER_H
 #define TOWER_H
 
-// Forward declared structs.
 #include "cards/cards.h"
 #include "players/players.h"
 
