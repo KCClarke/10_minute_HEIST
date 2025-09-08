@@ -20,6 +20,7 @@ static inline void initialize_game()
 {
     g_game.num_players = 1;
     g_game.current_player = PLAYER_1;
+    g_game.player_list = get_player_list();
 
     g_game.tower = get_tower();
 }

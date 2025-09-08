@@ -15,6 +15,7 @@ SRC = main.c \
 	  \
       tests/test_players.c \
       tests/test_cards.c \
+	  tests/test_powers.c \
 	  tests/test_copying.c \
 	  tests/test_tower.c \
 	  tests/test_game.c

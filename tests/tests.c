@@ -1,11 +1,12 @@
 /* tests.c */
 
 #include "tests.h"
-#include "test_game.h"
 #include "test_cards.h"
 #include "test_players.h"
 #include "test_copying.h"
 #include "test_tower.h"
+#include "test_game.h"
+#include "test_powers.h"
 
 #include <stdio.h>
 
@@ -16,11 +17,14 @@
 void all_tests()
 {
     printf("\n");
+
     test_cards();
     test_players();
     test_copying();
     test_tower();
     test_game();
+    test_powers();
     
     printf("\n%s passed.\n\n", __func__);
+    
 }
