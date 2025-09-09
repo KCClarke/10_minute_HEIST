@@ -8,7 +8,9 @@
 #include "tower/tower.h"
 #include "players/players.h"
 
-typedef struct game_s
+typedef struct game_s game_t;
+
+struct game_s
 {
     int num_players;
     player_ID_t current_player;
@@ -16,7 +18,7 @@ typedef struct game_s
 
     room_t * tower;
 
-} game_t;
+};
 
 game_t * get_game();
 
