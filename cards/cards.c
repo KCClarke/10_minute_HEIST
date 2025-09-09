@@ -18,6 +18,6 @@ static card_t g_master_card_list[] =
 const card_t * get_master_card_list()
 {
     g_master_card_list[0].power = basic_power;
-    
+
     return (g_master_card_list);
 }

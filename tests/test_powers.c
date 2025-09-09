@@ -15,7 +15,14 @@ void test_powers()
     const card_t * card_list = get_master_card_list();
     assert(NULL != card_list);
 
-    card_list[0].power(game);
+    const int curr_player = game->current_player;
+    assert(0 == curr_player);
+    assert(0 == game->player_list[curr_player].num_threes);
+
+    card_t card = card_list[0];
+    card.power(&card, game);
+
+
 
     printf("%s passed.\n", __func__);
 }

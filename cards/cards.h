@@ -6,15 +6,16 @@
 #include "constants.h"
 
 typedef struct game_s game_t;
+typedef struct card_s card_t;
 
-typedef struct card_s
+struct card_s
 {
     char *   name;
     int      value;
     suit_t   suit;
-    void (* power)(struct game_s *);
+    void (* power)(const card_t * card, game_t * game);
     
-} card_t;
+};
 
 const card_t * get_master_card_list();
 

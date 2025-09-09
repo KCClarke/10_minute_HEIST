@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-void basic_power(game_t * game)
+void basic_power(const card_t * card, game_t * game)
 {
     printf("\n%s\n", __func__);
 }
