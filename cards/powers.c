@@ -6,10 +6,35 @@
 
 #include <stdio.h>
 
+static inline void update_player_suits(const card_t * card, game_t * game);
+static inline void update_player_values(const card_t * card, game_t * game);
+
 void basic_power(const card_t * card, game_t * game)
 {
-    const int curr_player = game->current_player;
+    update_player_values(card, game);
+    update_player_suits(card, game);
+
+}
+
+static inline void update_player_values(const card_t * card, game_t * game)
+{
+    const int index = game->current_player;
+    player_t * player_list = game->player_list;
+
+    switch (card->value)
+    {
+        case 3:
+        player_list[index].num_threes++;
+        break;
+    }
+
+}
+
+static inline void update_player_suits(const card_t * card, game_t * game)
+{
+    const int index = game->current_player;
+    player_t * player_list = game->player_list;
     
-    game->player_list[curr_player].num_threes++;
+    player_list[index].num_suits[card->suit] += card->value;
 
 }

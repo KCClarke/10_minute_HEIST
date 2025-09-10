@@ -33,7 +33,9 @@ static inline void test_love_potion()
     assert(0 == player_list[index].num_threes);
 
     card_t card = card_list[0];
+    
     card.power(&card, game);
-
     assert(1 == player_list[index].num_threes);
+    assert(3 == player_list[index].num_suits[POTION]);
+
 }

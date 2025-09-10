@@ -10,7 +10,8 @@
 #define TOWER_WIDTH 5
 #define TOWER_HEIGHT 8
 #define TOTAL_ROOMS TOWER_HEIGHT * TOWER_WIDTH
-#define UNIQUE_SUITS 5
+/* UNIQUE_SUITS  does not include wilds*/
+
 
 typedef enum
 {
@@ -19,6 +20,7 @@ typedef enum
     ARTIFACT,
     JEWEL,
     TOME,
+    NUM_BASIC_SUITS,
     WILD
 
 } suit_t;

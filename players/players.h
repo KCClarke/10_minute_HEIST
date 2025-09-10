@@ -12,7 +12,7 @@ typedef struct player_s player_t;
 struct player_s
 {
     int num_threes;
-    suit_t num_suits[UNIQUE_SUITS];
+    suit_t num_suits[NUM_BASIC_SUITS];
     card_t * haul[MAX_HAUL];
 
 };

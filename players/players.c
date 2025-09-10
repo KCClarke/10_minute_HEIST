@@ -7,18 +7,18 @@
 
 static player_t g_players[MAX_PLAYERS];
 
-static inline void initialize_players();
+static inline void initialize_value_counts();
 static inline void initialize_hauls();
 
 player_t * get_player_list()
 {
-    initialize_players();
+    initialize_value_counts();
     initialize_hauls();
     
     return (g_players);
 }
 
-static inline void initialize_players()
+static inline void initialize_value_counts()
 {
     for(int index = 0; index < MAX_PLAYERS; ++index)
     {
