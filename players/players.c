@@ -8,6 +8,7 @@
 static player_t g_players[MAX_PLAYERS];
 
 static inline void initialize_value_counts();
+static inline void initialize_suit_counts();
 static inline void initialize_hauls();
 
 player_t * get_player_list()
@@ -16,6 +17,18 @@ player_t * get_player_list()
     initialize_hauls();
     
     return (g_players);
+}
+
+static inline void initialize_suit_counts()
+{
+    for (int player_index = 0; player_index < MAX_PLAYERS; ++player_index)
+    {
+        for (int suit_index = 0; suit_index < NUM_BASIC_SUITS; ++suit_index)
+        {
+            g_players[player_index].num_suits[suit_index] = 0;
+        }
+    }
+
 }
 
 static inline void initialize_value_counts()
