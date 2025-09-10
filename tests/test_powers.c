@@ -28,10 +28,12 @@ static inline void test_love_potion()
     const int index = game->current_player;
     assert(0 == index);
     
-    assert(0 == game->player_list[index].num_threes);
+    player_t * player_list = game-> player_list;
+
+    assert(0 == player_list[index].num_threes);
 
     card_t card = card_list[0];
     card.power(&card, game);
 
-    assert(1 == game->player_list[index].num_threes);
+    assert(1 == player_list[index].num_threes);
 }
