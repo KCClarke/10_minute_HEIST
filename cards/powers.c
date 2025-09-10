@@ -8,5 +8,7 @@
 
 void basic_power(const card_t * card, game_t * game)
 {
-    printf("\n%s\n", __func__);
+    const int curr_player = game->current_player;
+    game->player_list[curr_player].num_threes++;
+
 }
