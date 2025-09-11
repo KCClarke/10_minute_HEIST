@@ -3,17 +3,19 @@
 #include "players.h"
 
 #include <stddef.h>
+#include <assert.h>
 
 
 static player_t g_players[MAX_PLAYERS];
 
-static inline void initialize_value_counts();
+static inline void initialize_value_and_curse_counts();
 static inline void initialize_suit_counts();
 static inline void initialize_hauls();
 
 player_t * get_player_list()
 {
-    initialize_value_counts();
+    initialize_value_and_curse_counts();
+    initialize_suit_counts();
     initialize_hauls();
     
     return (g_players);
@@ -29,16 +31,20 @@ static inline void initialize_suit_counts()
         }
     }
 
+    assert(0 == g_players[0].num_suits[0]);
 }
 
-static inline void initialize_value_counts()
+static inline void initialize_value_and_curse_counts()
 {
     for(int index = 0; index < MAX_PLAYERS; ++index)
     {
         g_players[index].num_threes = 0;
         g_players[index].num_fours  = 0;
         g_players[index].num_fives  = 0;
+
+        g_players[index].num_curses = 0;
     }
+
 }
 
 static inline void initialize_hauls()
@@ -50,5 +56,5 @@ static inline void initialize_hauls()
             g_players[index].haul[haul_index] = NULL;
         }
     }
-}
 
+}

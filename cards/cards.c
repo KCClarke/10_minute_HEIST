@@ -6,7 +6,7 @@
 
 #include <assert.h>
 
-static card_t g_master_card_list[] = 
+static card_t g_master_card_list[57] = 
 {
     {
         "Love Potion #8",
@@ -105,15 +105,11 @@ static card_t g_master_card_list[] =
     
 };
 
-static const int cards_written = sizeof(g_master_card_list) / sizeof(card_t);
-
 static inline void non_curse_light_cards();
 static inline void connect_basic_power();
 
 const card_t * get_master_card_list()
 {
-    assert(17 == cards_written);
-
     non_curse_light_cards();
     connect_basic_power();
 
@@ -125,11 +121,11 @@ static inline void non_curse_light_cards()
 {
     const int light_cards_without_curses = 15;
 
-    for (int index = 0; index < light_cards_without_curses; ++ index)
+    for (int index = 0; index < light_cards_without_curses; ++index)
     {
         g_master_card_list[0].curse = 0;
     }
-    
+
 }
 
 static inline void connect_basic_power()

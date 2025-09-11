@@ -32,6 +32,8 @@ static inline void test_player_suit_counts()
             assert(0 == player_list[player_index].num_suits[suit_index]);
         }
     }
+
+    assert(0 == player_list[0].num_suits[POTION]);
 }
 
 static inline void test_player_initialization()

@@ -17,6 +17,7 @@ static inline void test_potion_of_strength();
 void test_powers()
 {
     test_love_potion();
+    test_potion_of_strength();
 
     printf("%s passed.\n", __func__);
 }
@@ -30,10 +31,11 @@ static inline void test_potion_of_strength()
     player_t * player_list = game-> player_list;
     assert(0 == player_list[index].num_fours);
     assert(0 == player_list[index].num_suits[POTION]);
+    assert(0 == player_list[index].num_curses);
 
     card_t card = card_list[POTION_OF_STRENGTH];
     assert(4 == card.value);
-    assert(POTION == card.value);
+    assert(POTION == card.suit);
     assert(0 == card.curse);
 
     card.power(&card, game);

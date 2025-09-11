@@ -1,7 +1,7 @@
 # Makefile
 
 COMPILER = gcc
-CFLAGS   = -std=c99 -g -I. -Wall -MMD -MP
+CFLAGS   = -g -std=c99 -I. -Wall -MMD -MP
 
 # Source files
 SRC = main.c \
