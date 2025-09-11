@@ -4,6 +4,7 @@
 #define CONSTANTS_H
 
 #define MAX_PLAYERS 5
+#define LIGHT_CARDS 17
 #define TOTAL_CARDS 57
 #define MAX_HAUL TOTAL_CARDS
 #define SCORING_TILES 13
@@ -24,6 +25,35 @@ typedef enum
     WILD
 
 } suit_t;
+
+typedef enum
+{
+    LOVE_POTION_8,
+    POTION_OF_STRENGTH,
+    GREATER_POTION_OF_HEALING,
+
+    SUNSTONE_PHOENIX_FEATHER,
+    GIBBONS_PAW,
+    DRAGON_SKULL,
+
+    SPRIG_OF_THE_DAWN_TREE,
+    THE_ANGELIC_COMPASS,
+    SILVER_IDOL_OF_HUN_BATZ,
+
+    THE_EYE_OF_VALA,
+    HEART_OF_ETERNITY,
+    STONE_OF_KINGS,
+
+    ORIONS_BESTIARY,
+    FLAMELS_FORMULAS,
+    BOOK_OF_SPELLS,
+
+    CELESTIAL_TAROT,
+    INFERNAL_TAROT,
+
+    /* The end of the list of light cards. */
+
+} card_index_t;
 
 typedef enum
 {

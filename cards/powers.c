@@ -26,6 +26,7 @@ static inline void update_player_values(const card_t * card, game_t * game)
         case 3:
         player_list[index].num_threes++;
         break;
+
     }
 
 }

@@ -36,6 +36,8 @@ static inline void initialize_value_counts()
     for(int index = 0; index < MAX_PLAYERS; ++index)
     {
         g_players[index].num_threes = 0;
+        g_players[index].num_fours  = 0;
+        g_players[index].num_fives  = 0;
     }
 }
 

@@ -41,6 +41,10 @@ static inline void test_player_initialization()
     for(int index = 0; index < MAX_PLAYERS; ++index)
     {
         assert(0 == players[index].num_threes);
+        assert(0 == players[index].num_fours);
+        assert(0 == players[index].num_fives);
+
+        assert(0 == players[index].num_curses);
     }
 
 }
