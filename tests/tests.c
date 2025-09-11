@@ -7,6 +7,7 @@
 #include "test_tower.h"
 #include "test_game.h"
 #include "test_powers.h"
+#include "test_turn.h"
 
 #include <stdio.h>
 
@@ -24,6 +25,7 @@ void all_tests()
     test_tower();
     test_game();
     test_powers();
+    test_turn();
     
     printf("\n%s passed.\n\n", __func__);
     

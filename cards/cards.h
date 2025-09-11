@@ -13,6 +13,7 @@ struct card_s
     char *   name;
     int      value;
     suit_t   suit;
+    int      curse;
     void (* power)(const card_t * card, game_t * game);
     
 };

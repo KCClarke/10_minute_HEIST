@@ -8,17 +8,31 @@
 
 static inline void test_player_initialization();
 static inline void test_haul_initialization();
+static inline void test_player_suit_counts();
 
 
 void test_players()
 {
     test_player_initialization();
     test_haul_initialization();
+    test_player_suit_counts();
 
     printf("%s passed.\n", __func__);
     
 }
 
+static inline void test_player_suit_counts()
+{
+    player_t * player_list = get_player_list();
+
+    for (int player_index = 0; player_index < MAX_PLAYERS; ++player_index)
+    {
+        for (int suit_index = 0; suit_index < NUM_BASIC_SUITS; ++suit_index)
+        {
+            assert(0 == player_list[player_index].num_suits[suit_index]);
+        }
+    }
+}
 
 static inline void test_player_initialization()
 {
