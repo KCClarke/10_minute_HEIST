@@ -22,7 +22,8 @@ typedef enum
     JEWEL,
     TOME,
     NUM_BASIC_SUITS,
-    WILD
+    WILD,
+    NONE
 
 } suit_t;
 
