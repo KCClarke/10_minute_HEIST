@@ -2,6 +2,7 @@
 
 #include "powers.h"
 
+#include "constants.h"
 #include "game/game.h"
 
 #include <stdio.h>
@@ -14,6 +15,21 @@ void basic_power(const card_t * card, game_t * game)
     update_player_values(card, game);
     update_player_suits(card, game);
 
+}
+
+void wild_power(const card_t * card, game_t * game)
+{
+    player_t * player_list = game->player_list;
+    const int curr = game->current_player;
+
+    // All wilds are cursed.
+    player_list[curr].num_curses += card->curse;
+
+    for (int index = 0; index < NUM_BASIC_SUITS; ++index)
+    {
+        player_list[curr].num_suits[index] += card->value;
+    }
+    
 }
 
 static inline void update_player_values(const card_t * card, game_t * game)

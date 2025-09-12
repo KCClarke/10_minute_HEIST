@@ -141,4 +141,7 @@ static inline void connect_light_card_powers()
         g_master_card_list[index].power = basic_power;
     }
 
+    g_master_card_list[CELESTIAL_TAROT].power = wild_power;
+    g_master_card_list[INFERNAL_TAROT].power = wild_power;
+
 }

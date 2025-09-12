@@ -13,13 +13,50 @@
 
 static inline void test_love_potion();
 static inline void test_potion_of_strength();
+static inline void test_tarot_cards();
 
 void test_powers()
 {
     test_love_potion();
     test_potion_of_strength();
+    test_tarot_cards();
 
     printf("%s passed.\n", __func__);
+}
+
+static inline void test_tarot_cards()
+{
+    game_t * game = get_game();
+    const card_t * card_list = get_master_card_list();
+    const int index = game->current_player;
+    player_t * player_list = game->player_list;
+
+    card_t celestial = card_list[CELESTIAL_TAROT];
+    assert(2 == celestial.value);
+    assert(WILD == celestial.suit);
+    assert(1 == celestial.curse);
+
+    celestial.power(&celestial, game);
+    assert(1 == player_list[index].num_curses);
+    assert(2 == player_list[index].num_suits[POTION]);
+    assert(2 == player_list[index].num_suits[FOSSIL]);
+    assert(2 == player_list[index].num_suits[ARTIFACT]);
+    assert(2 == player_list[index].num_suits[JEWEL]);
+    assert(2 == player_list[index].num_suits[TOME]);
+
+    card_t infernal = card_list[INFERNAL_TAROT];
+    assert(2 == infernal.value);
+    assert(WILD == infernal.suit);
+    assert(1 == infernal.curse);
+
+    infernal.power(&infernal, game);
+    assert(2 == player_list[index].num_curses);
+    assert(4 == player_list[index].num_suits[POTION]);
+    assert(4 == player_list[index].num_suits[FOSSIL]);
+    assert(4 == player_list[index].num_suits[ARTIFACT]);
+    assert(4 == player_list[index].num_suits[JEWEL]);
+    assert(4 == player_list[index].num_suits[TOME]);
+
 }
 
 static inline void test_potion_of_strength()
