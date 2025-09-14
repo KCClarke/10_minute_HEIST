@@ -11,7 +11,7 @@ int main()
     seed_random();
     all_tests();
 
-    for (int test_index = 0; test_index < 100; ++test_index)
+    for (int test_index = 0; test_index < 10; ++test_index)
     {
         game_t * game = get_game();
 
@@ -20,6 +20,8 @@ int main()
             char * card_name = game->player_list[index].haul[0]->name;
             printf("haul: %s\n", card_name);
         }
+
+        // TODO: print player stats see if they match the card
 
         for (int index = 0; index < TOWER_WIDTH; ++index)
         {

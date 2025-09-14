@@ -24,7 +24,6 @@ void test_tower()
 
 }
 
-
 static inline void moving_love_potion_around()
 {
     room_t * tower = get_tower();

@@ -31,8 +31,8 @@ static inline void initialize_dealt();
 static inline void deal_to_players(const card_t * card_list);
 static inline void deal_to_first_floor(const card_t * card_list);
 
-static inline card_t * g
-et_card(const card_t * card_list, const card_range_t range);
+static inline card_t * 
+get_card(const card_t * card_list, const card_range_t range);
 
 static inline int 
 get_undealt_card_index(const card_index_t first, const card_index_t last);
@@ -57,7 +57,8 @@ static inline void deal_to_first_floor(const card_t * card_list)
 {
     for (int tower_index = 0; tower_index < TOWER_WIDTH; ++tower_index)
     {
-        g_game.tower[tower_index].p_card = get_card(card_list, light_card_range);
+        card_t * card = get_card(card_list, light_card_range);
+        g_game.tower[tower_index].p_card = card;
         
     }
 
@@ -68,8 +69,10 @@ static inline void deal_to_players(const card_t * card_list)
 {
     for (int player_index = 0; player_index < g_game.num_players; ++player_index)
     {
-        g_game.player_list[player_index].haul[0] = get_card(card_list, light_card_range);
- 
+        card_t * card = get_card(card_list, light_card_range);
+        g_game.player_list[player_index].haul[0] = card;
+
+        card->power(card, &g_game);
     }
 
 }
