@@ -14,12 +14,14 @@ int main()
     for (int test_index = 0; test_index < 100; ++test_index)
     {
         game_t * game = get_game();
-        
+
         for (int index = 0; index < game->num_players; ++index)
         {
             char * card_name = game->player_list[index].haul[0]->name;
             printf("hello %s\n", card_name);
         }
+
+        printf("\n");
 
     }
     

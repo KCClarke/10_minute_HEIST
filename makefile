@@ -46,7 +46,6 @@ build/%.o: %.c
 
 # Run
 run: $(TARGET)
-	./$(TARGET)
 	./$(TARGET) > output.txt
 
 # Clean
