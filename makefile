@@ -12,6 +12,7 @@ SRC = main.c \
       tests/tests.c \
 	  turn/turn.c \
 	  game/game.c \
+	  random/random.c \
 	  \
 	  tests/test_turn.c \
       tests/test_players.c \

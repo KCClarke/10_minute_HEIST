@@ -41,7 +41,6 @@ static inline void initialize_value_and_curse_counts()
         g_players[index].num_threes = 0;
         g_players[index].num_fours  = 0;
         g_players[index].num_fives  = 0;
-
         g_players[index].num_curses = 0;
     }
 
