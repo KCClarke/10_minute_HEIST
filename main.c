@@ -18,10 +18,15 @@ int main()
         for (int index = 0; index < game->num_players; ++index)
         {
             char * card_name = game->player_list[index].haul[0]->name;
-            printf("hello %s\n", card_name);
+            printf("haul: %s\n", card_name);
         }
 
-        printf("\n");
+        for (int index = 0; index < TOWER_WIDTH; ++index)
+        {
+            char * card_name = game->tower[index].p_card->name;
+            printf("tower: %s\n", card_name);
+        }
+        printf("\n\n");
 
     }
     

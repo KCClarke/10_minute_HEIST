@@ -9,603 +9,803 @@ test_turn passed.
 
 all_tests passed.
 
-hello Stone of Kings
-hello Book of Spells
-hello Sunstone Phoenix Feather
-hello Orion's Bestiary
-hello Infernal Tarot
-
-hello Sunstone Phoenix Feather
-hello Heart of Eternity
-hello The Eye of Vala
-hello Flamel's Formulas
-hello The Angelic Compass
-
-hello Flamel's Formulas
-hello Infernal Tarot
-hello Love Potion #8
-hello Silver Idol of Hun-Batz
-hello Celestial Tarot
-
-hello Heart of Eternity
-hello Sprig of the Dawn Tree
-hello Celestial Tarot
-hello Orion's Bestiary
-hello Infernal Tarot
-
-hello Heart of Eternity
-hello Love Potion #8
-hello Stone of Kings
-hello Dragon Skull
-hello Sprig of the Dawn Tree
-
-hello Orion's Bestiary
-hello Infernal Tarot
-hello Sunstone Phoenix Feather
-hello Celestial Tarot
-hello Heart of Eternity
-
-hello Potion of Strength
-hello The Eye of Vala
-hello Sunstone Phoenix Feather
-hello Orion's Bestiary
-hello Celestial Tarot
-
-hello Greater Potion of Healing
-hello Silver Idol of Hun-Batz
-hello Book of Spells
-hello Infernal Tarot
-hello Stone of Kings
-
-hello Stone of Kings
-hello Gibbon's Paw
-hello Heart of Eternity
-hello Sunstone Phoenix Feather
-hello Infernal Tarot
-
-hello Dragon Skull
-hello Greater Potion of Healing
-hello Silver Idol of Hun-Batz
-hello Flamel's Formulas
-hello Stone of Kings
-
-hello Silver Idol of Hun-Batz
-hello Orion's Bestiary
-hello Sprig of the Dawn Tree
-hello Dragon Skull
-hello Celestial Tarot
-
-hello Celestial Tarot
-hello Flamel's Formulas
-hello Potion of Strength
-hello Infernal Tarot
-hello The Eye of Vala
-
-hello Flamel's Formulas
-hello Stone of Kings
-hello Gibbon's Paw
-hello Heart of Eternity
-hello Orion's Bestiary
-
-hello Greater Potion of Healing
-hello Gibbon's Paw
-hello The Angelic Compass
-hello Dragon Skull
-hello Book of Spells
-
-hello Heart of Eternity
-hello Gibbon's Paw
-hello Greater Potion of Healing
-hello Orion's Bestiary
-hello Flamel's Formulas
-
-hello The Angelic Compass
-hello Silver Idol of Hun-Batz
-hello Love Potion #8
-hello Infernal Tarot
-hello Sunstone Phoenix Feather
-
-hello Book of Spells
-hello Gibbon's Paw
-hello The Angelic Compass
-hello Orion's Bestiary
-hello Potion of Strength
-
-hello Gibbon's Paw
-hello Flamel's Formulas
-hello Orion's Bestiary
-hello Silver Idol of Hun-Batz
-hello Dragon Skull
-
-hello Stone of Kings
-hello Sprig of the Dawn Tree
-hello Love Potion #8
-hello Orion's Bestiary
-hello Heart of Eternity
-
-hello The Angelic Compass
-hello Potion of Strength
-hello Gibbon's Paw
-hello The Eye of Vala
-hello Orion's Bestiary
-
-hello Love Potion #8
-hello Sunstone Phoenix Feather
-hello Silver Idol of Hun-Batz
-hello Celestial Tarot
-hello Potion of Strength
-
-hello Flamel's Formulas
-hello Dragon Skull
-hello Potion of Strength
-hello The Angelic Compass
-hello Sprig of the Dawn Tree
-
-hello Dragon Skull
-hello Sunstone Phoenix Feather
-hello Infernal Tarot
-hello Stone of Kings
-hello Love Potion #8
-
-hello Gibbon's Paw
-hello Sprig of the Dawn Tree
-hello Love Potion #8
-hello Infernal Tarot
-hello Orion's Bestiary
-
-hello Love Potion #8
-hello Sprig of the Dawn Tree
-hello Orion's Bestiary
-hello Gibbon's Paw
-hello Celestial Tarot
-
-hello The Angelic Compass
-hello Gibbon's Paw
-hello Flamel's Formulas
-hello The Eye of Vala
-hello Orion's Bestiary
-
-hello Stone of Kings
-hello Heart of Eternity
-hello Dragon Skull
-hello Sprig of the Dawn Tree
-hello Book of Spells
-
-hello Sprig of the Dawn Tree
-hello Book of Spells
-hello Greater Potion of Healing
-hello Heart of Eternity
-hello Infernal Tarot
-
-hello Sprig of the Dawn Tree
-hello The Eye of Vala
-hello The Angelic Compass
-hello Orion's Bestiary
-hello Book of Spells
-
-hello Orion's Bestiary
-hello Love Potion #8
-hello Book of Spells
-hello Stone of Kings
-hello Flamel's Formulas
-
-hello Love Potion #8
-hello Dragon Skull
-hello Book of Spells
-hello Stone of Kings
-hello Gibbon's Paw
-
-hello Heart of Eternity
-hello Sunstone Phoenix Feather
-hello Celestial Tarot
-hello Gibbon's Paw
-hello Orion's Bestiary
-
-hello Gibbon's Paw
-hello Silver Idol of Hun-Batz
-hello The Eye of Vala
-hello Sprig of the Dawn Tree
-hello Heart of Eternity
-
-hello Greater Potion of Healing
-hello Dragon Skull
-hello Celestial Tarot
-hello Stone of Kings
-hello Book of Spells
-
-hello Gibbon's Paw
-hello Sprig of the Dawn Tree
-hello Stone of Kings
-hello Love Potion #8
-hello The Angelic Compass
-
-hello Stone of Kings
-hello Sunstone Phoenix Feather
-hello Gibbon's Paw
-hello Silver Idol of Hun-Batz
-hello Celestial Tarot
-
-hello Sprig of the Dawn Tree
-hello Potion of Strength
-hello Love Potion #8
-hello Dragon Skull
-hello Gibbon's Paw
-
-hello Orion's Bestiary
-hello Flamel's Formulas
-hello Greater Potion of Healing
-hello Love Potion #8
-hello Sunstone Phoenix Feather
-
-hello Greater Potion of Healing
-hello Silver Idol of Hun-Batz
-hello The Eye of Vala
-hello Flamel's Formulas
-hello Gibbon's Paw
-
-hello Book of Spells
-hello Greater Potion of Healing
-hello Flamel's Formulas
-hello Silver Idol of Hun-Batz
-hello Dragon Skull
-
-hello Sprig of the Dawn Tree
-hello The Angelic Compass
-hello Silver Idol of Hun-Batz
-hello Love Potion #8
-hello Stone of Kings
-
-hello Silver Idol of Hun-Batz
-hello Infernal Tarot
-hello The Eye of Vala
-hello Gibbon's Paw
-hello Flamel's Formulas
-
-hello Greater Potion of Healing
-hello Orion's Bestiary
-hello The Eye of Vala
-hello Gibbon's Paw
-hello Flamel's Formulas
-
-hello Stone of Kings
-hello Celestial Tarot
-hello Potion of Strength
-hello The Angelic Compass
-hello Heart of Eternity
-
-hello Sprig of the Dawn Tree
-hello Sunstone Phoenix Feather
-hello Orion's Bestiary
-hello Gibbon's Paw
-hello Infernal Tarot
-
-hello Greater Potion of Healing
-hello Silver Idol of Hun-Batz
-hello Sprig of the Dawn Tree
-hello The Eye of Vala
-hello Infernal Tarot
-
-hello Dragon Skull
-hello Greater Potion of Healing
-hello The Eye of Vala
-hello Flamel's Formulas
-hello Gibbon's Paw
-
-hello Love Potion #8
-hello Orion's Bestiary
-hello Infernal Tarot
-hello Potion of Strength
-hello Silver Idol of Hun-Batz
-
-hello Silver Idol of Hun-Batz
-hello Dragon Skull
-hello Sunstone Phoenix Feather
-hello Greater Potion of Healing
-hello Love Potion #8
-
-hello Sunstone Phoenix Feather
-hello Heart of Eternity
-hello Stone of Kings
-hello The Eye of Vala
-hello Flamel's Formulas
-
-hello Sprig of the Dawn Tree
-hello Orion's Bestiary
-hello Silver Idol of Hun-Batz
-hello Greater Potion of Healing
-hello Love Potion #8
-
-hello Love Potion #8
-hello Greater Potion of Healing
-hello Dragon Skull
-hello Heart of Eternity
-hello Potion of Strength
-
-hello Heart of Eternity
-hello Potion of Strength
-hello Dragon Skull
-hello Stone of Kings
-hello Book of Spells
-
-hello Dragon Skull
-hello Orion's Bestiary
-hello Flamel's Formulas
-hello Love Potion #8
-hello The Angelic Compass
-
-hello Book of Spells
-hello Sunstone Phoenix Feather
-hello The Angelic Compass
-hello Love Potion #8
-hello Orion's Bestiary
-
-hello Love Potion #8
-hello Silver Idol of Hun-Batz
-hello Sprig of the Dawn Tree
-hello Greater Potion of Healing
-hello Sunstone Phoenix Feather
-
-hello Book of Spells
-hello Dragon Skull
-hello Sunstone Phoenix Feather
-hello The Angelic Compass
-hello Celestial Tarot
-
-hello Infernal Tarot
-hello Silver Idol of Hun-Batz
-hello The Eye of Vala
-hello Potion of Strength
-hello Book of Spells
-
-hello Greater Potion of Healing
-hello Celestial Tarot
-hello Potion of Strength
-hello Flamel's Formulas
-hello Book of Spells
-
-hello Flamel's Formulas
-hello Infernal Tarot
-hello Celestial Tarot
-hello Stone of Kings
-hello Greater Potion of Healing
-
-hello Greater Potion of Healing
-hello Dragon Skull
-hello Gibbon's Paw
-hello Heart of Eternity
-hello The Angelic Compass
-
-hello Celestial Tarot
-hello Infernal Tarot
-hello Flamel's Formulas
-hello Dragon Skull
-hello Gibbon's Paw
-
-hello Celestial Tarot
-hello Greater Potion of Healing
-hello Dragon Skull
-hello Orion's Bestiary
-hello Sunstone Phoenix Feather
-
-hello Potion of Strength
-hello Book of Spells
-hello Infernal Tarot
-hello Celestial Tarot
-hello Dragon Skull
-
-hello Heart of Eternity
-hello Flamel's Formulas
-hello Sunstone Phoenix Feather
-hello Gibbon's Paw
-hello The Angelic Compass
-
-hello Potion of Strength
-hello Dragon Skull
-hello The Eye of Vala
-hello Sprig of the Dawn Tree
-hello Flamel's Formulas
-
-hello The Angelic Compass
-hello Potion of Strength
-hello Sunstone Phoenix Feather
-hello Gibbon's Paw
-hello Love Potion #8
-
-hello Love Potion #8
-hello Celestial Tarot
-hello Dragon Skull
-hello Sunstone Phoenix Feather
-hello The Angelic Compass
-
-hello Silver Idol of Hun-Batz
-hello Heart of Eternity
-hello Dragon Skull
-hello The Angelic Compass
-hello Greater Potion of Healing
-
-hello Sunstone Phoenix Feather
-hello Flamel's Formulas
-hello Sprig of the Dawn Tree
-hello The Eye of Vala
-hello Book of Spells
-
-hello Heart of Eternity
-hello Love Potion #8
-hello Greater Potion of Healing
-hello Sunstone Phoenix Feather
-hello Silver Idol of Hun-Batz
-
-hello Gibbon's Paw
-hello Infernal Tarot
-hello Orion's Bestiary
-hello Celestial Tarot
-hello Greater Potion of Healing
-
-hello Sunstone Phoenix Feather
-hello Celestial Tarot
-hello Book of Spells
-hello The Eye of Vala
-hello Sprig of the Dawn Tree
-
-hello Dragon Skull
-hello Sunstone Phoenix Feather
-hello Infernal Tarot
-hello Heart of Eternity
-hello Orion's Bestiary
-
-hello Dragon Skull
-hello Greater Potion of Healing
-hello The Angelic Compass
-hello Celestial Tarot
-hello Stone of Kings
-
-hello Orion's Bestiary
-hello Infernal Tarot
-hello Book of Spells
-hello Sunstone Phoenix Feather
-hello Greater Potion of Healing
-
-hello Heart of Eternity
-hello Celestial Tarot
-hello Dragon Skull
-hello Silver Idol of Hun-Batz
-hello The Angelic Compass
-
-hello Heart of Eternity
-hello Silver Idol of Hun-Batz
-hello Sunstone Phoenix Feather
-hello Book of Spells
-hello Dragon Skull
-
-hello Orion's Bestiary
-hello Love Potion #8
-hello Greater Potion of Healing
-hello Flamel's Formulas
-hello Sprig of the Dawn Tree
-
-hello Infernal Tarot
-hello Book of Spells
-hello Gibbon's Paw
-hello Heart of Eternity
-hello Silver Idol of Hun-Batz
-
-hello Sunstone Phoenix Feather
-hello Dragon Skull
-hello Sprig of the Dawn Tree
-hello Book of Spells
-hello Silver Idol of Hun-Batz
-
-hello The Angelic Compass
-hello Dragon Skull
-hello Orion's Bestiary
-hello Celestial Tarot
-hello Infernal Tarot
-
-hello Potion of Strength
-hello The Eye of Vala
-hello Sprig of the Dawn Tree
-hello Sunstone Phoenix Feather
-hello Orion's Bestiary
-
-hello Sunstone Phoenix Feather
-hello Love Potion #8
-hello Celestial Tarot
-hello Heart of Eternity
-hello Infernal Tarot
-
-hello Book of Spells
-hello Orion's Bestiary
-hello Stone of Kings
-hello Sunstone Phoenix Feather
-hello The Angelic Compass
-
-hello The Angelic Compass
-hello Sunstone Phoenix Feather
-hello Celestial Tarot
-hello Heart of Eternity
-hello Silver Idol of Hun-Batz
-
-hello Sunstone Phoenix Feather
-hello The Angelic Compass
-hello Celestial Tarot
-hello The Eye of Vala
-hello Gibbon's Paw
-
-hello Sunstone Phoenix Feather
-hello Orion's Bestiary
-hello Greater Potion of Healing
-hello Gibbon's Paw
-hello Silver Idol of Hun-Batz
-
-hello The Angelic Compass
-hello Celestial Tarot
-hello Stone of Kings
-hello Love Potion #8
-hello Book of Spells
-
-hello Silver Idol of Hun-Batz
-hello Stone of Kings
-hello Orion's Bestiary
-hello Dragon Skull
-hello Sprig of the Dawn Tree
-
-hello Dragon Skull
-hello The Angelic Compass
-hello Love Potion #8
-hello Orion's Bestiary
-hello Greater Potion of Healing
-
-hello Heart of Eternity
-hello Sprig of the Dawn Tree
-hello Orion's Bestiary
-hello Flamel's Formulas
-hello Silver Idol of Hun-Batz
-
-hello Dragon Skull
-hello Stone of Kings
-hello Silver Idol of Hun-Batz
-hello Flamel's Formulas
-hello Orion's Bestiary
-
-hello The Eye of Vala
-hello Gibbon's Paw
-hello Greater Potion of Healing
-hello The Angelic Compass
-hello Book of Spells
-
-hello Greater Potion of Healing
-hello Gibbon's Paw
-hello Orion's Bestiary
-hello Infernal Tarot
-hello Silver Idol of Hun-Batz
-
-hello Potion of Strength
-hello Dragon Skull
-hello Celestial Tarot
-hello Orion's Bestiary
-hello Sunstone Phoenix Feather
-
-hello The Eye of Vala
-hello Love Potion #8
-hello Flamel's Formulas
-hello Dragon Skull
-hello Gibbon's Paw
-
-hello The Eye of Vala
-hello The Angelic Compass
-hello Celestial Tarot
-hello Love Potion #8
-hello Orion's Bestiary
-
-hello Stone of Kings
-hello Gibbon's Paw
-hello Book of Spells
-hello Orion's Bestiary
-hello Heart of Eternity
-
-hello Book of Spells
-hello Celestial Tarot
-hello The Eye of Vala
-hello The Angelic Compass
-hello Heart of Eternity
+haul: Heart of Eternity
+tower: Flamel's Formulas
+tower: Gibbon's Paw
+tower: Sprig of the Dawn Tree
+tower: Stone of Kings
+tower: Infernal Tarot
+
+
+haul: Celestial Tarot
+tower: Sprig of the Dawn Tree
+tower: Love Potion #8
+tower: Orion's Bestiary
+tower: Infernal Tarot
+tower: Greater Potion of Healing
+
+
+haul: Flamel's Formulas
+tower: Greater Potion of Healing
+tower: Silver Idol of Hun-Batz
+tower: Sunstone Phoenix Feather
+tower: Book of Spells
+tower: Celestial Tarot
+
+
+haul: The Angelic Compass
+tower: Stone of Kings
+tower: Celestial Tarot
+tower: Greater Potion of Healing
+tower: Orion's Bestiary
+tower: Sunstone Phoenix Feather
+
+
+haul: Greater Potion of Healing
+tower: Potion of Strength
+tower: Book of Spells
+tower: Love Potion #8
+tower: Sunstone Phoenix Feather
+tower: Infernal Tarot
+
+
+haul: Potion of Strength
+tower: Orion's Bestiary
+tower: Celestial Tarot
+tower: Greater Potion of Healing
+tower: Silver Idol of Hun-Batz
+tower: Love Potion #8
+
+
+haul: Heart of Eternity
+tower: Greater Potion of Healing
+tower: Sunstone Phoenix Feather
+tower: The Angelic Compass
+tower: The Eye of Vala
+tower: Infernal Tarot
+
+
+haul: Greater Potion of Healing
+tower: The Angelic Compass
+tower: Flamel's Formulas
+tower: Gibbon's Paw
+tower: Book of Spells
+tower: The Eye of Vala
+
+
+haul: The Angelic Compass
+tower: Sunstone Phoenix Feather
+tower: Heart of Eternity
+tower: Gibbon's Paw
+tower: The Eye of Vala
+tower: Sprig of the Dawn Tree
+
+
+haul: Sunstone Phoenix Feather
+tower: Silver Idol of Hun-Batz
+tower: The Angelic Compass
+tower: Celestial Tarot
+tower: Dragon Skull
+tower: The Eye of Vala
+
+
+haul: Sprig of the Dawn Tree
+tower: Dragon Skull
+tower: Greater Potion of Healing
+tower: Silver Idol of Hun-Batz
+tower: The Angelic Compass
+tower: Love Potion #8
+
+
+haul: The Angelic Compass
+tower: Stone of Kings
+tower: Sprig of the Dawn Tree
+tower: Flamel's Formulas
+tower: Greater Potion of Healing
+tower: Love Potion #8
+
+
+haul: Sunstone Phoenix Feather
+tower: Sprig of the Dawn Tree
+tower: Flamel's Formulas
+tower: Infernal Tarot
+tower: Heart of Eternity
+tower: Celestial Tarot
+
+
+haul: Sprig of the Dawn Tree
+tower: Flamel's Formulas
+tower: Dragon Skull
+tower: Stone of Kings
+tower: Heart of Eternity
+tower: Love Potion #8
+
+
+haul: Celestial Tarot
+tower: The Angelic Compass
+tower: Dragon Skull
+tower: Infernal Tarot
+tower: Sprig of the Dawn Tree
+tower: Orion's Bestiary
+
+
+haul: The Eye of Vala
+tower: Stone of Kings
+tower: The Angelic Compass
+tower: Celestial Tarot
+tower: Flamel's Formulas
+tower: Sprig of the Dawn Tree
+
+
+haul: Potion of Strength
+tower: Greater Potion of Healing
+tower: The Eye of Vala
+tower: Flamel's Formulas
+tower: Celestial Tarot
+tower: Book of Spells
+
+
+haul: The Angelic Compass
+tower: Infernal Tarot
+tower: Greater Potion of Healing
+tower: Gibbon's Paw
+tower: Celestial Tarot
+tower: Flamel's Formulas
+
+
+haul: Book of Spells
+tower: Sunstone Phoenix Feather
+tower: Orion's Bestiary
+tower: Heart of Eternity
+tower: Greater Potion of Healing
+tower: Love Potion #8
+
+
+haul: Silver Idol of Hun-Batz
+tower: Stone of Kings
+tower: Infernal Tarot
+tower: Sunstone Phoenix Feather
+tower: Potion of Strength
+tower: Book of Spells
+
+
+haul: Silver Idol of Hun-Batz
+tower: Celestial Tarot
+tower: Potion of Strength
+tower: Infernal Tarot
+tower: Stone of Kings
+tower: Flamel's Formulas
+
+
+haul: Flamel's Formulas
+tower: Orion's Bestiary
+tower: Greater Potion of Healing
+tower: Celestial Tarot
+tower: Dragon Skull
+tower: Infernal Tarot
+
+
+haul: Flamel's Formulas
+tower: Love Potion #8
+tower: Infernal Tarot
+tower: The Angelic Compass
+tower: Silver Idol of Hun-Batz
+tower: Book of Spells
+
+
+haul: Silver Idol of Hun-Batz
+tower: Infernal Tarot
+tower: Dragon Skull
+tower: Potion of Strength
+tower: Celestial Tarot
+tower: The Angelic Compass
+
+
+haul: Greater Potion of Healing
+tower: Flamel's Formulas
+tower: Dragon Skull
+tower: The Eye of Vala
+tower: Heart of Eternity
+tower: Sprig of the Dawn Tree
+
+
+haul: The Angelic Compass
+tower: Gibbon's Paw
+tower: Infernal Tarot
+tower: Love Potion #8
+tower: Sprig of the Dawn Tree
+tower: Orion's Bestiary
+
+
+haul: Book of Spells
+tower: Heart of Eternity
+tower: Stone of Kings
+tower: The Eye of Vala
+tower: Sprig of the Dawn Tree
+tower: Silver Idol of Hun-Batz
+
+
+haul: Dragon Skull
+tower: Flamel's Formulas
+tower: Celestial Tarot
+tower: Greater Potion of Healing
+tower: Sunstone Phoenix Feather
+tower: Book of Spells
+
+
+haul: Sprig of the Dawn Tree
+tower: Dragon Skull
+tower: Flamel's Formulas
+tower: Silver Idol of Hun-Batz
+tower: Greater Potion of Healing
+tower: Celestial Tarot
+
+
+haul: Potion of Strength
+tower: The Angelic Compass
+tower: Dragon Skull
+tower: Gibbon's Paw
+tower: Stone of Kings
+tower: Silver Idol of Hun-Batz
+
+
+haul: Gibbon's Paw
+tower: Stone of Kings
+tower: Book of Spells
+tower: Celestial Tarot
+tower: The Angelic Compass
+tower: Silver Idol of Hun-Batz
+
+
+haul: Infernal Tarot
+tower: Love Potion #8
+tower: Book of Spells
+tower: Sprig of the Dawn Tree
+tower: Dragon Skull
+tower: Heart of Eternity
+
+
+haul: Gibbon's Paw
+tower: The Angelic Compass
+tower: Flamel's Formulas
+tower: Potion of Strength
+tower: The Eye of Vala
+tower: Love Potion #8
+
+
+haul: The Angelic Compass
+tower: Stone of Kings
+tower: Love Potion #8
+tower: Heart of Eternity
+tower: Gibbon's Paw
+tower: Book of Spells
+
+
+haul: Silver Idol of Hun-Batz
+tower: Heart of Eternity
+tower: Sunstone Phoenix Feather
+tower: Celestial Tarot
+tower: The Eye of Vala
+tower: Gibbon's Paw
+
+
+haul: Orion's Bestiary
+tower: Book of Spells
+tower: Silver Idol of Hun-Batz
+tower: Dragon Skull
+tower: Potion of Strength
+tower: Greater Potion of Healing
+
+
+haul: Stone of Kings
+tower: Potion of Strength
+tower: Celestial Tarot
+tower: Sunstone Phoenix Feather
+tower: The Angelic Compass
+tower: Flamel's Formulas
+
+
+haul: Stone of Kings
+tower: Gibbon's Paw
+tower: Orion's Bestiary
+tower: Greater Potion of Healing
+tower: Sprig of the Dawn Tree
+tower: Potion of Strength
+
+
+haul: Gibbon's Paw
+tower: Heart of Eternity
+tower: Celestial Tarot
+tower: Orion's Bestiary
+tower: Greater Potion of Healing
+tower: Dragon Skull
+
+
+haul: Dragon Skull
+tower: Heart of Eternity
+tower: Flamel's Formulas
+tower: The Eye of Vala
+tower: Stone of Kings
+tower: Gibbon's Paw
+
+
+haul: Heart of Eternity
+tower: Sprig of the Dawn Tree
+tower: Infernal Tarot
+tower: Greater Potion of Healing
+tower: The Eye of Vala
+tower: Book of Spells
+
+
+haul: Book of Spells
+tower: Stone of Kings
+tower: Silver Idol of Hun-Batz
+tower: Sunstone Phoenix Feather
+tower: Orion's Bestiary
+tower: Flamel's Formulas
+
+
+haul: Stone of Kings
+tower: The Angelic Compass
+tower: Infernal Tarot
+tower: Orion's Bestiary
+tower: Love Potion #8
+tower: Gibbon's Paw
+
+
+haul: Sunstone Phoenix Feather
+tower: Orion's Bestiary
+tower: Flamel's Formulas
+tower: Book of Spells
+tower: Dragon Skull
+tower: The Eye of Vala
+
+
+haul: The Eye of Vala
+tower: Celestial Tarot
+tower: Greater Potion of Healing
+tower: Flamel's Formulas
+tower: Orion's Bestiary
+tower: Infernal Tarot
+
+
+haul: Sprig of the Dawn Tree
+tower: Flamel's Formulas
+tower: Love Potion #8
+tower: Celestial Tarot
+tower: Orion's Bestiary
+tower: Stone of Kings
+
+
+haul: Stone of Kings
+tower: Dragon Skull
+tower: Love Potion #8
+tower: The Eye of Vala
+tower: Infernal Tarot
+tower: Gibbon's Paw
+
+
+haul: Love Potion #8
+tower: Sunstone Phoenix Feather
+tower: The Angelic Compass
+tower: Flamel's Formulas
+tower: Infernal Tarot
+tower: Gibbon's Paw
+
+
+haul: Potion of Strength
+tower: Sunstone Phoenix Feather
+tower: Flamel's Formulas
+tower: Heart of Eternity
+tower: Love Potion #8
+tower: Celestial Tarot
+
+
+haul: The Angelic Compass
+tower: Book of Spells
+tower: The Eye of Vala
+tower: Sunstone Phoenix Feather
+tower: Potion of Strength
+tower: Greater Potion of Healing
+
+
+haul: Love Potion #8
+tower: Potion of Strength
+tower: Flamel's Formulas
+tower: Stone of Kings
+tower: Orion's Bestiary
+tower: Greater Potion of Healing
+
+
+haul: Stone of Kings
+tower: Gibbon's Paw
+tower: Potion of Strength
+tower: Heart of Eternity
+tower: The Angelic Compass
+tower: Orion's Bestiary
+
+
+haul: Book of Spells
+tower: Stone of Kings
+tower: Potion of Strength
+tower: Flamel's Formulas
+tower: Sprig of the Dawn Tree
+tower: Heart of Eternity
+
+
+haul: Book of Spells
+tower: Stone of Kings
+tower: Sunstone Phoenix Feather
+tower: Gibbon's Paw
+tower: Flamel's Formulas
+tower: Sprig of the Dawn Tree
+
+
+haul: Celestial Tarot
+tower: Gibbon's Paw
+tower: The Angelic Compass
+tower: Book of Spells
+tower: Potion of Strength
+tower: Flamel's Formulas
+
+
+haul: The Angelic Compass
+tower: Sprig of the Dawn Tree
+tower: Book of Spells
+tower: Potion of Strength
+tower: Orion's Bestiary
+tower: Celestial Tarot
+
+
+haul: The Eye of Vala
+tower: Stone of Kings
+tower: The Angelic Compass
+tower: Silver Idol of Hun-Batz
+tower: Gibbon's Paw
+tower: Sprig of the Dawn Tree
+
+
+haul: Book of Spells
+tower: Love Potion #8
+tower: Infernal Tarot
+tower: Heart of Eternity
+tower: Potion of Strength
+tower: The Angelic Compass
+
+
+haul: Dragon Skull
+tower: Sunstone Phoenix Feather
+tower: Silver Idol of Hun-Batz
+tower: Heart of Eternity
+tower: Infernal Tarot
+tower: Stone of Kings
+
+
+haul: Orion's Bestiary
+tower: Infernal Tarot
+tower: Silver Idol of Hun-Batz
+tower: Sprig of the Dawn Tree
+tower: Gibbon's Paw
+tower: Celestial Tarot
+
+
+haul: Flamel's Formulas
+tower: The Angelic Compass
+tower: Potion of Strength
+tower: Greater Potion of Healing
+tower: Gibbon's Paw
+tower: Love Potion #8
+
+
+haul: Love Potion #8
+tower: Flamel's Formulas
+tower: Greater Potion of Healing
+tower: Sprig of the Dawn Tree
+tower: The Angelic Compass
+tower: Dragon Skull
+
+
+haul: Sprig of the Dawn Tree
+tower: Greater Potion of Healing
+tower: Infernal Tarot
+tower: Love Potion #8
+tower: Book of Spells
+tower: Celestial Tarot
+
+
+haul: The Angelic Compass
+tower: Heart of Eternity
+tower: Flamel's Formulas
+tower: Potion of Strength
+tower: Book of Spells
+tower: Orion's Bestiary
+
+
+haul: Celestial Tarot
+tower: Heart of Eternity
+tower: Potion of Strength
+tower: Stone of Kings
+tower: Gibbon's Paw
+tower: Orion's Bestiary
+
+
+haul: Potion of Strength
+tower: Sprig of the Dawn Tree
+tower: Celestial Tarot
+tower: Orion's Bestiary
+tower: Love Potion #8
+tower: Stone of Kings
+
+
+haul: Sprig of the Dawn Tree
+tower: Silver Idol of Hun-Batz
+tower: Orion's Bestiary
+tower: Potion of Strength
+tower: Book of Spells
+tower: Sunstone Phoenix Feather
+
+
+haul: Gibbon's Paw
+tower: Sprig of the Dawn Tree
+tower: Potion of Strength
+tower: Love Potion #8
+tower: The Eye of Vala
+tower: Heart of Eternity
+
+
+haul: Heart of Eternity
+tower: Dragon Skull
+tower: Sunstone Phoenix Feather
+tower: Gibbon's Paw
+tower: The Eye of Vala
+tower: Greater Potion of Healing
+
+
+haul: Book of Spells
+tower: Infernal Tarot
+tower: Celestial Tarot
+tower: Dragon Skull
+tower: Heart of Eternity
+tower: Gibbon's Paw
+
+
+haul: Sprig of the Dawn Tree
+tower: Potion of Strength
+tower: Heart of Eternity
+tower: Sunstone Phoenix Feather
+tower: Gibbon's Paw
+tower: Book of Spells
+
+
+haul: Silver Idol of Hun-Batz
+tower: Celestial Tarot
+tower: Love Potion #8
+tower: The Eye of Vala
+tower: The Angelic Compass
+tower: Gibbon's Paw
+
+
+haul: Orion's Bestiary
+tower: Heart of Eternity
+tower: Silver Idol of Hun-Batz
+tower: Gibbon's Paw
+tower: Book of Spells
+tower: Stone of Kings
+
+
+haul: Silver Idol of Hun-Batz
+tower: The Angelic Compass
+tower: Orion's Bestiary
+tower: Gibbon's Paw
+tower: Dragon Skull
+tower: Stone of Kings
+
+
+haul: The Eye of Vala
+tower: Infernal Tarot
+tower: Celestial Tarot
+tower: Love Potion #8
+tower: The Angelic Compass
+tower: Dragon Skull
+
+
+haul: Gibbon's Paw
+tower: Silver Idol of Hun-Batz
+tower: Flamel's Formulas
+tower: Sunstone Phoenix Feather
+tower: Celestial Tarot
+tower: Orion's Bestiary
+
+
+haul: Love Potion #8
+tower: Gibbon's Paw
+tower: The Angelic Compass
+tower: Greater Potion of Healing
+tower: Celestial Tarot
+tower: Stone of Kings
+
+
+haul: Potion of Strength
+tower: Celestial Tarot
+tower: Gibbon's Paw
+tower: The Eye of Vala
+tower: Love Potion #8
+tower: Book of Spells
+
+
+haul: Heart of Eternity
+tower: Sprig of the Dawn Tree
+tower: The Eye of Vala
+tower: The Angelic Compass
+tower: Gibbon's Paw
+tower: Book of Spells
+
+
+haul: Sunstone Phoenix Feather
+tower: Flamel's Formulas
+tower: Potion of Strength
+tower: Orion's Bestiary
+tower: Silver Idol of Hun-Batz
+tower: Gibbon's Paw
+
+
+haul: The Eye of Vala
+tower: Sunstone Phoenix Feather
+tower: The Angelic Compass
+tower: Sprig of the Dawn Tree
+tower: Heart of Eternity
+tower: Dragon Skull
+
+
+haul: The Angelic Compass
+tower: Book of Spells
+tower: Stone of Kings
+tower: Sprig of the Dawn Tree
+tower: Sunstone Phoenix Feather
+tower: Celestial Tarot
+
+
+haul: Love Potion #8
+tower: Orion's Bestiary
+tower: Gibbon's Paw
+tower: Sunstone Phoenix Feather
+tower: Greater Potion of Healing
+tower: Sprig of the Dawn Tree
+
+
+haul: Love Potion #8
+tower: Greater Potion of Healing
+tower: Potion of Strength
+tower: The Eye of Vala
+tower: Sprig of the Dawn Tree
+tower: Stone of Kings
+
+
+haul: Stone of Kings
+tower: Silver Idol of Hun-Batz
+tower: Potion of Strength
+tower: Heart of Eternity
+tower: Gibbon's Paw
+tower: Flamel's Formulas
+
+
+haul: The Eye of Vala
+tower: Love Potion #8
+tower: Sunstone Phoenix Feather
+tower: Sprig of the Dawn Tree
+tower: Heart of Eternity
+tower: Silver Idol of Hun-Batz
+
+
+haul: Infernal Tarot
+tower: Book of Spells
+tower: The Angelic Compass
+tower: Heart of Eternity
+tower: Greater Potion of Healing
+tower: Silver Idol of Hun-Batz
+
+
+haul: Flamel's Formulas
+tower: The Eye of Vala
+tower: Dragon Skull
+tower: Potion of Strength
+tower: Greater Potion of Healing
+tower: Celestial Tarot
+
+
+haul: Heart of Eternity
+tower: Sunstone Phoenix Feather
+tower: Infernal Tarot
+tower: Orion's Bestiary
+tower: The Eye of Vala
+tower: Stone of Kings
+
+
+haul: Sunstone Phoenix Feather
+tower: Stone of Kings
+tower: Love Potion #8
+tower: Orion's Bestiary
+tower: Greater Potion of Healing
+tower: Infernal Tarot
+
+
+haul: Silver Idol of Hun-Batz
+tower: Book of Spells
+tower: Love Potion #8
+tower: Greater Potion of Healing
+tower: Orion's Bestiary
+tower: Flamel's Formulas
+
+
+haul: The Angelic Compass
+tower: Silver Idol of Hun-Batz
+tower: Heart of Eternity
+tower: Infernal Tarot
+tower: Orion's Bestiary
+tower: Stone of Kings
+
+
+haul: Potion of Strength
+tower: Stone of Kings
+tower: Sunstone Phoenix Feather
+tower: The Eye of Vala
+tower: Flamel's Formulas
+tower: Celestial Tarot
+
+
+haul: Infernal Tarot
+tower: The Angelic Compass
+tower: Sprig of the Dawn Tree
+tower: Potion of Strength
+tower: Love Potion #8
+tower: Dragon Skull
+
+
+haul: Book of Spells
+tower: Greater Potion of Healing
+tower: Gibbon's Paw
+tower: Dragon Skull
+tower: Heart of Eternity
+tower: Stone of Kings
+
+
+haul: Potion of Strength
+tower: Love Potion #8
+tower: The Angelic Compass
+tower: Silver Idol of Hun-Batz
+tower: Infernal Tarot
+tower: Sprig of the Dawn Tree
+
+
+haul: Gibbon's Paw
+tower: Heart of Eternity
+tower: The Angelic Compass
+tower: Book of Spells
+tower: Flamel's Formulas
+tower: Sprig of the Dawn Tree
+
+
+haul: The Eye of Vala
+tower: Silver Idol of Hun-Batz
+tower: Potion of Strength
+tower: Sprig of the Dawn Tree
+tower: Celestial Tarot
+tower: Stone of Kings
+
+
+haul: Dragon Skull
+tower: Love Potion #8
+tower: Infernal Tarot
+tower: The Eye of Vala
+tower: Sunstone Phoenix Feather
+tower: Potion of Strength
+
+
+haul: Book of Spells
+tower: Heart of Eternity
+tower: Sprig of the Dawn Tree
+tower: The Eye of Vala
+tower: Potion of Strength
+tower: Gibbon's Paw
+
 
