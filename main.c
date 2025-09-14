@@ -11,11 +11,16 @@ int main()
     seed_random();
     all_tests();
 
-    game_t * game = get_game();
-
-    for (int index = 0; index < game->num_players; ++index)
+    for (int test_index = 0; test_index < 100; ++test_index)
     {
-        printf("\nhello %s\n", game->player_list[index].haul[0]->name);
+        game_t * game = get_game();
+        
+        for (int index = 0; index < game->num_players; ++index)
+        {
+            char * card_name = game->player_list[index].haul[0]->name;
+            printf("hello %s\n", card_name);
+        }
+
     }
     
 }

@@ -19,6 +19,10 @@ static inline void initialize_players();
 static inline void initialize_dealt();
 static inline void deal_to_players(const card_t * card_list);
 
+static inline int 
+get_undealt_card_index(const card_index_t first, const card_index_t last);
+
+
 game_t * get_game()
 {
     initialize_players();
@@ -31,25 +35,34 @@ game_t * get_game()
 
 }
 
+static inline int 
+get_undealt_card_index(const card_index_t first, const card_index_t last)
+{
+    int card_index;
+
+    for(;;)
+    {
+        card_index = first + random_number(last);
+
+        if (!g_dealt[card_index])
+        {
+            g_dealt[card_index] = true;
+            break;
+
+        }
+        
+    }
+
+    return (card_index);
+
+}
+
 static inline void deal_to_players(const card_t * card_list)
 {
     for (int player_index = 0; player_index < g_game.num_players; ++player_index)
     {
 
-        int card_index = 0;
-
-        for(;;)
-        {
-            card_index = random_number(NUM_LIGHT_CARDS);
-
-            if (!g_dealt[card_index])
-            {
-                printf("%2d card index\n", card_index);
-                g_dealt[card_index] = true;
-                break;
-            }
-        
-        }
+        const int card_index = get_undealt_card_index(LOVE_POTION_8, NUM_LIGHT_CARDS);
         
         // We cast off the const qualifier to copy into the haul.
         card_t * p_card = (card_t *) &card_list[card_index];
