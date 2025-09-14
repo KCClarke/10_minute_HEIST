@@ -3,6 +3,7 @@
 #include "tower.h"
 #include "constants.h"
 
+#include <stddef.h>
 
 
 static room_t g_tower[TOTAL_ROOMS];
@@ -20,6 +21,12 @@ room_t * get_tower()
 
 static inline void initialize_tower()
 {
+    for (int index = 0; index < TOTAL_ROOMS; ++index)
+    {
+        g_tower[index].p_player = NULL;
+        g_tower[index].p_card = NULL;
+    }
+
     put_love_potion_in_tower();
 }
 
