@@ -29,14 +29,13 @@ static inline void moving_love_potion_around()
 {
     room_t * tower = get_tower();
     const card_t * card_list = get_master_card_list();
-    const card_t * card = &card_list[0];
+    const card_t * card = &card_list[LOVE_POTION_8];
 
     tower[0].p_card = (card_t *) card;
 
     assert(3 == tower[0].p_card->value);
     assert(0 == strcmp("Love Potion #8", tower[0].p_card->name));
     assert(POTION == tower[0].p_card->suit);
-
 
     player_t * players = get_player_list();
     players[PLAYER_1].haul[0] = tower[0].p_card;

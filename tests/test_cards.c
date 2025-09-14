@@ -6,6 +6,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <assert.h>
+#include <stddef.h>
 
 static inline void test_love_potion();
 
@@ -22,9 +23,13 @@ void test_cards()
 static inline void test_love_potion()
 {
     const card_t * master_card_list = get_master_card_list();
+    
+    const card_t card = master_card_list[LOVE_POTION_8];    
 
-    assert(0 == strcmp("Love Potion #8", master_card_list[0].name));
-    assert(3 == master_card_list[0].value);
-    assert(POTION == master_card_list[0].suit);
+    assert(0 == strcmp("Love Potion #8", card.name));
+    assert(3 ==                          card.value);
+    assert(POTION ==                     card.suit);
+    assert(0 ==                          card.curse);
+    assert(NULL !=                       card.power);
 
 }

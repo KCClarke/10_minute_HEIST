@@ -22,8 +22,9 @@ void test_copying()
     // We cast because we are discarding const.
     player[PLAYER_1].haul[0] = (card_t *) card; 
     
-    assert(0 == strcmp("Love Potion #8", player[PLAYER_1].haul[0]->name));
-    assert(3 == player[PLAYER_1].haul[0]->value);
+    assert(0 == strcmp("Love Potion #8", 
+                     player[PLAYER_1].haul[0]->name));
+    assert(3 ==      player[PLAYER_1].haul[0]->value);
     assert(POTION == player[PLAYER_1].haul[0]->suit);
 
     printf("%s passed.\n", __func__);
