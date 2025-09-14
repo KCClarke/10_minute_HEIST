@@ -25,42 +25,41 @@ static inline void test_player_suit_counts()
 {
     player_t * player_list = get_player_list();
 
-    for (int player_index = 0; player_index < MAX_PLAYERS; ++player_index)
+    for (int index = 0; index < MAX_PLAYERS; ++index)
     {
-        for (int suit_index = 0; suit_index < NUM_BASIC_SUITS; ++suit_index)
-        {
-            assert(0 == player_list[player_index].num_suits[suit_index]);
-        }
+        assert(0 == player_list[index].num_suits[POTION]);
+        assert(0 == player_list[index].num_suits[FOSSIL]);
+        assert(0 == player_list[index].num_suits[ARTIFACT]);
+        assert(0 == player_list[index].num_suits[JEWEL]);
+        assert(0 == player_list[index].num_suits[TOME]);
     }
 
-    assert(0 == player_list[0].num_suits[POTION]);
 }
 
 static inline void test_player_initialization()
 {
-    player_t * players = get_player_list();
+    player_t * player_list = get_player_list();
 
     for(int index = 0; index < MAX_PLAYERS; ++index)
     {
-        assert(0 == players[index].num_threes);
-        assert(0 == players[index].num_fours);
-        assert(0 == players[index].num_fives);
-
-        assert(0 == players[index].num_curses);
+        assert(0 == player_list[index].num_threes);
+        assert(0 == player_list[index].num_fours);
+        assert(0 == player_list[index].num_fives);
+        assert(0 == player_list[index].num_curses);
     }
 
 }
 
 static inline void test_haul_initialization()
 {
-    player_t * players = get_player_list();
+    player_t * player_list = get_player_list();
 
-    for(int player_index = 0; player_index < MAX_PLAYERS; ++player_index)
+    for(int haul_index = 0; haul_index < MAX_HAUL; ++haul_index)
     {
-        for(int haul_index = 0; haul_index < MAX_HAUL; ++haul_index)
-        {
-            assert(NULL == players[player_index].haul[haul_index]);
-        }
+        assert(NULL == player_list[PLAYER_1].haul[haul_index]);
+        assert(NULL == player_list[PLAYER_2].haul[haul_index]);
+        assert(NULL == player_list[PLAYER_3].haul[haul_index]);
+        assert(NULL == player_list[PLAYER_4].haul[haul_index]);
+        assert(NULL == player_list[PLAYER_5].haul[haul_index]);
     }
-
 }

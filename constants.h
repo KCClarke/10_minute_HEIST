@@ -4,7 +4,7 @@
 #define CONSTANTS_H
 
 #define MAX_PLAYERS 5
-#define LIGHT_CARDS 17
+#define NUM_LIGHT_CARDS 17
 #define TOTAL_CARDS 57
 #define MAX_HAUL TOTAL_CARDS
 #define SCORING_TILES 13
