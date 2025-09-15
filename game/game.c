@@ -26,6 +26,7 @@ static const card_range_t
 light_card_range = {.from = LOVE_POTION_8, .to = INFERNAL_TAROT};
 
 
+// Private function prototypes
 static inline void initialize_players();
 static inline void initialize_dealt();
 static inline void deal_to_players(const card_t * card_list);
@@ -38,6 +39,7 @@ static inline int
 get_undealt_card_index(const card_index_t first, const card_index_t last);
 
 
+// Function definitions.
 game_t * get_game()
 {
     initialize_players();
@@ -70,10 +72,14 @@ static inline void deal_to_players(const card_t * card_list)
     for (int player_index = 0; player_index < g_game.num_players; ++player_index)
     {
         card_t * card = get_card(card_list, light_card_range);
+        
         g_game.player_list[player_index].haul[0] = card;
-
         card->power(card, &g_game);
+        g_game.current_player++;
+
     }
+    
+    g_game.current_player = 0;
 
 }
 
@@ -112,7 +118,7 @@ get_undealt_card_index(const card_index_t first, const card_index_t last)
 
 static inline void initialize_players()
 {
-    g_game.num_players = 1;
+    g_game.num_players = 5;
     g_game.current_player = PLAYER_1;
     g_game.player_list = get_player_list();
 

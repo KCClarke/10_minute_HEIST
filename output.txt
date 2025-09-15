@@ -9,803 +9,223 @@ test_turn passed.
 
 all_tests passed.
 
-haul: Dragon Skull
-tower: Stone of Kings
-tower: Orion's Bestiary
-tower: The Eye of Vala
-tower: Sprig of the Dawn Tree
-tower: Love Potion #8
-
-
-haul: Celestial Tarot
-tower: Silver Idol of Hun-Batz
-tower: Flamel's Formulas
-tower: Book of Spells
-tower: Gibbon's Paw
-tower: Orion's Bestiary
-
+haul: Silver Idol of Hun-Batz
+	card value: 5
+threes:0 fours:0 fives:1
 
 haul: Gibbon's Paw
-tower: Heart of Eternity
-tower: The Angelic Compass
-tower: Stone of Kings
-tower: Dragon Skull
-tower: Flamel's Formulas
+	card value: 4
+threes:0 fours:1 fives:0
+
+haul: Greater Potion of Healing
+	card value: 5
+threes:0 fours:0 fives:1
+
+haul: Orion's Bestiary
+	card value: 3
+threes:1 fours:0 fives:0
+
+haul: Stone of Kings
+	card value: 5
+threes:0 fours:0 fives:1
 
 
-haul: Flamel's Formulas
-tower: Gibbon's Paw
-tower: Silver Idol of Hun-Batz
-tower: Dragon Skull
-tower: Potion of Strength
-tower: Book of Spells
 
+haul: Stone of Kings
+	card value: 5
+threes:0 fours:0 fives:1
 
-haul: Silver Idol of Hun-Batz
-tower: Sunstone Phoenix Feather
-tower: Greater Potion of Healing
-tower: Dragon Skull
-tower: Stone of Kings
-tower: The Angelic Compass
+haul: Greater Potion of Healing
+	card value: 5
+threes:0 fours:0 fives:1
 
-
-haul: The Angelic Compass
-tower: Gibbon's Paw
-tower: Sprig of the Dawn Tree
-tower: Flamel's Formulas
-tower: Orion's Bestiary
-tower: Greater Potion of Healing
-
-
-haul: Heart of Eternity
-tower: The Eye of Vala
-tower: Celestial Tarot
-tower: Book of Spells
-tower: Gibbon's Paw
-tower: Potion of Strength
-
-
-haul: The Angelic Compass
-tower: Stone of Kings
-tower: Flamel's Formulas
-tower: Orion's Bestiary
-tower: Sprig of the Dawn Tree
-tower: The Eye of Vala
-
+haul: Orion's Bestiary
+	card value: 3
+threes:1 fours:0 fives:0
 
 haul: Infernal Tarot
-tower: Celestial Tarot
-tower: Book of Spells
-tower: Stone of Kings
-tower: Gibbon's Paw
-tower: Sunstone Phoenix Feather
+	card value: 2
+threes:0 fours:0 fives:0
 
+haul: Silver Idol of Hun-Batz
+	card value: 5
+threes:0 fours:0 fives:1
 
-haul: Flamel's Formulas
-tower: The Eye of Vala
-tower: Book of Spells
-tower: Sunstone Phoenix Feather
-tower: The Angelic Compass
-tower: Potion of Strength
-
-
-haul: Heart of Eternity
-tower: The Eye of Vala
-tower: Book of Spells
-tower: Sprig of the Dawn Tree
-tower: Silver Idol of Hun-Batz
-tower: Gibbon's Paw
-
-
-haul: Potion of Strength
-tower: The Eye of Vala
-tower: Heart of Eternity
-tower: Orion's Bestiary
-tower: Gibbon's Paw
-tower: Dragon Skull
 
 
 haul: Love Potion #8
-tower: Flamel's Formulas
-tower: Sunstone Phoenix Feather
-tower: Celestial Tarot
-tower: The Eye of Vala
-tower: Book of Spells
-
-
-haul: Dragon Skull
-tower: Potion of Strength
-tower: The Angelic Compass
-tower: Flamel's Formulas
-tower: Silver Idol of Hun-Batz
-tower: Sprig of the Dawn Tree
-
-
-haul: Flamel's Formulas
-tower: Dragon Skull
-tower: Stone of Kings
-tower: The Angelic Compass
-tower: Silver Idol of Hun-Batz
-tower: Celestial Tarot
-
-
-haul: Book of Spells
-tower: The Eye of Vala
-tower: The Angelic Compass
-tower: Sunstone Phoenix Feather
-tower: Orion's Bestiary
-tower: Stone of Kings
-
-
-haul: Sunstone Phoenix Feather
-tower: The Angelic Compass
-tower: Book of Spells
-tower: Greater Potion of Healing
-tower: Infernal Tarot
-tower: Heart of Eternity
-
-
-haul: Flamel's Formulas
-tower: Gibbon's Paw
-tower: Celestial Tarot
-tower: Love Potion #8
-tower: Sprig of the Dawn Tree
-tower: The Eye of Vala
-
-
-haul: Book of Spells
-tower: Greater Potion of Healing
-tower: Sprig of the Dawn Tree
-tower: Potion of Strength
-tower: Orion's Bestiary
-tower: Sunstone Phoenix Feather
-
-
-haul: Heart of Eternity
-tower: Orion's Bestiary
-tower: Infernal Tarot
-tower: Celestial Tarot
-tower: Stone of Kings
-tower: Potion of Strength
-
-
-haul: Potion of Strength
-tower: The Angelic Compass
-tower: Greater Potion of Healing
-tower: Sprig of the Dawn Tree
-tower: Flamel's Formulas
-tower: Orion's Bestiary
-
-
-haul: The Eye of Vala
-tower: Stone of Kings
-tower: Flamel's Formulas
-tower: Infernal Tarot
-tower: Silver Idol of Hun-Batz
-tower: Sprig of the Dawn Tree
-
-
-haul: Flamel's Formulas
-tower: The Eye of Vala
-tower: Stone of Kings
-tower: Book of Spells
-tower: Sunstone Phoenix Feather
-tower: Dragon Skull
-
-
-haul: The Eye of Vala
-tower: Sprig of the Dawn Tree
-tower: Celestial Tarot
-tower: Potion of Strength
-tower: Flamel's Formulas
-tower: Love Potion #8
-
-
-haul: Celestial Tarot
-tower: The Angelic Compass
-tower: Heart of Eternity
-tower: Infernal Tarot
-tower: Love Potion #8
-tower: Potion of Strength
-
-
-haul: Sprig of the Dawn Tree
-tower: Flamel's Formulas
-tower: Love Potion #8
-tower: Celestial Tarot
-tower: Silver Idol of Hun-Batz
-tower: Stone of Kings
-
-
-haul: Stone of Kings
-tower: Sprig of the Dawn Tree
-tower: Potion of Strength
-tower: Love Potion #8
-tower: Greater Potion of Healing
-tower: The Eye of Vala
-
-
-haul: Heart of Eternity
-tower: Celestial Tarot
-tower: Flamel's Formulas
-tower: The Angelic Compass
-tower: Greater Potion of Healing
-tower: Orion's Bestiary
-
-
-haul: Silver Idol of Hun-Batz
-tower: Sunstone Phoenix Feather
-tower: The Angelic Compass
-tower: The Eye of Vala
-tower: Potion of Strength
-tower: Book of Spells
-
-
-haul: Potion of Strength
-tower: Love Potion #8
-tower: Sunstone Phoenix Feather
-tower: Greater Potion of Healing
-tower: The Eye of Vala
-tower: Silver Idol of Hun-Batz
-
-
-haul: Book of Spells
-tower: Silver Idol of Hun-Batz
-tower: Sprig of the Dawn Tree
-tower: Gibbon's Paw
-tower: Sunstone Phoenix Feather
-tower: Love Potion #8
-
-
-haul: Stone of Kings
-tower: Gibbon's Paw
-tower: Infernal Tarot
-tower: Orion's Bestiary
-tower: Flamel's Formulas
-tower: Silver Idol of Hun-Batz
-
-
-haul: Heart of Eternity
-tower: The Eye of Vala
-tower: Dragon Skull
-tower: Potion of Strength
-tower: Love Potion #8
-tower: Silver Idol of Hun-Batz
-
-
-haul: Flamel's Formulas
-tower: The Angelic Compass
-tower: Infernal Tarot
-tower: Book of Spells
-tower: Gibbon's Paw
-tower: Potion of Strength
-
-
-haul: Flamel's Formulas
-tower: The Angelic Compass
-tower: Sunstone Phoenix Feather
-tower: Book of Spells
-tower: Infernal Tarot
-tower: Heart of Eternity
-
-
-haul: Stone of Kings
-tower: Sprig of the Dawn Tree
-tower: Celestial Tarot
-tower: The Eye of Vala
-tower: Book of Spells
-tower: Silver Idol of Hun-Batz
-
-
-haul: Flamel's Formulas
-tower: Sunstone Phoenix Feather
-tower: The Eye of Vala
-tower: Love Potion #8
-tower: Silver Idol of Hun-Batz
-tower: Book of Spells
-
-
-haul: Heart of Eternity
-tower: The Angelic Compass
-tower: Gibbon's Paw
-tower: Book of Spells
-tower: Love Potion #8
-tower: Dragon Skull
-
+	card value: 3
+threes:1 fours:0 fives:0
 
 haul: Infernal Tarot
-tower: Sprig of the Dawn Tree
-tower: The Angelic Compass
-tower: Book of Spells
-tower: Gibbon's Paw
-tower: Love Potion #8
+	card value: 2
+threes:0 fours:0 fives:0
+
+haul: Silver Idol of Hun-Batz
+	card value: 5
+threes:0 fours:0 fives:1
+
+haul: Heart of Eternity
+	card value: 4
+threes:0 fours:1 fives:0
+
+haul: Greater Potion of Healing
+	card value: 5
+threes:0 fours:0 fives:1
 
 
-haul: The Angelic Compass
-tower: Stone of Kings
-tower: Infernal Tarot
-tower: Dragon Skull
-tower: Sunstone Phoenix Feather
-tower: Flamel's Formulas
 
+haul: Orion's Bestiary
+	card value: 3
+threes:1 fours:0 fives:0
+
+haul: Celestial Tarot
+	card value: 2
+threes:0 fours:0 fives:0
 
 haul: Flamel's Formulas
-tower: Celestial Tarot
-tower: The Eye of Vala
-tower: The Angelic Compass
-tower: Stone of Kings
-tower: Sprig of the Dawn Tree
+	card value: 4
+threes:0 fours:1 fives:0
 
+haul: The Angelic Compass
+	card value: 4
+threes:0 fours:1 fives:0
 
 haul: Sunstone Phoenix Feather
-tower: The Angelic Compass
-tower: Love Potion #8
-tower: The Eye of Vala
-tower: Stone of Kings
-tower: Sprig of the Dawn Tree
+	card value: 3
+threes:1 fours:0 fives:0
 
-
-haul: Dragon Skull
-tower: Celestial Tarot
-tower: The Eye of Vala
-tower: Greater Potion of Healing
-tower: Silver Idol of Hun-Batz
-tower: Orion's Bestiary
 
 
 haul: The Eye of Vala
-tower: Dragon Skull
-tower: Infernal Tarot
-tower: Heart of Eternity
-tower: The Angelic Compass
-tower: Love Potion #8
+	card value: 3
+threes:1 fours:0 fives:0
+
+haul: Silver Idol of Hun-Batz
+	card value: 5
+threes:0 fours:0 fives:1
+
+haul: Potion of Strength
+	card value: 4
+threes:0 fours:1 fives:0
+
+haul: Orion's Bestiary
+	card value: 3
+threes:1 fours:0 fives:0
+
+haul: Sprig of the Dawn Tree
+	card value: 3
+threes:1 fours:0 fives:0
 
 
-haul: Flamel's Formulas
-tower: Sunstone Phoenix Feather
-tower: Orion's Bestiary
-tower: Stone of Kings
-tower: The Eye of Vala
-tower: Potion of Strength
 
+haul: Orion's Bestiary
+	card value: 3
+threes:1 fours:0 fives:0
+
+haul: Sprig of the Dawn Tree
+	card value: 3
+threes:1 fours:0 fives:0
+
+haul: The Angelic Compass
+	card value: 4
+threes:0 fours:1 fives:0
 
 haul: Dragon Skull
-tower: Sunstone Phoenix Feather
-tower: The Angelic Compass
-tower: The Eye of Vala
-tower: Sprig of the Dawn Tree
-tower: Orion's Bestiary
+	card value: 5
+threes:0 fours:0 fives:1
 
+haul: Sunstone Phoenix Feather
+	card value: 3
+threes:1 fours:0 fives:0
 
-haul: Gibbon's Paw
-tower: Potion of Strength
-tower: Heart of Eternity
-tower: Sunstone Phoenix Feather
-tower: Flamel's Formulas
-tower: Orion's Bestiary
 
 
 haul: Love Potion #8
-tower: Sunstone Phoenix Feather
-tower: Gibbon's Paw
-tower: Orion's Bestiary
-tower: Flamel's Formulas
-tower: Heart of Eternity
+	card value: 3
+threes:1 fours:0 fives:0
 
+haul: Heart of Eternity
+	card value: 4
+threes:0 fours:1 fives:0
 
-haul: Stone of Kings
-tower: Flamel's Formulas
-tower: Dragon Skull
-tower: Greater Potion of Healing
-tower: The Angelic Compass
-tower: Book of Spells
+haul: Flamel's Formulas
+	card value: 4
+threes:0 fours:1 fives:0
 
+haul: Potion of Strength
+	card value: 4
+threes:0 fours:1 fives:0
 
-haul: Greater Potion of Healing
-tower: Orion's Bestiary
-tower: Infernal Tarot
-tower: The Eye of Vala
-tower: Celestial Tarot
-tower: Potion of Strength
+haul: Dragon Skull
+	card value: 5
+threes:0 fours:0 fives:1
 
-
-haul: Orion's Bestiary
-tower: Stone of Kings
-tower: Sprig of the Dawn Tree
-tower: Flamel's Formulas
-tower: Book of Spells
-tower: Celestial Tarot
-
-
-haul: The Eye of Vala
-tower: Greater Potion of Healing
-tower: Stone of Kings
-tower: Heart of Eternity
-tower: Gibbon's Paw
-tower: Book of Spells
 
 
 haul: Gibbon's Paw
-tower: Infernal Tarot
-tower: The Angelic Compass
-tower: Book of Spells
-tower: Sunstone Phoenix Feather
-tower: Greater Potion of Healing
-
+	card value: 4
+threes:0 fours:1 fives:0
 
 haul: Heart of Eternity
-tower: Celestial Tarot
-tower: Orion's Bestiary
-tower: Gibbon's Paw
-tower: The Angelic Compass
-tower: Sprig of the Dawn Tree
+	card value: 4
+threes:0 fours:1 fives:0
 
-
-haul: Greater Potion of Healing
-tower: The Angelic Compass
-tower: Potion of Strength
-tower: Flamel's Formulas
-tower: Orion's Bestiary
-tower: Heart of Eternity
-
-
-haul: Heart of Eternity
-tower: Orion's Bestiary
-tower: Greater Potion of Healing
-tower: Stone of Kings
-tower: Sprig of the Dawn Tree
-tower: Infernal Tarot
-
-
-haul: Greater Potion of Healing
-tower: Celestial Tarot
-tower: Silver Idol of Hun-Batz
-tower: Sprig of the Dawn Tree
-tower: Stone of Kings
-tower: Flamel's Formulas
-
-
-haul: Celestial Tarot
-tower: Gibbon's Paw
-tower: Heart of Eternity
-tower: The Eye of Vala
-tower: Silver Idol of Hun-Batz
-tower: The Angelic Compass
-
-
-haul: Flamel's Formulas
-tower: Book of Spells
-tower: Celestial Tarot
-tower: Dragon Skull
-tower: Stone of Kings
-tower: Love Potion #8
-
-
-haul: Heart of Eternity
-tower: Sunstone Phoenix Feather
-tower: Dragon Skull
-tower: Gibbon's Paw
-tower: Infernal Tarot
-tower: Greater Potion of Healing
-
-
-haul: Orion's Bestiary
-tower: Flamel's Formulas
-tower: Love Potion #8
-tower: Gibbon's Paw
-tower: The Angelic Compass
-tower: Dragon Skull
-
-
-haul: Book of Spells
-tower: Greater Potion of Healing
-tower: Potion of Strength
-tower: Flamel's Formulas
-tower: Stone of Kings
-tower: Heart of Eternity
-
+haul: Sprig of the Dawn Tree
+	card value: 3
+threes:1 fours:0 fives:0
 
 haul: Sunstone Phoenix Feather
-tower: The Angelic Compass
-tower: Infernal Tarot
-tower: Dragon Skull
-tower: Stone of Kings
-tower: Flamel's Formulas
-
-
-haul: Celestial Tarot
-tower: Stone of Kings
-tower: Sprig of the Dawn Tree
-tower: Potion of Strength
-tower: Gibbon's Paw
-tower: Dragon Skull
-
+	card value: 3
+threes:1 fours:0 fives:0
 
 haul: The Angelic Compass
-tower: Gibbon's Paw
-tower: Dragon Skull
-tower: The Eye of Vala
-tower: Infernal Tarot
-tower: Love Potion #8
+	card value: 4
+threes:0 fours:1 fives:0
+
 
 
 haul: Silver Idol of Hun-Batz
-tower: Greater Potion of Healing
-tower: Flamel's Formulas
-tower: Infernal Tarot
-tower: Heart of Eternity
-tower: Celestial Tarot
+	card value: 5
+threes:0 fours:0 fives:1
+
+haul: Flamel's Formulas
+	card value: 4
+threes:0 fours:1 fives:0
+
+haul: The Eye of Vala
+	card value: 3
+threes:1 fours:0 fives:0
+
+haul: Greater Potion of Healing
+	card value: 5
+threes:0 fours:0 fives:1
+
+haul: Orion's Bestiary
+	card value: 3
+threes:1 fours:0 fives:0
+
 
 
 haul: Love Potion #8
-tower: Sprig of the Dawn Tree
-tower: Silver Idol of Hun-Batz
-tower: Heart of Eternity
-tower: The Eye of Vala
-tower: Infernal Tarot
-
-
-haul: Infernal Tarot
-tower: Silver Idol of Hun-Batz
-tower: Sunstone Phoenix Feather
-tower: Stone of Kings
-tower: Potion of Strength
-tower: Gibbon's Paw
-
-
-haul: Silver Idol of Hun-Batz
-tower: Greater Potion of Healing
-tower: The Angelic Compass
-tower: Sprig of the Dawn Tree
-tower: Stone of Kings
-tower: Dragon Skull
-
-
-haul: Dragon Skull
-tower: Orion's Bestiary
-tower: Flamel's Formulas
-tower: Sprig of the Dawn Tree
-tower: Sunstone Phoenix Feather
-tower: Silver Idol of Hun-Batz
-
-
-haul: Gibbon's Paw
-tower: Flamel's Formulas
-tower: Dragon Skull
-tower: Greater Potion of Healing
-tower: Book of Spells
-tower: Stone of Kings
-
+	card value: 3
+threes:1 fours:0 fives:0
 
 haul: Orion's Bestiary
-tower: Flamel's Formulas
-tower: Potion of Strength
-tower: Celestial Tarot
-tower: Sprig of the Dawn Tree
-tower: Gibbon's Paw
+	card value: 3
+threes:1 fours:0 fives:0
 
-
-haul: Infernal Tarot
-tower: Heart of Eternity
-tower: Potion of Strength
-tower: Love Potion #8
-tower: Book of Spells
-tower: Silver Idol of Hun-Batz
-
-
-haul: Flamel's Formulas
-tower: Sunstone Phoenix Feather
-tower: Greater Potion of Healing
-tower: Potion of Strength
-tower: The Angelic Compass
-tower: Book of Spells
-
-
-haul: Orion's Bestiary
-tower: Dragon Skull
-tower: Infernal Tarot
-tower: Flamel's Formulas
-tower: Heart of Eternity
-tower: Gibbon's Paw
-
-
-haul: Sprig of the Dawn Tree
-tower: Love Potion #8
-tower: Silver Idol of Hun-Batz
-tower: Potion of Strength
-tower: Orion's Bestiary
-tower: Celestial Tarot
-
-
-haul: Heart of Eternity
-tower: Sprig of the Dawn Tree
-tower: Greater Potion of Healing
-tower: The Angelic Compass
-tower: Gibbon's Paw
-tower: The Eye of Vala
-
+haul: Sunstone Phoenix Feather
+	card value: 3
+threes:1 fours:0 fives:0
 
 haul: The Angelic Compass
-tower: Heart of Eternity
-tower: Sprig of the Dawn Tree
-tower: Sunstone Phoenix Feather
-tower: Dragon Skull
-tower: Silver Idol of Hun-Batz
-
-
-haul: Gibbon's Paw
-tower: Potion of Strength
-tower: The Angelic Compass
-tower: Celestial Tarot
-tower: Sprig of the Dawn Tree
-tower: Dragon Skull
-
-
-haul: Silver Idol of Hun-Batz
-tower: Greater Potion of Healing
-tower: Flamel's Formulas
-tower: The Angelic Compass
-tower: Dragon Skull
-tower: Gibbon's Paw
-
-
-haul: Sprig of the Dawn Tree
-tower: Book of Spells
-tower: Stone of Kings
-tower: Orion's Bestiary
-tower: Greater Potion of Healing
-tower: Gibbon's Paw
-
-
-haul: Greater Potion of Healing
-tower: Stone of Kings
-tower: The Eye of Vala
-tower: Dragon Skull
-tower: Love Potion #8
-tower: Book of Spells
-
-
-haul: Flamel's Formulas
-tower: Sunstone Phoenix Feather
-tower: Celestial Tarot
-tower: Heart of Eternity
-tower: Orion's Bestiary
-tower: Infernal Tarot
-
+	card value: 4
+threes:0 fours:1 fives:0
 
 haul: Potion of Strength
-tower: Stone of Kings
-tower: Love Potion #8
-tower: Flamel's Formulas
-tower: Sunstone Phoenix Feather
-tower: Sprig of the Dawn Tree
+	card value: 4
+threes:0 fours:1 fives:0
 
-
-haul: Infernal Tarot
-tower: Celestial Tarot
-tower: Stone of Kings
-tower: Dragon Skull
-tower: Orion's Bestiary
-tower: Love Potion #8
-
-
-haul: Flamel's Formulas
-tower: Silver Idol of Hun-Batz
-tower: Potion of Strength
-tower: Love Potion #8
-tower: Sprig of the Dawn Tree
-tower: The Angelic Compass
-
-
-haul: Celestial Tarot
-tower: Greater Potion of Healing
-tower: Heart of Eternity
-tower: Orion's Bestiary
-tower: The Angelic Compass
-tower: Love Potion #8
-
-
-haul: Potion of Strength
-tower: Silver Idol of Hun-Batz
-tower: Stone of Kings
-tower: Greater Potion of Healing
-tower: Gibbon's Paw
-tower: Dragon Skull
-
-
-haul: The Angelic Compass
-tower: Potion of Strength
-tower: Gibbon's Paw
-tower: Dragon Skull
-tower: Orion's Bestiary
-tower: Silver Idol of Hun-Batz
-
-
-haul: Infernal Tarot
-tower: Silver Idol of Hun-Batz
-tower: Flamel's Formulas
-tower: The Eye of Vala
-tower: Gibbon's Paw
-tower: The Angelic Compass
-
-
-haul: Celestial Tarot
-tower: Heart of Eternity
-tower: Dragon Skull
-tower: Infernal Tarot
-tower: Sunstone Phoenix Feather
-tower: Book of Spells
-
-
-haul: Gibbon's Paw
-tower: The Angelic Compass
-tower: Book of Spells
-tower: Dragon Skull
-tower: Celestial Tarot
-tower: Silver Idol of Hun-Batz
-
-
-haul: Sprig of the Dawn Tree
-tower: Potion of Strength
-tower: Greater Potion of Healing
-tower: Heart of Eternity
-tower: Silver Idol of Hun-Batz
-tower: Sunstone Phoenix Feather
-
-
-haul: Flamel's Formulas
-tower: Orion's Bestiary
-tower: Celestial Tarot
-tower: Dragon Skull
-tower: The Angelic Compass
-tower: Gibbon's Paw
-
-
-haul: Heart of Eternity
-tower: Orion's Bestiary
-tower: Greater Potion of Healing
-tower: Sunstone Phoenix Feather
-tower: Love Potion #8
-tower: Potion of Strength
-
-
-haul: Dragon Skull
-tower: Infernal Tarot
-tower: Celestial Tarot
-tower: The Eye of Vala
-tower: Sprig of the Dawn Tree
-tower: Flamel's Formulas
-
-
-haul: Book of Spells
-tower: Gibbon's Paw
-tower: Sunstone Phoenix Feather
-tower: Dragon Skull
-tower: Sprig of the Dawn Tree
-tower: Flamel's Formulas
-
-
-haul: Flamel's Formulas
-tower: The Eye of Vala
-tower: Heart of Eternity
-tower: Silver Idol of Hun-Batz
-tower: Sprig of the Dawn Tree
-tower: Book of Spells
-
-
-haul: Greater Potion of Healing
-tower: Sunstone Phoenix Feather
-tower: The Eye of Vala
-tower: Silver Idol of Hun-Batz
-tower: Flamel's Formulas
-tower: Celestial Tarot
-
-
-haul: Gibbon's Paw
-tower: Sunstone Phoenix Feather
-tower: Celestial Tarot
-tower: The Eye of Vala
-tower: Potion of Strength
-tower: Book of Spells
 
 

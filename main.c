@@ -17,18 +17,24 @@ int main()
 
         for (int index = 0; index < game->num_players; ++index)
         {
-            char * card_name = game->player_list[index].haul[0]->name;
-            printf("haul: %s\n", card_name);
+            const player_t * player_list = game->player_list;
+            const player_t * player = &player_list[index];
+            const card_t * card = player->haul[0];
+            
+            printf("haul: %s\n", card->name);
+            printf("\tcard value: %d\n", card->value);
+            printf("threes:%d fours:%d fives:%d\n\n", player->num_threes, player->num_fours, player->num_fives);
+            
         }
-
-        // TODO: print player stats see if they match the card
+        
+        printf("\n");
 
         for (int index = 0; index < TOWER_WIDTH; ++index)
         {
-            char * card_name = game->tower[index].p_card->name;
-            printf("tower: %s\n", card_name);
+            // char * card_name = game->tower[index].p_card->name;
+            // printf("tower: %s\n", card_name);
         }
-        printf("\n\n");
+        printf("\n");
 
     }
     

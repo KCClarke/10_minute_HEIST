@@ -14,6 +14,9 @@
 static inline void test_love_potion();
 static inline void test_potion_of_strength();
 static inline void test_tarot_cards();
+static inline void test_powers_to_haul();
+static inline void test_values(const player_t * player, const card_t * card);
+static inline void test_suits(const player_t * player, const card_t * card);
 
 void test_powers()
 {
@@ -21,7 +24,71 @@ void test_powers()
     test_potion_of_strength();
     test_tarot_cards();
 
+    const int num_tests = 500;
+    for (int index = 0; index < num_tests; ++index)
+    {
+        test_powers_to_haul();
+    }
+
     printf("%s passed.\n", __func__);
+}
+
+static inline void test_powers_to_haul()
+{
+    const game_t * game = get_game();
+    const int index = game->current_player;
+    const player_t * player = &game->player_list[index];
+    const card_t * card = player->haul[0];
+
+    test_values(player, card);
+    test_suits(player, card);
+
+    
+}
+
+static inline void test_values(const player_t * player, const card_t * card)
+{
+    switch (card->value)
+    {
+        case 3:
+        {
+            assert(1 == player->num_threes);
+        break;
+        }
+
+        case 4:
+        {
+            assert(1 == player->num_fours);
+        break;
+        }
+
+        case 5:
+        {
+            assert(1 == player->num_fives);
+        break;
+        }
+
+        default:
+        break;
+
+    }
+
+}
+
+static inline void test_suits(const player_t * player, const card_t * card)
+{
+    if (WILD != card->suit)
+    {
+        assert(card->value == player->num_suits[card->suit]);
+    }
+    else 
+    {
+        for(int index = 0; index < NUM_BASIC_SUITS; ++index)
+        {
+            assert(card->value == player->num_suits[index]);
+        }
+    }
+
 }
 
 static inline void test_tarot_cards()
