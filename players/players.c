@@ -8,13 +8,13 @@
 
 static player_t g_players[MAX_PLAYERS];
 
-static inline void initialize_value_and_curse_counts();
+static inline void initialize_players();
 static inline void initialize_suit_counts();
 static inline void initialize_hauls();
 
 player_t * get_player_list()
 {
-    initialize_value_and_curse_counts();
+    initialize_players();
     initialize_suit_counts();
     initialize_hauls();
     
@@ -34,7 +34,7 @@ static inline void initialize_suit_counts()
     assert(0 == g_players[0].num_suits[0]);
 }
 
-static inline void initialize_value_and_curse_counts()
+static inline void initialize_players()
 {
     for(int index = 0; index < MAX_PLAYERS; ++index)
     {
@@ -42,6 +42,7 @@ static inline void initialize_value_and_curse_counts()
         g_players[index].num_fours  = 0;
         g_players[index].num_fives  = 0;
         g_players[index].num_curses = 0;
+        g_players[index].in_tower = false;
     }
 
 }

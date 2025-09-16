@@ -5,6 +5,7 @@
 #include <assert.h>
 #include <stdio.h>
 #include <stddef.h>
+#include <stdbool.h>
 
 static inline void test_player_initialization();
 static inline void test_haul_initialization();
@@ -46,6 +47,9 @@ static inline void test_player_initialization()
         assert(0 == player_list[index].num_fours);
         assert(0 == player_list[index].num_fives);
         assert(0 == player_list[index].num_curses);
+
+        assert(false == player_list[index].in_tower);
+
     }
 
 }

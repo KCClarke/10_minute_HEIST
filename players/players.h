@@ -7,6 +7,8 @@
 
 #include "cards/cards.h"
 
+#include <stdbool.h>
+
 typedef struct player_s player_t;
 
 struct player_s
@@ -17,6 +19,7 @@ struct player_s
     int num_curses;
     suit_t num_suits[NUM_BASIC_SUITS];
     card_t * haul[MAX_HAUL];
+    bool in_tower;
 
 };
 
