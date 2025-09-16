@@ -19,10 +19,8 @@ room_t * get_tower()
     
 }
 
-
 static inline void initialize_tower()
 {
-
     for (int index = 0; index < TOTAL_ROOMS; ++index)
     {
         g_tower[index].p_player = NULL;

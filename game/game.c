@@ -51,6 +51,8 @@ game_t * get_game()
     deal_to_players(card_list);
     deal_to_first_floor(card_list);
 
+    g_game.players_exited = 0;
+
     return (&g_game);
 
 }
@@ -75,6 +77,7 @@ static inline void deal_to_players(const card_t * card_list)
         
         g_game.player_list[player_index].haul[0] = card;
         card->power(card, &g_game);
+        g_game.player_list[player_index].cards_in_haul = 1;
         g_game.current_player++;
 
     }

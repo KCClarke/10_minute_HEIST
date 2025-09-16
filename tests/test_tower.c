@@ -12,6 +12,7 @@
 #include <string.h>
 
 static inline void moving_love_potion_around();
+static inline void test_has_card_no_player();
 
 void test_tower()
 {
@@ -20,8 +21,20 @@ void test_tower()
 
     moving_love_potion_around();
 
+    test_has_card_no_player();
+
     printf("%s passed.\n", __func__);
 
+}
+
+static inline void test_has_card_no_player()
+{
+    room_t * tower = get_tower();
+    assert(NULL != tower);
+    const card_t * card_list = get_master_card_list();
+    assert(NULL != card_list);
+
+    assert(false == has_card_no_player());
 }
 
 static inline void moving_love_potion_around()

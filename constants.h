@@ -11,8 +11,6 @@
 #define TOWER_WIDTH 5
 #define TOWER_HEIGHT 8
 #define TOTAL_ROOMS TOWER_HEIGHT * TOWER_WIDTH
-/* UNIQUE_SUITS  does not include wilds*/
-
 
 typedef enum
 {

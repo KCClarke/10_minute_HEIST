@@ -15,6 +15,7 @@ void test_game()
 {
     game_t * game = get_game();
     assert(NULL != game);
+    assert(0 == game->players_exited);
 
     test_haul_initialization();
 

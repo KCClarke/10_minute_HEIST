@@ -15,8 +15,8 @@ struct game_s
     int num_players;
     player_ID_t current_player;
     player_t * player_list;
-
     room_t * tower;
+    int players_exited;
 
 };
 

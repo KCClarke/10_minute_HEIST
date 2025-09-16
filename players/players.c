@@ -3,7 +3,6 @@
 #include "players.h"
 
 #include <stddef.h>
-#include <assert.h>
 
 
 static player_t g_players[MAX_PLAYERS];
@@ -21,6 +20,13 @@ player_t * get_player_list()
     return (g_players);
 }
 
+void take_turn(turn_t * turn, game_t * game)
+{
+    turn->location.floor = 'a';
+    turn->location.room = '1';
+    turn->exited = false;
+}
+
 static inline void initialize_suit_counts()
 {
     for (int player_index = 0; player_index < MAX_PLAYERS; ++player_index)
@@ -31,7 +37,6 @@ static inline void initialize_suit_counts()
         }
     }
 
-    assert(0 == g_players[0].num_suits[0]);
 }
 
 static inline void initialize_players()
@@ -42,7 +47,10 @@ static inline void initialize_players()
         g_players[index].num_fours  = 0;
         g_players[index].num_fives  = 0;
         g_players[index].num_curses = 0;
+        g_players[index].exit_number = 0;
         g_players[index].in_tower = false;
+        g_players[index].has_exited = false;
+        g_players[index].take_turn = take_turn;
     }
 
 }
