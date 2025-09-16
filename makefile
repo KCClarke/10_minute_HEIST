@@ -13,6 +13,7 @@ SRC = main.c \
 	  turn/turn.c \
 	  game/game.c \
 	  random/random.c \
+	  location/location.c \
 	  \
 	  tests/test_turn.c \
       tests/test_players.c \
@@ -20,7 +21,8 @@ SRC = main.c \
 	  tests/test_powers.c \
 	  tests/test_copying.c \
 	  tests/test_tower.c \
-	  tests/test_game.c
+	  tests/test_game.c \
+	  tests/test_location.c
 
 # Object files in build/ maintaining folder structure
 OBJ = $(patsubst %.c,build/%.o,$(SRC))

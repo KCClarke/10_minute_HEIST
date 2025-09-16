@@ -8,7 +8,7 @@
 #include "test_game.h"
 #include "test_powers.h"
 #include "test_turn.h"
-
+#include "test_location.h"
 #include <stdio.h>
 
 /*!
@@ -26,6 +26,7 @@ void all_tests()
     test_game();
     test_powers();
     test_turn();
+    test_location();
     
     printf("\n%s passed.\n\n", __func__);
     
