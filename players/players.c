@@ -21,6 +21,7 @@ player_t * get_player_list()
     return (g_players);
 }
 
+
 char get_bot_floor(game_t * game)
 {
     player_t * player = &game->player_list[game->current_player];
@@ -29,6 +30,7 @@ char get_bot_floor(game_t * game)
     if (false == player->in_tower)
     {
         floor = 'a';
+        player->in_tower = true;
     }
     else
     {

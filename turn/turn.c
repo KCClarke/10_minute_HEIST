@@ -8,13 +8,29 @@
 
 bool get_bot_turn(turn_t * turn, game_t * game)
 {
-    turn->location.floor = get_bot_floor(game);
-
-    if (turn->location.floor > 'h')
+    room_t * tower = game->tower;
+    turn->location.room = '1';
+    for(;;)
     {
-        turn.exit = true;
-    }
+        turn->location.floor = get_bot_floor(game);
 
+        if (turn->location.floor > 'h')
+        {
+            turn->exited = true;
+            break;
+        }
+
+        for (int index = 0; index < TOWER_WIDTH; ++index)
+        {
+            to_index(&turn->location);
+            if (has_card_no_player(tower[turn->location.index]))
+            {
+                break;
+            }
+            turn->location.room++;
+        }
+
+    }
     return (true);
 }
 

@@ -4,6 +4,7 @@
 #include "tower/tower.h"
 #include "players/players.h"
 #include "random/random.h"
+#include "cards/cards.h"
 #include "constants.h"
 
 #include <assert.h>
@@ -55,6 +56,12 @@ game_t * get_game()
 
     return (&g_game);
 
+}
+
+void exit_player()
+{
+    const int exit_number = g_game.players_exited++;
+    g_game.player_list[g_game.current_player].exit_number = exit_number;
 }
 
 void next_player()

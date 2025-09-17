@@ -23,6 +23,8 @@ struct game_s
 };
 
 game_t * get_game();
+
+void exit_player();
 void next_player();
 bool game_running();
 

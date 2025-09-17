@@ -48,7 +48,7 @@ static inline void mock_game()
         if (player->has_exited == false)
         {
             // TODO: get what the player wants to do for their turn.
-            // turn.valid = get_turn(&turn, game);
+            turn.valid = get_bot_turn(&turn, game);
         }
         else
         {
@@ -57,22 +57,23 @@ static inline void mock_game()
         }
 
 
-        game->players_exited++; // TODO: move this inside if (turn.exited)
         
         if (turn.exited)
         {
             // TODO: exit_player();
+            exit_player();
             turn.success = true;
         }
 
         if (turn.valid)
         {
             // TODO: collect_card(turn.location.index);
+            
+            //move_player(&turn);
             turn.success = true;
         }
 
-        // TODO: uncomment the following if
-        // if (turn.success)
+        if (turn.success)
         {
             next_player();
         }
