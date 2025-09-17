@@ -11,3 +11,8 @@ void take_turn(turn_t * turn, game_t * game)
     turn->exited = false;
 
 }
+
+bool did_not_move_up(const location_t * location, const game_t * game)
+{
+    return (true);
+}

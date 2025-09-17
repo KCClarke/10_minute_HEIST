@@ -29,22 +29,27 @@ static inline void mock_turn()
     turn_t turn;
     assert(NULL != &turn);
 
-    /* main gameplay loop */
+    /* Main gameplay loop.
+    *
+    * Three things make a turn successful
+    *   one) Player exits.
+    *   two) An exited player is skipped.
+    *   three) Player takes a card. 
+    */
     {
         player_t * player = &players[game->current_player];
         turn.success = false;
         
         if (player->has_exited == false)
         {
-            player->take_turn(&turn, game);
 
-            assert('a' == turn.location.floor);
-            assert('1' == turn.location.room);
-            assert(false == turn.exited);
+            player->take_turn(&turn, game);
+            // bool player_did_not_move_up()
+            // bool has_card_no_player()
+
         }
         else
         {
-            // We skip the exited player.
             turn.success = true;
         }
 

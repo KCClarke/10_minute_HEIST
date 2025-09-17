@@ -45,6 +45,7 @@ static inline void initialize_players()
         g_players[index].in_tower = false;
         g_players[index].has_exited = false;
         g_players[index].take_turn = take_turn;
+        g_players[index].did_not_move_up = did_not_move_up;
     }
 
 }
