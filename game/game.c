@@ -39,7 +39,7 @@ static inline int
 get_undealt_card_index(const card_index_t first, const card_index_t last);
 
 
-// Function definitions.
+// Public function definitions.
 game_t * get_game()
 {
     initialize_players();
@@ -64,6 +64,12 @@ void next_player()
 
 }
 
+bool game_running()
+{
+    return (g_game.num_players != (g_game.players_exited - 1));
+}
+
+// Private function definitions.
 static inline void deal_to_first_floor(const card_t * card_list)
 {
     for (int tower_index = 0; tower_index < TOWER_WIDTH; ++tower_index)

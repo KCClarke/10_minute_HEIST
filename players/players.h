@@ -7,7 +7,7 @@
 
 #include "cards/cards.h"
 #include "location/location.h"
-#include "turn.h"
+#include "turn/turn.h"
 
 #include <stdbool.h>
 
@@ -30,12 +30,10 @@ struct player_s
     bool has_exited;
     
     int cards_in_haul;
-
-    void (* take_turn)(turn_t * turn, game_t * game);
-    bool (* did_not_move_up)(const location_t * location, const player_t * player);
-
+    
 };
 
 player_t * get_player_list();
+char get_bot_floor(game_t * game);
 
 #endif

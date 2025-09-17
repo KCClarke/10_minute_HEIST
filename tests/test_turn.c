@@ -10,12 +10,76 @@
 #include "players/players.h"
 
 static inline void mock_turn();
+static inline void mock_game();
 
 void test_turn()
 {
     mock_turn();
+    mock_game();
 
     printf("%s passed.\n", __func__);
+}
+
+static inline void mock_game()
+{
+    game_t   * game = get_game();
+    player_t * players = game->player_list;
+    room_t   * tower = game->tower;
+    turn_t     turn;
+
+    assert(NULL != game);
+    assert(NULL != players);
+    assert(NULL != tower);
+
+    initialize_turn(&turn);
+    assert(false == turn.valid);
+    assert(false == turn.exited);
+    assert(false == turn.success);
+    
+    assert(true == game_running());
+
+    while(game_running())
+    {
+        player_t * player  = &players[game->current_player];
+        assert(NULL != player);
+
+        initialize_turn(&turn);
+
+        if (player->has_exited == false)
+        {
+            // TODO: get what the player wants to do for their turn.
+            // turn.valid = get_turn(&turn, game);
+        }
+        else
+        {
+            // Skip them, they've exited.
+            turn.success = true;
+        }
+
+
+        game->players_exited++; // TODO: move this inside if (turn.exited)
+        
+        if (turn.exited)
+        {
+            // TODO: exit_player();
+            turn.success = true;
+        }
+
+        if (turn.valid)
+        {
+            // TODO: collect_card(turn.location.index);
+            turn.success = true;
+        }
+
+        // TODO: uncomment the following if
+        // if (turn.success)
+        {
+            next_player();
+        }
+    }
+
+    assert(false == game_running());
+
 }
 
 static inline void mock_turn()
@@ -35,18 +99,18 @@ static inline void mock_turn()
     {
         player_t * player = &players[game->current_player];
         turn.success = false;
-        turn.proposal_valid = false;
+        turn.valid = false;
         
         if (player->has_exited == false)
         {
 
-            player->take_turn(&turn, game);
+            take_turn(&turn, game);
             
-            turn.proposal_valid =  player->did_not_move_up(&turn.location, player);
+            turn.valid =  did_not_move_up(&turn.location, player);
             to_index(&turn.location);
-            turn.proposal_valid &= has_card_no_player(tower[turn.location.index]);
+            turn.valid &= has_card_no_player(tower[turn.location.index]);
 
-            assert(true == turn.proposal_valid);
+            assert(true == turn.valid);
 
         }
         else
@@ -63,7 +127,7 @@ static inline void mock_turn()
             turn.success = true;
         }
 
-        if (turn.proposal_valid)
+        if (turn.valid)
         {
             room_t room = tower[turn.location.index];
             card_t * card = room.p_card;

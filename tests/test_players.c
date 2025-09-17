@@ -31,7 +31,7 @@ static inline void test_player_did_not_move_up()
     location_t location;
     player_t * player = &game->player_list[game->current_player];
     
-    player->did_not_move_up(&location, player);
+    did_not_move_up(&location, player);
 }
 
 static inline void test_player_suit_counts()
@@ -63,8 +63,6 @@ static inline void test_player_initialization()
         
         assert(false == player_list[index].in_tower);
         assert(false == player_list[index].has_exited);
-
-        assert(NULL != player_list[index].take_turn);
 
     }
 

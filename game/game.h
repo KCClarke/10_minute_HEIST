@@ -8,6 +8,8 @@
 #include "tower/tower.h"
 #include "players/players.h"
 
+#include <stdbool.h>
+
 typedef struct game_s game_t;
 
 struct game_s
@@ -22,5 +24,6 @@ struct game_s
 
 game_t * get_game();
 void next_player();
+bool game_running();
 
 #endif
