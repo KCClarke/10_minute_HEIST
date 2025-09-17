@@ -18,6 +18,13 @@ room_t * get_tower()
     
 }
 
+bool has_card_no_player(room_t room)
+{
+    bool has_card = room.p_card != NULL;
+    bool no_player = room.p_player == NULL;
+    return (has_card && no_player);
+}
+
 static inline void initialize_tower()
 {
     for (int index = 0; index < TOTAL_ROOMS; ++index)

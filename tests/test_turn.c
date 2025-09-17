@@ -60,7 +60,7 @@ static inline void mock_turn()
         if (/* location in tower is valid */ true)
         {
             
-            
+
             turn.success = true;
         }
 

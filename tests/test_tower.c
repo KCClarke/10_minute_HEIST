@@ -4,6 +4,7 @@
 #include "tower/tower.h"
 #include "cards/cards.h"
 #include "players/players.h"
+#include "game/game.h"
 #include "constants.h"
 
 #include <stdio.h>
@@ -29,11 +30,22 @@ void test_tower()
 
 static inline void test_has_card_no_player()
 {
-    room_t * tower = get_tower();
-    assert(NULL != tower);
-    const card_t * card_list = get_master_card_list();
-    assert(NULL != card_list);
+    game_t * game = get_game();
+    assert(NULL != game->tower);
 
+    room_t * tower = game->tower;
+
+    for (int index = 0; index < TOWER_WIDTH; ++index)
+    {
+        assert(NULL == tower[index].p_player);
+        assert(NULL != tower[index].p_card);
+        assert(true == has_card_no_player(tower[index]));
+    }
+
+    tower[0].p_card = NULL;
+    assert(false == has_card_no_player(tower[0]));
+    tower[0].p_player = NULL;
+    assert(false == has_card_no_player(tower[0]));
 }
 
 static inline void moving_love_potion_around()
