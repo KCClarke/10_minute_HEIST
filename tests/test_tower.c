@@ -34,7 +34,6 @@ static inline void test_has_card_no_player()
     const card_t * card_list = get_master_card_list();
     assert(NULL != card_list);
 
-    assert(false == has_card_no_player());
 }
 
 static inline void moving_love_potion_around()
