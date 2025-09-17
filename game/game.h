@@ -21,5 +21,6 @@ struct game_s
 };
 
 game_t * get_game();
+void next_player();
 
 #endif

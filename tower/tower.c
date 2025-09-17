@@ -18,7 +18,7 @@ room_t * get_tower()
     
 }
 
-bool has_card_no_player(room_t room)
+bool has_card_no_player(const room_t room)
 {
     bool has_card = room.p_card != NULL;
     bool no_player = room.p_player == NULL;

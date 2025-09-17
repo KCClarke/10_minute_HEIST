@@ -20,14 +20,10 @@ void test_turn()
 
 static inline void mock_turn()
 {
-    game_t * game = get_game();
-    assert(NULL != game);
-
+    game_t   * game = get_game();
     player_t * players = game->player_list;
-    assert(NULL != players);
-
-    turn_t turn;
-    assert(NULL != &turn);
+    room_t   * tower = game->tower;
+    turn_t     turn;
 
     /* Main gameplay loop.
     *
@@ -39,13 +35,18 @@ static inline void mock_turn()
     {
         player_t * player = &players[game->current_player];
         turn.success = false;
+        turn.proposal_valid = false;
         
         if (player->has_exited == false)
         {
 
             player->take_turn(&turn, game);
-            // bool player_did_not_move_up()
-            // bool has_card_no_player()
+            
+            turn.proposal_valid =  player->did_not_move_up(&turn.location, player);
+            to_index(&turn.location);
+            turn.proposal_valid &= has_card_no_player(tower[turn.location.index]);
+
+            assert(true == turn.proposal_valid);
 
         }
         else
@@ -62,16 +63,19 @@ static inline void mock_turn()
             turn.success = true;
         }
 
-        if (/* location in tower is valid */ true)
+        if (turn.proposal_valid)
         {
-            
+            room_t room = tower[turn.location.index];
+            card_t * card = room.p_card;
+            card->power(card, game);
+            room.p_player = player;
 
             turn.success = true;
         }
 
         if (turn.success)
         {
-            // Next Player
+            next_player();
         }
 
     }

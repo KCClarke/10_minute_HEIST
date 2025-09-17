@@ -3,6 +3,7 @@
 #include "turn.h"
 
 #include "game/game.h"
+#include "players/players.h"
 
 void take_turn(turn_t * turn, game_t * game)
 {
@@ -12,7 +13,7 @@ void take_turn(turn_t * turn, game_t * game)
 
 }
 
-bool did_not_move_up(const location_t * location, const game_t * game)
+bool did_not_move_up(const location_t * location, const player_t * player)
 {
     return (true);
 }

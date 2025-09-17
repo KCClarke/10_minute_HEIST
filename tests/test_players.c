@@ -29,8 +29,9 @@ static inline void test_player_did_not_move_up()
 {
     game_t * game = get_game();
     location_t location;
-
-    game->player_list[game->current_player].did_not_move_up(&location, game);
+    player_t * player = &game->player_list[game->current_player];
+    
+    player->did_not_move_up(&location, player);
 }
 
 static inline void test_player_suit_counts()

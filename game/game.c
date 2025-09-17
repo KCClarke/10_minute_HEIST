@@ -57,6 +57,13 @@ game_t * get_game()
 
 }
 
+void next_player()
+{
+    g_game.current_player++;
+    g_game.current_player %= g_game.num_players;
+
+}
+
 static inline void deal_to_first_floor(const card_t * card_list)
 {
     for (int tower_index = 0; tower_index < TOWER_WIDTH; ++tower_index)

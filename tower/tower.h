@@ -15,6 +15,6 @@ struct room_s{
 };
 
 room_t * get_tower();
-bool has_card_no_player(room_t room);
+bool has_card_no_player(const room_t room);
 
 #endif
