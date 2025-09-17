@@ -30,7 +30,7 @@ struct player_s
     
     int cards_in_haul;
 
-    void (*take_turn)(turn_t * turn, game_t * game);
+    void (* take_turn)(turn_t * turn, game_t * game);
 
 };
 

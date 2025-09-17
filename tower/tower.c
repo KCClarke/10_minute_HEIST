@@ -2,7 +2,6 @@
 
 #include "tower.h"
 #include "constants.h"
-#include "random/random.h"
 
 #include <stddef.h>
 
