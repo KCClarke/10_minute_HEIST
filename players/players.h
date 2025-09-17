@@ -7,7 +7,7 @@
 
 #include "cards/cards.h"
 #include "location/location.h"
-#include "turn/turn.h"
+#include "turn.h"
 
 #include <stdbool.h>
 

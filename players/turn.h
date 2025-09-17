@@ -7,6 +7,7 @@
 
 #include <stdbool.h>
 
+typedef struct game_s game_t;
 typedef struct turn_s turn_t;
 
 struct turn_s
@@ -16,5 +17,7 @@ struct turn_s
     bool success;
 
 };
+
+void take_turn(turn_t * turn, game_t * game);
 
 #endif

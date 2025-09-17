@@ -20,12 +20,6 @@ player_t * get_player_list()
     return (g_players);
 }
 
-void take_turn(turn_t * turn, game_t * game)
-{
-    turn->location.floor = 'a';
-    turn->location.room = '1';
-    turn->exited = false;
-}
 
 static inline void initialize_suit_counts()
 {

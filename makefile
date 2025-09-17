@@ -8,9 +8,9 @@ SRC = main.c \
       cards/cards.c \
 	  cards/powers.c \
       players/players.c \
+	  players/turn.c \
 	  tower/tower.c \
       tests/tests.c \
-	  turn/turn.c \
 	  game/game.c \
 	  random/random.c \
 	  location/location.c \
