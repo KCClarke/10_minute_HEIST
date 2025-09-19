@@ -6,6 +6,7 @@
 int main()
 {
     seed_random();
+    
     all_tests();
 
 }

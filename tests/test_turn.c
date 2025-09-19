@@ -6,12 +6,9 @@
 #include <stdio.h>
 #include <assert.h>
 
-#include "game/game.h"
 #include "players/players.h"
 
 static inline void mock_turn();
-static inline void mock_game();
-static inline void print_mock_game_results(const game_t * game);
 
 void test_turn()
 {
@@ -21,7 +18,7 @@ void test_turn()
     printf("%s passed.\n", __func__);
 }
 
-static inline void mock_game()
+game_t * mock_game()
 {
     game_t   * game = get_game();
     player_t * players = game->player_list;
@@ -80,12 +77,11 @@ static inline void mock_game()
     }
 
     //assert(false == game_running());
-
-    print_mock_game_results(game);
     
+    return (game);
 }
 
-static inline void print_mock_game_results(const game_t * game)
+void print_mock_game(const game_t * game)
 {
     printf("\n");
     for (int index = 0; index < game->num_players; ++index)
