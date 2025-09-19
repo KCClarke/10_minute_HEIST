@@ -12,6 +12,8 @@
 #include <stdbool.h>
 #include <stdio.h>
 
+#define NUM_PLAYERS 5
+
 static game_t g_game;
 
 static bool g_dealt[TOTAL_CARDS];
@@ -141,7 +143,7 @@ get_undealt_card_index(const card_index_t first, const card_index_t last)
 
 static inline void initialize_players()
 {
-    g_game.num_players = 5;
+    g_game.num_players = NUM_PLAYERS;
     g_game.current_player = PLAYER_1;
     g_game.player_list = get_player_list();
 

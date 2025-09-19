@@ -22,25 +22,6 @@ player_t * get_player_list()
 }
 
 
-char get_bot_floor(game_t * game)
-{
-    player_t * player = &game->player_list[game->current_player];
-    char floor;
-    
-    if (false == player->in_tower)
-    {
-        floor = 'a';
-        player->in_tower = true;
-    }
-    else
-    {
-        floor = player->location.floor++;
-    }
-
-    return (floor);
-}
-
-
 static inline void initialize_suit_counts()
 {
     for (int player_index = 0; player_index < MAX_PLAYERS; ++player_index)
@@ -62,6 +43,7 @@ static inline void initialize_players()
         g_players[index].num_fives  = 0;
         g_players[index].num_curses = 0;
         g_players[index].exit_number = 0;
+        g_players[index].cards_in_haul = 0;
         g_players[index].in_tower = false;
         g_players[index].has_exited = false;
     }

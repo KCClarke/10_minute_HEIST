@@ -34,6 +34,5 @@ struct player_s
 };
 
 player_t * get_player_list();
-char get_bot_floor(game_t * game);
 
 #endif

@@ -4,34 +4,70 @@
 
 #include "game/game.h"
 #include "players/players.h"
+#include "location/location.h"
+#include <stddef.h>
 
-
-bool get_bot_turn(turn_t * turn, game_t * game)
+void move_player(turn_t * turn, game_t * game)
 {
+    player_t * player = &game->player_list[game->current_player];
     room_t * tower = game->tower;
-    turn->location.room = '1';
-    for(;;)
-    {
-        turn->location.floor = get_bot_floor(game);
 
-        if (turn->location.floor > 'h')
+    if (player->in_tower)
+    {
+        location_t previous_player_location;
+        previous_player_location.floor = player->location.floor;
+        previous_player_location.room = player->location.room;
+        to_index(&previous_player_location);
+        // Remove the player from the previous room.
+        tower[previous_player_location.index].p_player = NULL;
+    }
+
+    // Put them in the new room.
+    tower[turn->location.index].p_player = player;
+    player->location.floor = turn->location.floor;
+    player->location.room = turn->location.room;
+    
+    player->in_tower = true;
+}
+
+void collect_card(turn_t * turn, game_t * game)
+{
+    const int index = turn->location.index;
+
+    card_t * card = game->tower[index].p_card;
+    player_t * player = &game->player_list[game->current_player];
+
+    card->power(card, game);
+    
+    player->haul[player->cards_in_haul] = card;
+    player->cards_in_haul++;
+
+    game->tower[index].p_card = NULL;
+
+}
+
+void get_bot_turn(turn_t * turn, game_t * game)
+{
+    bool card_found = false;
+
+    for (int index = 0; index < TOWER_WIDTH * TOWER_HEIGHT; ++index)
+    {
+        if (has_card_no_player(game->tower[index]))
         {
-            turn->exited = true;
+            turn->location.index = index;
+            to_floor_room(&turn->location);
+            card_found = true;
             break;
         }
-
-        for (int index = 0; index < TOWER_WIDTH; ++index)
-        {
-            to_index(&turn->location);
-            if (has_card_no_player(tower[turn->location.index]))
-            {
-                break;
-            }
-            turn->location.room++;
-        }
-
     }
-    return (true);
+
+    if (false == card_found)
+    {
+        turn->exited = true;
+    }
+
+    turn->valid = true;
+    turn->success = true;
 }
 
 void initialize_turn(turn_t * turn)

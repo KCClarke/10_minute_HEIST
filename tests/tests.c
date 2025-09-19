@@ -25,8 +25,8 @@ void all_tests()
     test_tower();
     test_game();
     test_powers();
-    test_turn();
     test_location();
+    test_turn();
     
     printf("\n%s passed.\n\n", __func__);
     

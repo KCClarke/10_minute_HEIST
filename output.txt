@@ -5,8 +5,25 @@ test_copying passed.
 test_tower passed.
 test_game passed.
 test_powers passed.
-test_turn passed.
 test_location passed.
+
+player 1:
+	The Angelic Compass
+	Silver Idol of Hun-Batz
+player 2:
+	Flamel's Formulas
+	Sunstone Phoenix Feather
+player 3:
+	Stone of Kings
+	Infernal Tarot
+player 4:
+	Potion of Strength
+	Gibbon's Paw
+player 5:
+	Dragon Skull
+	Book of Spells
+
+test_turn passed.
 
 all_tests passed.
 

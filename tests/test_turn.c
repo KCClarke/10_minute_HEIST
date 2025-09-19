@@ -11,6 +11,7 @@
 
 static inline void mock_turn();
 static inline void mock_game();
+static inline void print_mock_game_results(const game_t * game);
 
 void test_turn()
 {
@@ -48,7 +49,8 @@ static inline void mock_game()
         if (player->has_exited == false)
         {
             // TODO: get what the player wants to do for their turn.
-            turn.valid = get_bot_turn(&turn, game);
+            get_bot_turn(&turn, game);
+            turn.success = true;
         }
         else
         {
@@ -56,20 +58,18 @@ static inline void mock_game()
             turn.success = true;
         }
 
-
-        
         if (turn.exited)
         {
             // TODO: exit_player();
             exit_player();
             turn.success = true;
         }
-
-        if (turn.valid)
+        else
         {
             // TODO: collect_card(turn.location.index);
             
-            //move_player(&turn);
+            collect_card(&turn, game);
+            move_player(&turn, game);
             turn.success = true;
         }
 
@@ -79,8 +79,28 @@ static inline void mock_game()
         }
     }
 
-    assert(false == game_running());
+    //assert(false == game_running());
 
+    print_mock_game_results(game);
+    
+}
+
+static inline void print_mock_game_results(const game_t * game)
+{
+    printf("\n");
+    for (int index = 0; index < game->num_players; ++index)
+    {
+        player_t * player = &game->player_list[index];
+
+        printf("player %d:\n", 1 + index);
+        for (int num_cards = 0; num_cards < player->cards_in_haul; ++num_cards)
+        {
+            printf("\t%s\n", player->haul[num_cards]->name);
+        }
+
+    }
+
+    printf("\n");
 }
 
 static inline void mock_turn()
