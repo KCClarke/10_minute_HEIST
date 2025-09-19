@@ -6,6 +6,8 @@
 #include <stdio.h>
 #include <assert.h>
 
+#include "constants.h"
+#include "cards/cards.h"
 #include "players/players.h"
 
 static inline void mock_turn();
@@ -13,7 +15,7 @@ static inline void mock_turn();
 void test_turn()
 {
     mock_turn();
-    mock_game();
+    print_mock_game(mock_game());
 
     printf("%s passed.\n", __func__);
 }
@@ -87,11 +89,23 @@ void print_mock_game(const game_t * game)
     for (int index = 0; index < game->num_players; ++index)
     {
         player_t * player = &game->player_list[index];
+        const char ** suit_names = get_suit_names();
 
         printf("player %d:\n", 1 + index);
         for (int num_cards = 0; num_cards < player->cards_in_haul; ++num_cards)
         {
-            printf("\t%s\n", player->haul[num_cards]->name);
+            const card_t * card = player->haul[num_cards];
+            printf("\t%d ", card->value);
+            printf("%-9s ", suit_names[card->suit]);
+            printf("%s\n", card->name);
+        }
+        
+        printf("\tthrees:%d  fours:%d fives:%d\n", player->num_threes, player->num_fours, player->num_fives);
+        
+        for (int index = 0; index < NUM_BASIC_SUITS; ++index)
+        {
+            printf("\t%-9s ", suit_names[index]);
+            printf("%d\n", player->num_suits[index]);
         }
 
     }

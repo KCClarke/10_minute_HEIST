@@ -27,6 +27,22 @@ const card_t * get_master_card_list()
 
 }
 
+const char * suit_names[] = 
+{
+    "potion",
+    "fossil",
+    "artifact",
+    "jewel",
+    "tome",
+    "ERROR: 'NUM_BASIC_SUITS' sent",
+    "wild"
+};
+
+const char ** get_suit_names()
+{
+    return (suit_names);
+}
+
 static inline void initialize_default_card_properties()
 {
     for (int index = 0; index < TOTAL_CARDS; ++index)

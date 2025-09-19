@@ -19,5 +19,5 @@ struct card_s
 };
 
 const card_t * get_master_card_list();
-
+const char ** get_suit_names();
 #endif

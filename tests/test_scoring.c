@@ -1,6 +1,7 @@
 /* test_scoring.c */
 
 #include "test_scoring.h"
+#include "test_turn.h"
 
 #include <stddef.h>
 #include <assert.h>

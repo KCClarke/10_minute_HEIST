@@ -6,6 +6,53 @@ test_tower passed.
 test_game passed.
 test_powers passed.
 test_location passed.
+
+player 1:
+	5 potion    Greater Potion of Healing
+	4 jewel     Heart of Eternity
+	threes:0  fours:1 fives:1
+	potion    5
+	fossil    0
+	artifact  0
+	jewel     4
+	tome      0
+player 2:
+	3 tome      Orion's Bestiary
+	5 jewel     Stone of Kings
+	threes:1  fours:0 fives:1
+	potion    0
+	fossil    0
+	artifact  0
+	jewel     5
+	tome      3
+player 3:
+	4 artifact  The Angelic Compass
+	3 jewel     The Eye of Vala
+	threes:1  fours:1 fives:0
+	potion    0
+	fossil    0
+	artifact  4
+	jewel     3
+	tome      0
+player 4:
+	2 wild      Infernal Tarot
+	3 potion    Love Potion #8
+	threes:1  fours:0 fives:0
+	potion    5
+	fossil    2
+	artifact  2
+	jewel     2
+	tome      2
+player 5:
+	3 artifact  Sprig of the Dawn Tree
+	5 artifact  Silver Idol of Hun-Batz
+	threes:1  fours:0 fives:1
+	potion    0
+	fossil    0
+	artifact  8
+	jewel     0
+	tome      0
+
 test_turn passed.
 passed test_scoring.
 
