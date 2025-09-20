@@ -28,11 +28,13 @@ game_t * mock_game()
     turn_t     turn;
 
     assert(NULL != game);
+    assert(0 == game->players_exited);
+    assert(0 == game->current_player);
     assert(NULL != players);
     assert(NULL != tower);
 
     initialize_turn(&turn);
-    assert(false == turn.valid);
+    assert(false == turn.card_found);
     assert(false == turn.exited);
     assert(false == turn.success);
     
@@ -46,27 +48,24 @@ game_t * mock_game()
         initialize_turn(&turn);
 
         if (player->has_exited == false)
-        {
-            // TODO: get what the player wants to do for their turn.
+        {   // TODO: get what the player wants to do for their turn.
             get_bot_turn(&turn, game);
-            turn.success = true;
         }
         else
-        {
-            // Skip them, they've exited.
+        {   // Skip them, they've exited.
             turn.success = true;
         }
 
         if (turn.exited)
         {
-            // TODO: exit_player();
+            printf(" turn exited\n");
             exit_player();
             turn.success = true;
         }
-        else
-        {
-            // TODO: collect_card(turn.location.index);
-            
+
+        if (turn.card_found)
+        {   
+
             collect_card(&turn, game);
             move_player(&turn, game);
             turn.success = true;
@@ -78,9 +77,9 @@ game_t * mock_game()
         }
     }
 
-    //assert(false == game_running());
-    
+    assert(false == game_running());
     return (game);
+
 }
 
 void print_mock_game(const game_t * game)
@@ -131,18 +130,18 @@ static inline void mock_turn()
     {
         player_t * player = &players[game->current_player];
         turn.success = false;
-        turn.valid = false;
+        turn.card_found = false;
         
         if (player->has_exited == false)
         {
-
             take_turn(&turn, game);
             
-            turn.valid =  did_not_move_up(&turn.location, player);
             to_index(&turn.location);
-            turn.valid &= has_card_no_player(tower[turn.location.index]);
+            assert(0 == turn.location.index);
 
-            assert(true == turn.valid);
+            turn.card_found = has_card_no_player(tower[turn.location.index]);
+
+            assert(true == turn.card_found);
 
         }
         else
@@ -159,7 +158,7 @@ static inline void mock_turn()
             turn.success = true;
         }
 
-        if (turn.valid)
+        if (turn.card_found )
         {
             room_t room = tower[turn.location.index];
             card_t * card = room.p_card;

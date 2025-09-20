@@ -6,6 +6,7 @@
 #include "players/players.h"
 #include "location/location.h"
 #include <stddef.h>
+#include <stdio.h>
 
 void move_player(turn_t * turn, game_t * game)
 {
@@ -48,7 +49,6 @@ void collect_card(turn_t * turn, game_t * game)
 
 void get_bot_turn(turn_t * turn, game_t * game)
 {
-    bool card_found = false;
 
     for (int index = 0; index < TOWER_WIDTH * TOWER_HEIGHT; ++index)
     {
@@ -56,23 +56,22 @@ void get_bot_turn(turn_t * turn, game_t * game)
         {
             turn->location.index = index;
             to_floor_room(&turn->location);
-            card_found = true;
+            turn->card_found = true;
             break;
         }
     }
 
-    if (false == card_found)
+    if (false == turn->card_found)
     {
+        printf("card not found player:%d", game->current_player);
         turn->exited = true;
     }
 
-    turn->valid = true;
-    turn->success = true;
 }
 
 void initialize_turn(turn_t * turn)
 {
-    turn->valid = false;
+    turn->card_found = false;
     turn->exited = false;
     turn->success = false;
 }

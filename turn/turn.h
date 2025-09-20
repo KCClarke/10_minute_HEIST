@@ -15,7 +15,7 @@ typedef struct game_s game_t;
 struct turn_s
 {
     location_t location;
-    bool valid;
+    bool card_found;
     bool exited;
     bool success;
 

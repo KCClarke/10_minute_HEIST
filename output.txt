@@ -6,40 +6,46 @@ test_tower passed.
 test_game passed.
 test_powers passed.
 test_location passed.
+card not found player:2 turn exited
+card not found player:0 turn exited
+card not found player:1 turn exited
 test_turn passed.
+card not found player:2 turn exited
+card not found player:0 turn exited
+card not found player:1 turn exited
 
 player 1:
-	3 artifact  Sprig of the Dawn Tree
-	4 tome      Flamel's Formulas
-	2 wild      Celestial Tarot
-	threes:1  fours:1 fives:0
-	potion    2
-	fossil    2
-	artifact  5
+	5 potion    Greater Potion of Healing
+	2 wild      Infernal Tarot
+	4 fossil    Gibbon's Paw
+	threes:0  fours:1 fives:1
+	potion    7
+	fossil    6
+	artifact  2
 	jewel     2
-	tome      6
-	exited:1
+	tome      2
+	exited:2
 player 2:
-	3 jewel     The Eye of Vala
+	3 tome      Orion's Bestiary
 	5 artifact  Silver Idol of Hun-Batz
-	4 jewel     Heart of Eternity
-	threes:1  fours:1 fives:1
-	potion    0
+	3 potion    Love Potion #8
+	threes:2  fours:0 fives:1
+	potion    3
 	fossil    0
 	artifact  5
-	jewel     7
-	tome      0
-	exited:2
-player 3:
-	4 fossil    Gibbon's Paw
-	5 potion    Greater Potion of Healing
-	threes:0  fours:1 fives:1
-	potion    5
-	fossil    4
-	artifact  0
 	jewel     0
-	tome      0
+	tome      3
 	exited:3
+player 3:
+	5 fossil    Dragon Skull
+	2 wild      Celestial Tarot
+	threes:0  fours:0 fives:1
+	potion    2
+	fossil    7
+	artifact  2
+	jewel     2
+	tome      2
+	exited:1
 
 passed test_scoring.
 

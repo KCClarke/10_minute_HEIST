@@ -62,20 +62,25 @@ game_t * get_game()
 
 void exit_player()
 {
-    const int exit_number = g_game.players_exited++;
+    g_game.players_exited++;
+    const int exit_number = g_game.players_exited;
+
     g_game.player_list[g_game.current_player].exit_number = exit_number;
+    g_game.player_list[g_game.current_player].has_exited = true;
+
 }
 
 void next_player()
 {
     g_game.current_player++;
     g_game.current_player %= g_game.num_players;
+    assert(NUM_PLAYERS < MAX_PLAYERS);
 
 }
 
 bool game_running()
 {
-    return (g_game.num_players != (g_game.players_exited - 1));
+    return (g_game.num_players != (g_game.players_exited));
 }
 
 // Private function definitions.
