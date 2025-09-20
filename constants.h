@@ -3,14 +3,35 @@
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 
-#define MAX_PLAYERS 5
 #define NUM_LIGHT_CARDS 17
 #define TOTAL_CARDS 57
 #define MAX_HAUL TOTAL_CARDS
-#define SCORING_TILES 13
 #define TOWER_WIDTH 5
 #define TOWER_HEIGHT 8
 #define TOTAL_ROOMS TOWER_HEIGHT * TOWER_WIDTH
+
+typedef enum
+{
+    MOST_POTIONS,
+    MOST_FOSSILS,
+    MOST_ARTIFACTS,
+    MOST_JEWELS,
+    MOST_TOMES,
+
+    MOST_THREES,
+    MOST_FOURS,
+    MOST_FIVES,
+
+    FIRST_EXIT,
+    SECOND_EXIT,
+    LAST_EXIT,
+
+    MOST_CURSES,
+    LEAST_CURSES
+
+    NUM_SCORING_TILES
+
+} score_t;
 
 typedef enum
 {
@@ -19,6 +40,7 @@ typedef enum
     ARTIFACT,
     JEWEL,
     TOME,
+
     NUM_BASIC_SUITS,
     WILD,
     NONE
@@ -60,7 +82,9 @@ typedef enum
     PLAYER_2, 
     PLAYER_3,
     PLAYER_4,
-    PLAYER_5
+    PLAYER_5,
+
+    MAX_PLAYERS
 
 } player_ID_t;
 
