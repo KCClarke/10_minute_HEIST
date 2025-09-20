@@ -27,7 +27,7 @@ typedef enum
     LAST_EXIT,
 
     MOST_CURSES,
-    LEAST_CURSES
+    LEAST_CURSES,
 
     NUM_SCORING_TILES
 

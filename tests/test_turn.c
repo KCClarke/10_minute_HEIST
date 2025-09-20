@@ -15,7 +15,7 @@ static inline void mock_turn();
 void test_turn()
 {
     mock_turn();
-    print_mock_game(mock_game());
+    mock_game();
 
     printf("%s passed.\n", __func__);
 }
@@ -108,6 +108,7 @@ void print_mock_game(const game_t * game)
             printf("%d\n", player->num_suits[index]);
         }
 
+        printf("\texited:%d\n", player->exit_number);
     }
 
     printf("\n");

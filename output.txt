@@ -6,54 +6,41 @@ test_tower passed.
 test_game passed.
 test_powers passed.
 test_location passed.
+test_turn passed.
 
 player 1:
-	5 jewel     Stone of Kings
+	3 artifact  Sprig of the Dawn Tree
+	4 tome      Flamel's Formulas
+	2 wild      Celestial Tarot
+	threes:1  fours:1 fives:0
+	potion    2
+	fossil    2
+	artifact  5
+	jewel     2
+	tome      6
+	exited:1
+player 2:
+	3 jewel     The Eye of Vala
 	5 artifact  Silver Idol of Hun-Batz
-	threes:0  fours:0 fives:2
+	4 jewel     Heart of Eternity
+	threes:1  fours:1 fives:1
 	potion    0
 	fossil    0
 	artifact  5
-	jewel     5
+	jewel     7
 	tome      0
-player 2:
-	3 tome      Orion's Bestiary
-	3 fossil    Sunstone Phoenix Feather
-	threes:2  fours:0 fives:0
-	potion    0
-	fossil    3
-	artifact  0
-	jewel     0
-	tome      3
+	exited:2
 player 3:
-	3 potion    Love Potion #8
-	2 wild      Celestial Tarot
-	threes:1  fours:0 fives:0
-	potion    5
-	fossil    2
-	artifact  2
-	jewel     2
-	tome      2
-player 4:
+	4 fossil    Gibbon's Paw
 	5 potion    Greater Potion of Healing
-	4 artifact  The Angelic Compass
 	threes:0  fours:1 fives:1
 	potion    5
-	fossil    0
-	artifact  4
+	fossil    4
+	artifact  0
 	jewel     0
 	tome      0
-player 5:
-	4 tome      Flamel's Formulas
-	3 jewel     The Eye of Vala
-	threes:1  fours:1 fives:0
-	potion    0
-	fossil    0
-	artifact  0
-	jewel     3
-	tome      4
+	exited:3
 
-test_turn passed.
 passed test_scoring.
 
 all_tests passed.
