@@ -63,7 +63,6 @@ void get_bot_turn(turn_t * turn, game_t * game)
 
     if (false == turn->card_found)
     {
-        printf("card not found player:%d", game->current_player);
         turn->exited = true;
     }
 

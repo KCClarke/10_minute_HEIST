@@ -58,7 +58,6 @@ game_t * mock_game()
 
         if (turn.exited)
         {
-            printf(" turn exited\n");
             exit_player();
             turn.success = true;
         }

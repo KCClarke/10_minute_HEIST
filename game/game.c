@@ -74,8 +74,6 @@ void next_player()
 {
     g_game.current_player++;
     g_game.current_player %= g_game.num_players;
-    assert(NUM_PLAYERS < MAX_PLAYERS);
-
 }
 
 bool game_running()
