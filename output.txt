@@ -9,46 +9,37 @@ test_location passed.
 test_turn passed.
 
 player 1:
+	5 jewel     Stone of Kings
 	4 fossil    Gibbon's Paw
-	3 artifact  Sprig of the Dawn Tree
-	4 jewel     Heart of Eternity
-	threes:1  fours:2 fives:0
+	5 tome      Book of Spells
+	threes:0  fours:1 fives:2
 	potion    0
 	fossil    4
-	artifact  3
-	jewel     4
-	tome      0
-	exited:4
-player 2:
-	3 potion    Love Potion #8
-	3 fossil    Sunstone Phoenix Feather
-	threes:2  fours:0 fives:0
-	potion    3
-	fossil    3
 	artifact  0
-	jewel     0
-	tome      0
-	exited:1
+	jewel     5
+	tome      5
+	exited:2
+player 2:
+	3 jewel     The Eye of Vala
+	5 artifact  Silver Idol of Hun-Batz
+	2 wild      Infernal Tarot
+	threes:1  fours:0 fives:1
+	potion    2
+	fossil    2
+	artifact  7
+	jewel     5
+	tome      2
+	exited:3
 player 3:
 	4 potion    Potion of Strength
-	3 tome      Orion's Bestiary
+	3 artifact  Sprig of the Dawn Tree
 	threes:1  fours:1 fives:0
 	potion    4
 	fossil    0
-	artifact  0
+	artifact  3
 	jewel     0
-	tome      3
-	exited:2
-player 4:
-	3 jewel     The Eye of Vala
-	4 artifact  The Angelic Compass
-	threes:1  fours:1 fives:0
-	potion    0
-	fossil    0
-	artifact  4
-	jewel     3
 	tome      0
-	exited:3
+	exited:1
 
 passed test_scoring.
 
