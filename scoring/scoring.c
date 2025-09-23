@@ -5,6 +5,12 @@
 
 int g_points[NUM_SCORING_TILES];
 
+
+void score(player_t * players)
+{
+    players[PLAYER_1].points = 500;
+}
+
 int * get_points()
 {
     g_points[MOST_POTIONS]   = 3;

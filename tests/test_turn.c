@@ -97,6 +97,8 @@ void print_mock_game(const game_t * game)
             printf("%-9s ", suit_names[card->suit]);
             printf("%s\n", card->name);
         }
+
+        printf("\tcards in haul:%d\n", player->cards_in_haul);
         
         printf("\tthrees:%d  fours:%d fives:%d\n", player->num_threes, player->num_fours, player->num_fives);
         

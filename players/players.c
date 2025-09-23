@@ -11,16 +11,28 @@ static player_t g_players[MAX_PLAYERS];
 static inline void initialize_players();
 static inline void initialize_suit_counts();
 static inline void initialize_hauls();
+static inline void initialize_awards();
 
 player_t * get_player_list()
 {
     initialize_players();
     initialize_suit_counts();
     initialize_hauls();
+    initialize_awards();
     
     return (g_players);
 }
 
+static inline void initialize_awards()
+{
+    for (int index = 0; index < MAX_PLAYERS; ++index)
+    {
+        for(int tiles = 0; tiles < NUM_SCORING_TILES; ++tiles)
+        {
+            g_players[index].awards[tiles] = false;
+        }
+    }
+}
 
 static inline void initialize_suit_counts()
 {
@@ -44,10 +56,11 @@ static inline void initialize_players()
         g_players[index].num_curses = 0;
         g_players[index].exit_number = 0;
         g_players[index].cards_in_haul = 0;
+        g_players[index].points = 0;
         g_players[index].in_tower = false;
         g_players[index].has_exited = false;
     }
-
+    
 }
 
 static inline void initialize_hauls()

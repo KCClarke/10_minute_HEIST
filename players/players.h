@@ -31,6 +31,9 @@ struct player_s
     
     int cards_in_haul;
     
+    int points;
+    bool awards[NUM_SCORING_TILES];
+    
 };
 
 player_t * get_player_list();

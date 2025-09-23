@@ -60,6 +60,7 @@ static inline void test_player_initialization()
         assert(0 == player_list[index].num_fives);
         assert(0 == player_list[index].num_curses);
         assert(0 == player_list[index].exit_number);
+        assert(0 == player_list[index].points);
         
         assert(false == player_list[index].in_tower);
         assert(false == player_list[index].has_exited);
