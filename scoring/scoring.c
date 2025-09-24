@@ -3,13 +3,81 @@
 #include "scoring.h"
 #include "constants.h"
 
+#include <assert.h>
+
 int g_points[NUM_SCORING_TILES];
 
+static inline int highest_num_suit(game_t * game, suit_t suit, int * player_index);
+static inline bool tied(game_t * game, suit_t suit, int num);
+static inline void score_suits(game_t * game);
 
-void score(player_t * players)
+void score(game_t * game)
 {
-    players[PLAYER_1].points = 500;
+    (void) get_points();
+    score_suits(game);
+    
 }
+
+static inline void score_suits(game_t * game)
+{
+    suit_t first_suit = POTION;
+    suit_t last_suit = TOME;
+    int player_index;
+
+    for (int suit = first_suit; suit <= last_suit; ++suit)
+    {
+        int num = highest_num_suit(game, suit, &player_index);
+
+        bool is_tied = true;
+        if (num > 0)
+        {
+            is_tied = tied(game, suit, num);
+        }
+
+        if (!is_tied)
+        {
+            game->player_list[player_index].points += g_points[suit];
+        }
+    }
+
+}
+
+static inline bool tied(game_t * game, suit_t suit, int num)
+{
+    player_t * players = game->player_list;
+    int players_at_score = 0;
+
+    for (int player = 0; player < game->num_players; ++player)
+    {
+        if (players[player].num_suits[suit] == num)
+        {
+            ++players_at_score;
+        }
+    }
+
+    return (players_at_score > 1);
+}
+
+static inline int highest_num_suit(game_t * game, suit_t suit, int * player_index)
+{
+    player_t * players = game->player_list;
+    int most_in_suit = 0;
+
+    for (int player = 0; player < game->num_players; ++ player)
+    {
+        int curr_num = players[player].num_suits[suit];
+
+        if (curr_num > most_in_suit)
+        {
+            most_in_suit = curr_num;
+            *player_index = player;
+
+        }
+    }
+
+    return (most_in_suit);
+}
+
 
 int * get_points()
 {

@@ -4,8 +4,9 @@
 #define SCORING_H
 
 #include "players/players.h"
+#include "game/game.h"
 
 int * get_points();
-void score(player_t *);
+void score(game_t *);
 
 #endif
