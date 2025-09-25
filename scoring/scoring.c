@@ -25,18 +25,7 @@ void score(game_t * game)
 
 static inline void score_values(game_t * game)
 {
-    int most_of_value = 0;
-
-    for (int player = 0; player < game->num_players; ++player)
-    {
-        int curr_num_values = game->player_list[player].num_threes;
-        
-        if (curr_num_values > most_of_value)
-        {
-            most_of_value = curr_num_values;
-        }
-    }
-
+    
 }
 
 static inline void score_suits(game_t * game)

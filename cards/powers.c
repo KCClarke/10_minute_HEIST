@@ -41,19 +41,19 @@ static inline void update_player_values(const card_t * card, game_t * game)
     {
         case 3:
         {
-            player_list[index].num_threes++;
+            player_list[index].num_values[THREES]++;
         break;
         }
 
         case 4:
         {
-            player_list[index].num_fours++;
+            player_list[index].num_values[FOURS]++;
         break;
         }
 
         case 5:
         {
-            player_list[index].num_fives++;
+            player_list[index].num_values[FIVES]++;
         break;
         }
 

@@ -53,6 +53,7 @@ typedef enum
     FOURS,
     FIVES,
     NUM_VALUES
+    
 } value_t;
 
 typedef enum

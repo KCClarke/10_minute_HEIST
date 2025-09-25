@@ -55,9 +55,9 @@ static inline void test_player_initialization()
 
     for(int index = 0; index < MAX_PLAYERS; ++index)
     {
-        assert(0 == player_list[index].num_threes);
-        assert(0 == player_list[index].num_fours);
-        assert(0 == player_list[index].num_fives);
+        assert(0 == player_list[index].num_values[THREES]);
+        assert(0 == player_list[index].num_values[FOURS]);
+        assert(0 == player_list[index].num_values[FIVES]);
         assert(0 == player_list[index].num_curses);
         assert(0 == player_list[index].exit_number);
         assert(0 == player_list[index].points);

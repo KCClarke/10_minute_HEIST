@@ -10,6 +10,7 @@ static player_t g_players[MAX_PLAYERS];
 
 static inline void initialize_players();
 static inline void initialize_suit_counts();
+static inline void initialize_value_counts();
 static inline void initialize_hauls();
 static inline void initialize_awards();
 
@@ -17,6 +18,7 @@ player_t * get_player_list()
 {
     initialize_players();
     initialize_suit_counts();
+    initialize_value_counts();
     initialize_hauls();
     initialize_awards();
     
@@ -46,13 +48,22 @@ static inline void initialize_suit_counts()
 
 }
 
+static inline void initialize_value_counts()
+{
+    for (int player_index = 0; player_index < MAX_PLAYERS; ++player_index)
+    {
+        for (int value = THREES; value <= FIVES; ++value)
+        {
+            g_players[player_index].num_values[value] = 0;
+        }
+    }
+
+}
+
 static inline void initialize_players()
 {
     for(int index = 0; index < MAX_PLAYERS; ++index)
     {
-        g_players[index].num_threes = 0;
-        g_players[index].num_fours  = 0;
-        g_players[index].num_fives  = 0;
         g_players[index].num_curses = 0;
         g_players[index].exit_number = 0;
         g_players[index].cards_in_haul = 0;

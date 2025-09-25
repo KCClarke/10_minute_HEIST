@@ -52,19 +52,19 @@ static inline void test_values(const player_t * player, const card_t * card)
     {
         case 3:
         {
-            assert(1 == player->num_threes);
+            assert(1 == player->num_values[THREES]);
         break;
         }
 
         case 4:
         {
-            assert(1 == player->num_fours);
+            assert(1 == player->num_values[FOURS]);
         break;
         }
 
         case 5:
         {
-            assert(1 == player->num_fives);
+            assert(1 == player->num_values[FIVES]);
         break;
         }
 
@@ -145,7 +145,7 @@ static inline void test_potion_of_strength()
     * scores updated by the
     * card's power.
     */
-    const int starting_fours = player_list[index].num_fours;
+    const int starting_fours = player_list[index].num_values[FOURS];
     const int starting_suits = player_list[index].num_suits[POTION];
 
     card_t card = card_list[POTION_OF_STRENGTH];
@@ -154,7 +154,7 @@ static inline void test_potion_of_strength()
     assert(0 == card.curse);
 
     card.power(&card, game);
-    assert(1 + starting_fours == player_list[index].num_fours);
+    assert(1 + starting_fours == player_list[index].num_values[FOURS]);
     assert(4 + starting_suits == player_list[index].num_suits[POTION]);
 
 }
@@ -170,13 +170,13 @@ static inline void test_love_potion()
     
     player_t * player_list = game-> player_list;
 
-    const int statring_threes  = player_list[index].num_threes;
+    const int statring_threes  = player_list[index].num_values[THREES];
     const int starting_potions = player_list[index].num_suits[POTION];
 
     card_t card = card_list[LOVE_POTION_8];
     
     card.power(&card, game);
-    assert(1 + statring_threes == player_list[index].num_threes);
+    assert(1 + statring_threes == player_list[index].num_values[THREES]);
     assert(3 + starting_potions == player_list[index].num_suits[POTION]);
 
 }

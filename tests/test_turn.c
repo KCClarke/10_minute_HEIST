@@ -100,7 +100,9 @@ void print_mock_game(const game_t * game)
 
         printf("\tcards in haul:%d\n", player->cards_in_haul);
         
-        printf("\tthrees:%d  fours:%d fives:%d\n", player->num_threes, player->num_fours, player->num_fives);
+        printf("\tthrees:%d", player->num_values[THREES]);
+        printf(" fours:%d" ,  player->num_values[FOURS]);
+        printf(" fives:%d\n", player->num_values[FIVES]);
         
         for (int index = 0; index < NUM_BASIC_SUITS; ++index)
         {

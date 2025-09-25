@@ -44,11 +44,11 @@ static inline void hard_codes_value_tests()
 
     player_t * players = game->player_list;
 
-    players[PLAYER_1].num_threes = 1;
-    players[PLAYER_2].num_threes = 2;
-    players[PLAYER_3].num_threes = 2;
-    players[PLAYER_4].num_fours = 3;
-    players[PLAYER_5].num_fives = 4;
+    players[PLAYER_1].num_values[THREES] = 1;
+    players[PLAYER_2].num_values[THREES] = 2;
+    players[PLAYER_3].num_values[THREES] = 2;
+    players[PLAYER_4].num_values[FOURS] = 3;
+    players[PLAYER_5].num_values[FIVES] = 4;
 
 }
 
