@@ -15,21 +15,61 @@ static inline void test_point_values();
 
 static inline game_t * blank_slate_setup();
 
-static inline void hard_coded_curse_tests();
-static inline void hard_coded_suit_tests();
-static inline void hard_codes_value_tests();
+static inline void curse_tests();
+static inline void suit_tests();
+static inline void value_tests();
+static inline void exit_tests();
 
 void test_scoring()
 {
-    hard_coded_suit_tests();
-    hard_codes_value_tests();
-    hard_coded_suit_tests();
-    hard_coded_curse_tests();
+    suit_tests();
+    value_tests();
+    suit_tests();
+    curse_tests();
+    exit_tests();
     
     printf("passed %s.\n", __func__);
 }
 
-static inline void hard_coded_curse_tests()
+static inline void exit_tests()
+{
+    const int * points = get_points();
+    game_t * game = blank_slate_setup();
+    player_t * players = game->player_list;
+    
+    players[PLAYER_1].exit_number = 1;
+    players[PLAYER_2].exit_number = 2;
+    players[PLAYER_3].exit_number = 3;
+    players[PLAYER_4].exit_number = 4;
+    players[PLAYER_5].exit_number = 5;
+
+    score(game);
+
+    assert(points[FIRST_EXIT] == players[PLAYER_1].points);
+    assert(points[SECOND_EXIT] == players[PLAYER_2].points);
+    assert(points[LAST_EXIT] == players[PLAYER_5].points);
+
+    assert(true == players[PLAYER_1].awards[FIRST_EXIT]);
+    assert(true == players[PLAYER_2].awards[SECOND_EXIT]);
+    assert(true == players[PLAYER_5].awards[LAST_EXIT]);
+
+
+    game = blank_slate_setup();
+    game->num_players = 2;
+
+    assert(0 == players[PLAYER_1].points);
+    assert(0 == players[PLAYER_2].points);
+
+    players[PLAYER_1].exit_number = 1;
+    players[PLAYER_2].exit_number = 2;
+
+    score(game);
+    assert(0 == players[PLAYER_2].points);
+    assert(false == players[PLAYER_2].awards[SECOND_EXIT]);
+
+}
+
+static inline void curse_tests()
 {
     game_t * game = blank_slate_setup();
     player_t * players = game->player_list;
@@ -81,6 +121,18 @@ static inline void hard_coded_curse_tests()
     assert(1 == players[PLAYER_1].points);
     assert(true == players[PLAYER_1].awards[LEAST_CURSES]);
 
+    // Reset.
+    game = blank_slate_setup();
+    game->num_players = 2;
+
+    players[PLAYER_1].num_curses = 1;
+
+    score(game);
+
+    assert(-3 == players[PLAYER_1].points);
+    // 2 player game doesn't have least curses scoring per game rules;
+    assert(0 == players[PLAYER_2].points); 
+
 }
 
 static inline game_t * blank_slate_setup()
@@ -95,7 +147,7 @@ static inline game_t * blank_slate_setup()
 
 }
 
-static inline void hard_codes_value_tests()
+static inline void value_tests()
 {
     game_t * game = blank_slate_setup();
 
@@ -125,7 +177,7 @@ static inline void hard_codes_value_tests()
     assert(true == players[PLAYER_5].awards[MOST_FIVES]);
 }
 
-static inline void hard_coded_suit_tests()
+static inline void suit_tests()
 {
     game_t * game = blank_slate_setup();
     player_t * players = game->player_list;

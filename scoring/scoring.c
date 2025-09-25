@@ -22,6 +22,10 @@ static inline bool curse_tied(game_t * game, int curses);
 static inline void least_curses(game_t * game);
 static inline void score_curses(game_t * game);
 
+static inline void first_exit(game_t * game);
+static inline void other_exit(game_t * game);
+static inline void score_exit(game_t * game);
+
 
 
 void score(game_t * game)
@@ -31,7 +35,59 @@ void score(game_t * game)
     score_suits(game);
     score_values(game);
     score_curses(game);
+    score_exit(game);
     
+}
+
+static inline void score_exit(game_t * game)
+{
+    first_exit(game);
+    if (game->num_players > 2)
+    {
+        other_exit(game);
+    }
+}
+
+static inline void first_exit(game_t * game)
+{
+    player_t * players = game->player_list;
+
+    for (int player = 0; player < game->num_players; ++player)
+    {
+        int exit_number = players[player].exit_number;
+
+        if(1 == exit_number)
+        {
+            players[player].points += g_points[FIRST_EXIT];
+            players[player].awards[FIRST_EXIT] = true;
+            break;
+        }
+    }
+
+}
+
+static inline void other_exit(game_t * game)
+{
+    player_t * players = game->player_list;
+
+    for (int player = 0; player < game->num_players; ++player)
+    {
+        int exit_number = players[player].exit_number;
+
+        if(2 == exit_number)
+        {
+            players[player].points += g_points[SECOND_EXIT];
+            players[player].awards[SECOND_EXIT] = true;
+        }
+
+        if(game->num_players == exit_number)
+        {
+            players[player].points += g_points[LAST_EXIT];
+            players[player].awards[LAST_EXIT] = true;
+        }
+        
+    }
+
 }
 
 static inline void score_curses(game_t * game)
@@ -106,7 +162,6 @@ static inline int highest_curses(game_t * game, int * player_index)
     player_t * players = game->player_list;
     int highest_curses = 0;
 
-    
     for (int player = 0; player < game->num_players; ++player)
     {
         int curr_curses = players[player].num_curses;
