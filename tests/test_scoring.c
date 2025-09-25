@@ -50,6 +50,22 @@ static inline void hard_codes_value_tests()
     players[PLAYER_4].num_values[FOURS] = 3;
     players[PLAYER_5].num_values[FIVES] = 4;
 
+    score(game);
+
+    assert(0 == players[PLAYER_1].points);
+    assert(false == players[PLAYER_1].awards[MOST_THREES]);
+
+    assert(0 == players[PLAYER_2].points);
+    assert(false == players[PLAYER_2].awards[MOST_THREES]);
+
+    assert(0 == players[PLAYER_3].points);
+    assert(false == players[PLAYER_3].awards[MOST_THREES]);
+
+    assert(4 == players[PLAYER_4].points);
+    assert(true == players[PLAYER_4].awards[MOST_FOURS]);
+
+    assert(3 == players[PLAYER_5].points);
+    assert(true == players[PLAYER_5].awards[MOST_FIVES]);
 }
 
 static inline void hard_coded_suit_tests()
