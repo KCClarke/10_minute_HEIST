@@ -11,11 +11,32 @@ static inline int highest_num_suit(game_t * game, suit_t suit, int * player_inde
 static inline bool tied(game_t * game, suit_t suit, int num);
 static inline void score_suits(game_t * game);
 
+static inline void score_values(game_t * game);
+
+
 void score(game_t * game)
 {
     (void) get_points();
     score_suits(game);
+
+    score_values(game);
     
+}
+
+static inline void score_values(game_t * game)
+{
+    int most_of_value = 0;
+
+    for (int player = 0; player < game->num_players; ++player)
+    {
+        int curr_num_values = game->player_list[player].num_threes;
+        
+        if (curr_num_values > most_of_value)
+        {
+            most_of_value = curr_num_values;
+        }
+    }
+
 }
 
 static inline void score_suits(game_t * game)
@@ -37,6 +58,7 @@ static inline void score_suits(game_t * game)
         if (!is_tied)
         {
             game->player_list[player_index].points += g_points[suit];
+            game->player_list[player_index].awards[suit] = true;
         }
     }
 
@@ -71,13 +93,11 @@ static inline int highest_num_suit(game_t * game, suit_t suit, int * player_inde
         {
             most_in_suit = curr_num;
             *player_index = player;
-
         }
     }
 
     return (most_in_suit);
 }
-
 
 int * get_points()
 {

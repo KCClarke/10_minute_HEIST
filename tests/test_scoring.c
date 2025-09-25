@@ -13,16 +13,20 @@
 static inline void run_game_to_score();
 static inline void test_point_values();
 
+static inline game_t * blank_slate_setup();
+
 static inline void hard_coded_suit_tests();
+static inline void hard_codes_value_tests();
 
 void test_scoring()
 {
     hard_coded_suit_tests();
+    hard_codes_value_tests();
     
     printf("passed %s.\n", __func__);
 }
 
-static inline void hard_coded_suit_tests()
+static inline game_t * blank_slate_setup()
 {
     game_t * game = get_game();
     // We overwrite the card dealing from get_game() with the blank player list.
@@ -30,6 +34,27 @@ static inline void hard_coded_suit_tests()
     game->player_list = get_player_list();
     game->num_players = 5;
 
+    return (game);
+
+}
+
+static inline void hard_codes_value_tests()
+{
+    game_t * game = blank_slate_setup();
+
+    player_t * players = game->player_list;
+
+    players[PLAYER_1].num_threes = 1;
+    players[PLAYER_2].num_threes = 2;
+    players[PLAYER_3].num_threes = 2;
+    players[PLAYER_4].num_fours = 3;
+    players[PLAYER_5].num_fives = 4;
+
+}
+
+static inline void hard_coded_suit_tests()
+{
+    game_t * game = blank_slate_setup();
     player_t * players = game->player_list;
 
     players[PLAYER_1].num_suits[POTION] = 5;
@@ -41,13 +66,22 @@ static inline void hard_coded_suit_tests()
     score(game);
 
     assert(3 == players[PLAYER_1].points);
+    assert(true == players[PLAYER_1].awards[MOST_POTIONS]);
+
     assert(4 == players[PLAYER_2].points);
+    assert(true == players[PLAYER_2].awards[MOST_FOSSILS]);
+
     assert(4 == players[PLAYER_3].points);
+    assert(true == players[PLAYER_3].awards[MOST_ARTIFACTS]);
+    
     assert(5 == players[PLAYER_4].points);
+    assert(true == players[PLAYER_4].awards[MOST_JEWELS]);
+
     assert(6 == players[PLAYER_5].points);
+    assert(true == players[PLAYER_5].awards[MOST_TOMES]);
 
 
-    // Test for a tie
+    // Test for a tie.
     game->player_list = get_player_list();
 
     players[PLAYER_1].num_suits[POTION] = 5;

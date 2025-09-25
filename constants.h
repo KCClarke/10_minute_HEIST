@@ -49,6 +49,14 @@ typedef enum
 
 typedef enum
 {
+    THREES, 
+    FOURS,
+    FIVES,
+    NUM_VALUES
+} value_t;
+
+typedef enum
+{
     LOVE_POTION_8,
     POTION_OF_STRENGTH,
     GREATER_POTION_OF_HEALING,
