@@ -8,8 +8,9 @@ int main()
 {
     seed_random();
     
-    all_tests();
+    // all_tests();
 
     welcome();
-
+    how_many_players();
+    get_num_players();
 }

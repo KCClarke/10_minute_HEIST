@@ -4,5 +4,6 @@
 #define TERMINAL_OUT_H
 
 void welcome();
+void how_many_players();
 
 #endif
