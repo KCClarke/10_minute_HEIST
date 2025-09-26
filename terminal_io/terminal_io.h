@@ -3,6 +3,7 @@
 #ifndef TERMINAL_IO_H
 #define TERMINAL_IO_H
 
-void welcome();
+#include "terminal_out.h"
+#include "terminal_in.h"
 
 #endif

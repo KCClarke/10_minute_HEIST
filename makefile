@@ -15,7 +15,8 @@ SRC = main.c \
 	  random/random.c \
 	  location/location.c \
 	  scoring/scoring.c \
-	  terminal_io/terminal_io.c \
+	  terminal_io/terminal_out.c \
+	  terminal_io/terminal_in.c \
 	  \
 	  tests/test_scoring.c \
 	  tests/test_turn.c \
