@@ -11,3 +11,4 @@ passed test_scoring.
 
 all_tests passed.
 
+welcome to Ten Minute Heist
