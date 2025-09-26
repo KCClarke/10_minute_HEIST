@@ -4,6 +4,50 @@
 
 #include <stdio.h>
 
+static inline void print_floor(const char floor);
+static inline void print_player(const player_t * player)
+{
+    const int player_number = player->player_id + 1;
+    printf("player_%d", player_number);
+    putchar('\n');
+}
+
+static inline void print_floor(const char floor)
+{
+    const int floor_marker = 80;
+    for (int index = 0; index < floor_marker; ++index)
+    {
+        putchar(floor);
+    }
+    putchar('\n');
+}
+
+void print_a_row_of_the_tower(const char floor, const room_t * tower)
+{
+    print_floor(floor);
+    for (int index = 0; index < TOWER_WIDTH; ++index)
+    {
+        const int room_number = index + 1;
+        printf("%d) ", room_number);
+
+        const card_t * card = tower[index].p_card;
+        if(NULL != card)
+        {
+            print_a_card(card);
+        }
+
+        const player_t * player = tower[index].p_player;
+        if (NULL != player)
+        {
+            print_player(player);
+        }
+
+        if (NULL == player && NULL == card)
+        {
+            putchar('\n');
+        }
+    }
+}
 
 void print_a_card(card_t * card)
 {

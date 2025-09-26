@@ -34,6 +34,8 @@ struct player_s
     bool awards[NUM_SCORING_TILES];
 
     bool is_you;
+
+    int player_id;
     
 };
 
