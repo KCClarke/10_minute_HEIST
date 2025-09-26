@@ -68,6 +68,11 @@ void exit_player()
     g_game.player_list[g_game.current_player].exit_number = exit_number;
     g_game.player_list[g_game.current_player].has_exited = true;
 
+    to_index(&g_game.player_list[g_game.current_player].location);
+    const int index = g_game.player_list[g_game.current_player].location.index;
+
+    g_game.tower[index].p_player = NULL;
+    
 }
 
 void next_player()

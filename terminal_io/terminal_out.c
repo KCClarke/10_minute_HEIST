@@ -7,7 +7,7 @@
 static inline void print_floor(const char floor);
 static inline void print_player(const player_t * player)
 {
-    const int player_number = player->player_id + 1;
+    const int player_number = player->player_number + 1;
     printf("player_%d", player_number);
     putchar('\n');
 }
