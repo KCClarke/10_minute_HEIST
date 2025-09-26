@@ -64,6 +64,8 @@ static inline void test_player_initialization()
         
         assert(false == player_list[index].in_tower);
         assert(false == player_list[index].has_exited);
+        assert(false == player_list[index].is_you);
+        assert(false == player_list[index].first_card_revealed);
 
     }
 

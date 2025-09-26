@@ -20,6 +20,7 @@ struct player_s
     int num_curses;
     suit_t num_suits[NUM_BASIC_SUITS];
     card_t * haul[MAX_HAUL];
+    bool first_card_revealed;
 
     bool in_tower;
     location_t location;
@@ -31,6 +32,8 @@ struct player_s
     
     int points;
     bool awards[NUM_SCORING_TILES];
+
+    bool is_you;
     
 };
 

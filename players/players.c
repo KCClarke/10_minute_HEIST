@@ -70,6 +70,8 @@ static inline void initialize_players()
         g_players[index].points = 0;
         g_players[index].in_tower = false;
         g_players[index].has_exited = false;
+        g_players[index].is_you = false;
+        g_players[index].first_card_revealed = false;
     }
     
 }
