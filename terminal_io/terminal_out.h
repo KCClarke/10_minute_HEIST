@@ -3,7 +3,10 @@
 #ifndef TERMINAL_OUT_H
 #define TERMINAL_OUT_H
 
-void welcome();
+#include "game/game.h"
+
+void print_a_card(game_t * game);
 void how_many_players();
+void welcome();
 
 #endif
