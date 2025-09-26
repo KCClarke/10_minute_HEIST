@@ -35,7 +35,7 @@ struct player_s
 
     bool is_you;
 
-    int player_id;
+    int player_number;
     
 };
 

@@ -62,16 +62,22 @@ static inline void initialize_value_counts()
 
 static inline void initialize_players()
 {
+    int player_number = 0;
     for(int index = 0; index < MAX_PLAYERS; ++index)
     {
         g_players[index].num_curses = 0;
         g_players[index].exit_number = 0;
         g_players[index].cards_in_haul = 0;
         g_players[index].points = 0;
+        
         g_players[index].in_tower = false;
         g_players[index].has_exited = false;
         g_players[index].is_you = false;
         g_players[index].first_card_revealed = false;
+        
+        g_players[index].player_number = player_number;
+        ++player_number;
+
     }
     
 }
