@@ -12,6 +12,6 @@ int main()
     all_tests();
     
     game_t * game = get_game();
-    print_a_card(game);
+    print_a_card(game->tower[0].p_card);
     
 }

@@ -4,9 +4,18 @@
 
 #include <stdio.h>
 
-void print_a_card(game_t * game)
+
+void print_a_card(card_t * card)
 {
-    printf("a card\n");
+    const char ** suit_names = get_suit_names();
+
+    printf("%s", card->name);
+    putchar('\n');
+
+    putchar('\t');
+    printf("%s", suit_names[card->suit]);
+    printf(" %d", card->value);
+    putchar('\n');
 }
 
 void welcome()
