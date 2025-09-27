@@ -13,12 +13,50 @@ static inline void print_floor(const char floor);
 static inline void print_player(const player_t * player);
 static inline void print_floor(const char floor);
 static inline void print_awards(player_t * player);
+static inline void print_winner(game_t * game);
 
 
 // Function Definitions
+static inline void print_winner(game_t * game)
+{
+    int high_score = 0;
+    int high_score_player = 0;
+
+    player_t * players = game->player_list;
+    for (int index = 0; index < game->num_players; ++index)
+    {
+        const int curr_score = players[index].points;
+        if (curr_score > high_score)
+        {
+            high_score = curr_score;
+            high_score_player = index;
+        }
+    }
+
+    int players_at_score = 0;
+
+    for (int index = 0; index < game->num_players; ++index)
+    {
+        const int curr_score = players[index].points;
+        if (curr_score == high_score)
+        {
+            ++players_at_score;
+        }
+    }
+
+    if (players_at_score > 1)
+    {
+        printf("a tie, nobody wins\n");
+    }
+    else
+    {
+        printf("player %d wins!\n", high_score_player + 1);
+    }
+}
+
 void print_all_hauls(game_t * game)
 {
-    printf("all hauls\n");
+    printf("\nall hauls\n");
     player_t * players = game->player_list;
 
     for (int index = 0; index < game->num_players; ++index)
@@ -81,6 +119,8 @@ void print_score(game_t * game)
         putchar('\n');
         print_awards(&players[index]);
     }
+
+    print_winner(game);
 }
 
 void print_haul(game_t * game)
