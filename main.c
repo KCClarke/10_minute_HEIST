@@ -21,6 +21,8 @@ int main()
     assert(NULL != tower);
     turn_t     turn;
 
+    you_are_player(game);
+
     while(game_running())
     {
         player_t * player  = &players[game->current_player];
@@ -57,9 +59,9 @@ int main()
 
     }
 
-    // for (;;)
+    for (;;)
     {
-
+        print_haul(game);
     }
     
 }

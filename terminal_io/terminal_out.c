@@ -1,6 +1,7 @@
 /* terminal_io.c */
 
 #include "terminal_out.h"
+#include "terminal_in.h"
 
 #include <stdio.h>
 
@@ -12,6 +13,44 @@ static inline void print_floor(const char floor);
 
 
 // Function Definitions
+void print_haul(game_t * game)
+{
+    printf("whose haul would you like to see? ");
+    int player_number = get_player_number();
+
+    printf("player %d's haul\n", player_number);
+
+    const int player_index = player_number - 1;
+
+    player_t * player = &game->player_list[player_index];
+
+    printf("card 0) ");
+
+    if (player->is_you)
+    {
+        print_a_card(player->haul[0]);
+    }
+
+    if (!player->is_you && player->first_card_revealed)
+    {
+        print_a_card(player->haul[0]);
+    }
+
+    if (!player->is_you && !player->first_card_revealed)
+    {
+        printf("????????\n");
+        printf("\t?????? ?\n");
+    }
+
+    for (int index = 1; index < player->cards_in_haul; ++index)
+    {
+        printf("card %d) ", index);
+        print_a_card(player->haul[index]);        
+    }
+
+    putchar('\n');
+}
+
 void you_are_player(game_t * game)
 {
     for (int index = 0; index < game->num_players; ++index)
