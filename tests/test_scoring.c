@@ -28,7 +28,7 @@ void test_scoring()
     curse_tests();
     exit_tests();
     
-    printf("passed %s.\n", __func__);
+    printf("%s passed.\n", __func__);
 }
 
 static inline void exit_tests()

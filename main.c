@@ -5,6 +5,7 @@
 #include "terminal_io/terminal_io.h"
 #include "game/game.h"
 #include "turn/turn.h"
+#include "scoring/scoring.h"
 
 #include <assert.h>
 #include <stddef.h>
@@ -59,9 +60,7 @@ int main()
 
     }
 
-    for (;;)
-    {
-        print_haul(game);
-    }
-    
+    score(game);
+    print_score(game);
+
 }

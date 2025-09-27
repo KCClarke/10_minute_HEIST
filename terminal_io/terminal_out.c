@@ -2,6 +2,8 @@
 
 #include "terminal_out.h"
 #include "terminal_in.h"
+#include "constants.h"
+#include "scoring/scoring.h"
 
 #include <stdio.h>
 
@@ -10,9 +12,61 @@
 static inline void print_floor(const char floor);
 static inline void print_player(const player_t * player);
 static inline void print_floor(const char floor);
+static inline void print_awards(player_t * player);
 
 
 // Function Definitions
+static inline void print_awards(player_t * player)
+{
+    const char * award_names[] = 
+    {
+        "MOST_POTIONS",
+        "MOST_FOSSILS",
+        "MOST_ARTIFACTS",
+        "MOST_JEWELS",
+        "MOST_TOMES",
+
+        "MOST_THREES",
+        "MOST_FOURS",
+        "MOST_FIVES",
+
+        "FIRST_EXIT",
+        "SECOND_EXIT",
+        "LAST_EXIT",
+
+        "MOST_CURSES",
+        "LEAST_CURSES",
+    };
+
+    int * points = get_points();
+
+    for (int index = 0; index < NUM_SCORING_TILES; ++index)
+    {
+        if (player->awards[index] == true)
+        {
+            printf("\t%s ", award_names[index]);
+            printf("%d", points[index]);
+            putchar('\n');
+        }
+    }
+
+    putchar('\n');
+}
+
+void print_score(game_t * game)
+{
+    printf("final score\n");
+
+    player_t * players = game->player_list;
+    for(int index = 0; index < game->num_players; ++index)
+    {
+        printf("player %d", index + 1);
+        printf(" points %d", players[index].points);
+        putchar('\n');
+        print_awards(&players[index]);
+    }
+}
+
 void print_haul(game_t * game)
 {
     printf("whose haul would you like to see? ");
@@ -61,6 +115,7 @@ void you_are_player(game_t * game)
         }
     }
 }
+
 static inline void print_player(const player_t * player)
 {
     const int player_number = player->player_number + 1;
