@@ -60,6 +60,7 @@ int main()
 
     }
 
+    print_all_hauls(game);
     score(game);
     print_score(game);
 

@@ -5,6 +5,7 @@
 
 #include "game/game.h"
 
+void print_all_hauls(game_t * game);
 void print_score(game_t * game);
 void print_haul(game_t * game);
 void you_are_player(game_t * game);

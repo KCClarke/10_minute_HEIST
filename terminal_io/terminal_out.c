@@ -16,6 +16,22 @@ static inline void print_awards(player_t * player);
 
 
 // Function Definitions
+void print_all_hauls(game_t * game)
+{
+    printf("all hauls\n");
+    player_t * players = game->player_list;
+
+    for (int index = 0; index < game->num_players; ++index)
+    {
+        printf("player %d's haul\n", index + 1);
+        for (int card_n = 0; card_n < players[index].cards_in_haul; ++card_n)
+        {
+            print_a_card(players[index].haul[card_n]);
+        }
+        putchar('\n');
+    }
+}
+
 static inline void print_awards(player_t * player)
 {
     const char * award_names[] = 
