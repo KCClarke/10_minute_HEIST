@@ -4,11 +4,34 @@
 
 #include <stdio.h>
 
+
+// Helper function prototypes
 static inline void print_floor(const char floor);
+static inline void print_player(const player_t * player);
+static inline void print_floor(const char floor);
+
+
+// Function Definitions
+void you_are_player(game_t * game)
+{
+    for (int index = 0; index < game->num_players; ++index)
+    {
+        if (game->player_list[index].is_you)
+        {
+            printf("you are player %d\n", 1 + index);
+        }
+    }
+}
 static inline void print_player(const player_t * player)
 {
     const int player_number = player->player_number + 1;
     printf("player_%d", player_number);
+
+    if (player->is_you)
+    {
+        printf(" (you)");
+    }
+
     putchar('\n');
 }
 
@@ -25,18 +48,19 @@ static inline void print_floor(const char floor)
 void print_a_row_of_the_tower(const char floor, const room_t * tower)
 {
     print_floor(floor);
+
     for (int index = 0; index < TOWER_WIDTH; ++index)
     {
         const int room_number = index + 1;
         printf("%d) ", room_number);
 
-        const card_t * card = tower[index].p_card;
+        card_t * card = tower[index].p_card;
         if(NULL != card)
         {
             print_a_card(card);
         }
 
-        const player_t * player = tower[index].p_player;
+        player_t * player = tower[index].p_player;
         if (NULL != player)
         {
             print_player(player);

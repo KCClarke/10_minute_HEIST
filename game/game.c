@@ -12,7 +12,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-#define NUM_PLAYERS 3
+#define NUM_PLAYERS 5
 
 static game_t g_game;
 
@@ -30,6 +30,7 @@ light_card_range = {.from = LOVE_POTION_8, .to = INFERNAL_TAROT};
 
 
 // Private function prototypes
+static inline void initialize_you();
 static inline void initialize_players();
 static inline void initialize_dealt();
 static inline void deal_to_players(const card_t * card_list);
@@ -47,17 +48,22 @@ game_t * get_game()
 {
     initialize_players();
     initialize_dealt();
+    initialize_you();
 
     g_game.tower = get_tower();
-
+    
     const card_t * card_list = get_master_card_list();
     deal_to_players(card_list);
     deal_to_first_floor(card_list);
 
-    g_game.players_exited = 0;
-
     return (&g_game);
 
+}
+
+static inline void initialize_you()
+{
+    const int random = random_number(g_game.num_players);
+    g_game.player_list[random].is_you = true;
 }
 
 void exit_player()
@@ -151,6 +157,7 @@ get_undealt_card_index(const card_index_t first, const card_index_t last)
 
 static inline void initialize_players()
 {
+    g_game.players_exited = 0;
     g_game.num_players = NUM_PLAYERS;
     g_game.current_player = PLAYER_1;
     g_game.player_list = get_player_list();

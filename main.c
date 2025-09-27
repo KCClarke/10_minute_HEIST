@@ -6,6 +6,9 @@
 #include "game/game.h"
 #include "turn/turn.h"
 
+#include <assert.h>
+#include <stddef.h>
+
 int main()
 {
     seed_random();
@@ -15,11 +18,10 @@ int main()
     game_t   * game = get_game();
     player_t * players = game->player_list;
     room_t   * tower = game->tower;
+    assert(NULL != tower);
     turn_t     turn;
-    
-    print_a_row_of_the_tower('a', tower);
 
-     while(game_running())
+    while(game_running())
     {
         player_t * player  = &players[game->current_player];
 
@@ -53,7 +55,11 @@ int main()
             next_player();
         }
 
-        print_a_row_of_the_tower('a', tower);
+    }
+
+    // for (;;)
+    {
+
     }
     
 }
