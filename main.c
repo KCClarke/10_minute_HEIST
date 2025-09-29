@@ -30,9 +30,18 @@ int main()
 
         initialize_turn(&turn);
 
+        print_a_row_of_the_tower('a', game->tower);
+
         if (player->has_exited == false)
-        {   // TODO: get what the player wants to do for their turn.
-            get_bot_turn(&turn, game);
+        {   
+            if (player->is_you)
+            {
+                get_player_turn(&turn, game);
+            }
+            else
+            {
+                get_bot_turn(&turn, game);
+            }
         }
         else
         {   // Skip them, they've exited.
@@ -47,7 +56,6 @@ int main()
 
         if (turn.card_found)
         {   
-
             collect_card(&turn, game);
             move_player(&turn, game);
             turn.success = true;

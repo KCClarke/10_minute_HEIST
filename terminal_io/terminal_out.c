@@ -17,12 +17,23 @@ static inline void print_winner(game_t * game);
 
 
 // Function Definitions
+void room_prompt()
+{
+    printf("room? ");
+}
+
+void floor_prompt()
+{
+    printf("floor? ");
+}
+
 static inline void print_winner(game_t * game)
 {
     int high_score = 0;
     int high_score_player = 0;
 
     player_t * players = game->player_list;
+
     for (int index = 0; index < game->num_players; ++index)
     {
         const int curr_score = players[index].points;
@@ -52,6 +63,7 @@ static inline void print_winner(game_t * game)
     {
         printf("player %d wins!\n", high_score_player + 1);
     }
+    
 }
 
 void print_all_hauls(game_t * game)

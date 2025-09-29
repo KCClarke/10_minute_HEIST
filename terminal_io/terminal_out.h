@@ -5,6 +5,8 @@
 
 #include "game/game.h"
 
+void floor_prompt();
+void room_prompt();
 void print_all_hauls(game_t * game);
 void print_score(game_t * game);
 void print_haul(game_t * game);

@@ -137,7 +137,7 @@ static inline void mock_turn()
         
         if (player->has_exited == false)
         {
-            take_turn(&turn, game);
+            get_bot_turn(&turn, game);
             
             to_index(&turn.location);
             assert(0 == turn.location.index);

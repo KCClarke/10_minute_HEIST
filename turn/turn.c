@@ -5,6 +5,8 @@
 #include "game/game.h"
 #include "players/players.h"
 #include "location/location.h"
+#include "terminal_io/terminal_io.h"
+
 #include <stddef.h>
 #include <stdio.h>
 
@@ -68,19 +70,35 @@ void get_bot_turn(turn_t * turn, game_t * game)
 
 }
 
+void get_player_turn(turn_t * turn, game_t * game)
+{
+    get_turn_input(turn);
+    to_index(&turn->location);
+    
+    int index = turn->location.index;
+    if (has_card_no_player(game->tower[index]))
+    {
+        turn->card_found = true;
+    }
+    else
+    {
+        turn->success = false;
+    }
+    
+    if ('x' == turn->location.floor)
+    {
+        turn->exited = true;
+    }
+
+}
+
 void initialize_turn(turn_t * turn)
 {
+    turn->print_menue = false;
+    turn->print_haul = false;
     turn->card_found = false;
     turn->exited = false;
     turn->success = false;
-}
-
-void take_turn(turn_t * turn, game_t * game)
-{
-    turn->location.floor = 'a';
-    turn->location.room = '1';
-    turn->exited = false;
-
 }
 
 bool did_not_move_up(const location_t * location, const player_t * player)

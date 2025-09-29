@@ -1,9 +1,26 @@
 /* terminal_in.c */
 
 #include "terminal_in.h"
+#include "terminal_out.h"
 #include "game/game.h"
 
 #include <stdio.h>
+
+void get_turn_input(turn_t * turn)
+{
+    floor_prompt();
+    char floor;
+    scanf("%c", &floor);
+    turn->location.floor = floor;
+    getchar();
+
+    room_prompt();
+    char room;
+    scanf("%c", &room);
+    turn->location.room = room;
+    getchar();
+
+}
 
 int get_player_number()
 {
