@@ -9,7 +9,6 @@
 
 
 // Helper function prototypes
-static inline void print_floor(const char floor);
 static inline void print_player(const player_t * player);
 static inline void print_floor(const char floor);
 static inline void print_awards(player_t * player);
