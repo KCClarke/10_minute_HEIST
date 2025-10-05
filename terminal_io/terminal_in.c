@@ -6,6 +6,7 @@
 
 #include <stdio.h>
 
+
 void get_turn_input(turn_t * turn)
 {
     floor_prompt();

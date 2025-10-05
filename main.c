@@ -30,12 +30,12 @@ int main()
 
         initialize_turn(&turn);
 
-        print_a_row_of_the_tower('a', game->tower);
 
         if (player->has_exited == false)
         {   
             if (player->is_you)
             {
+                print_a_row_of_the_tower('a', game->tower);
                 get_player_turn(&turn, game);
             }
             else
@@ -43,7 +43,7 @@ int main()
                 get_bot_turn(&turn, game);
             }
         }
-        else
+        
         {   // Skip them, they've exited.
             turn.success = true;
         }

@@ -68,12 +68,11 @@ static inline void print_winner(game_t * game)
 
 void print_all_hauls(game_t * game)
 {
-    printf("\nall hauls\n");
     player_t * players = game->player_list;
 
     for (int index = 0; index < game->num_players; ++index)
     {
-        printf("player %d's haul\n", index + 1);
+        printf("\nplayer %d's haul\n", index + 1);
         for (int card_n = 0; card_n < players[index].cards_in_haul; ++card_n)
         {
             print_a_card(players[index].haul[card_n]);
@@ -195,6 +194,7 @@ static inline void print_player(const player_t * player)
     }
 
     putchar('\n');
+    putchar('\n');
 }
 
 static inline void print_floor(const char floor)
@@ -245,6 +245,7 @@ void print_a_card(card_t * card)
     putchar('\t');
     printf("%s", suit_names[card->suit]);
     printf(" %d", card->value);
+    putchar('\n');
     putchar('\n');
 }
 
