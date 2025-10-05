@@ -64,6 +64,7 @@ static inline void initialize_you()
 {
     const int random = random_number(g_game.num_players);
     g_game.player_list[random].is_you = true;
+    g_game.your_player_number = random;
 }
 
 void exit_player()

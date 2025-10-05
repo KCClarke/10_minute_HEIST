@@ -20,6 +20,8 @@ struct game_s
     room_t * tower;
     int players_exited;
 
+    int your_player_number;
+
 };
 
 game_t * get_game();

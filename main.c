@@ -22,7 +22,11 @@ int main()
     assert(NULL != tower);
     turn_t     turn;
 
+    print_a_row_of_the_tower('a', game->tower);
     you_are_player(game);
+    the_card_you_were_dealt(game);
+    
+
 
     while(game_running())
     {
@@ -30,18 +34,14 @@ int main()
 
         initialize_turn(&turn);
 
-
-        if (player->has_exited == false)
-        {   
-            if (player->is_you)
-            {
-                print_a_row_of_the_tower('a', game->tower);
-                get_player_turn(&turn, game);
-            }
-            else
-            {
-                get_bot_turn(&turn, game);
-            }
+        if (player->is_you && player->has_exited == false)
+        {
+            print_a_row_of_the_tower('a', game->tower);
+            get_player_turn(&turn, game);
+        }
+        else
+        {
+            get_bot_turn(&turn, game);
         }
 
         if (turn.exited)

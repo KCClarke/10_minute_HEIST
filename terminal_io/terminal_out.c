@@ -4,6 +4,7 @@
 #include "terminal_in.h"
 #include "constants.h"
 #include "scoring/scoring.h"
+#include "cards/cards.h"
 
 #include <stdio.h>
 
@@ -16,6 +17,13 @@ static inline void print_winner(game_t * game);
 
 
 // Function Definitions
+void the_card_you_were_dealt(game_t * game)
+{
+    printf("you have in your haul the ");
+    card_t * card = game->player_list[game->your_player_number].haul[0];
+    print_a_card(card);
+    
+}
 void room_prompt()
 {
     printf("room? ");
@@ -192,7 +200,7 @@ void you_are_player(game_t * game)
     {
         if (game->player_list[index].is_you)
         {
-            printf("you are player %d\n", 1 + index);
+            printf("You are player %d,\n", 1 + index);
         }
     }
 }
