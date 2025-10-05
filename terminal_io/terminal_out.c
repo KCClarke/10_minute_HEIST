@@ -130,7 +130,16 @@ void print_score(game_t * game)
     player_t * players = game->player_list;
     for(int index = 0; index < game->num_players; ++index)
     {
-        printf("player %d", index + 1);
+
+        if (players[index].is_you ==  false)
+        {
+            printf("player %d's", index + 1);
+        }
+        else
+        {
+            printf( "your");
+        }
+
         printf(" points %d", players[index].points);
         putchar('\n');
         print_awards(&players[index]);

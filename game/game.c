@@ -12,7 +12,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-#define NUM_PLAYERS 3
+
 
 static game_t g_game;
 

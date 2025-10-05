@@ -154,7 +154,6 @@ static inline void mock_turn()
 
         if (turn.exited)
         {
-            // TODO: exit player
             game->players_exited++;
             player->exit_number = game->players_exited;
 
