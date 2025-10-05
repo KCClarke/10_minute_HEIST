@@ -43,10 +43,6 @@ int main()
                 get_bot_turn(&turn, game);
             }
         }
-        
-        {   // Skip them, they've exited.
-            turn.success = true;
-        }
 
         if (turn.exited)
         {

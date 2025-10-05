@@ -61,7 +61,13 @@ static inline void print_winner(game_t * game)
     }
     else
     {
-        printf("player %d wins!\n", high_score_player + 1);
+        if(game->player_list[high_score_player].is_you)
+        {
+            printf("you win!\n");
+        }
+        else{
+            printf("player %d wins!\n", high_score_player + 1);
+        }
     }
     
 }
