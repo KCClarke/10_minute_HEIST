@@ -94,7 +94,7 @@ void get_player_turn(turn_t * turn, game_t * game)
 
 void initialize_turn(turn_t * turn)
 {
-    turn->print_menue = false;
+    turn->print_menue = true;
     turn->print_haul = false;
     turn->card_found = false;
     turn->exited = false;

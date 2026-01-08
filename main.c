@@ -19,7 +19,6 @@ int main()
     game_t   * game = get_game();
     player_t * players = game->player_list;
     room_t   * tower = game->tower;
-    assert(NULL != tower);
     turn_t     turn;
 
     print_a_row_of_the_tower('a', game->tower);
@@ -36,7 +35,7 @@ int main()
 
         if (player->is_you && player->has_exited == false)
         {
-            print_a_row_of_the_tower('a', game->tower);
+            print_a_row_of_the_tower('a', tower);
             get_player_turn(&turn, game);
         }
         else
