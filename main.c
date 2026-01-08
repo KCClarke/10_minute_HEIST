@@ -7,9 +7,6 @@
 #include "turn/turn.h"
 #include "scoring/scoring.h"
 
-#include <assert.h>
-#include <stddef.h>
-
 int main()
 {
     seed_random();
@@ -25,8 +22,6 @@ int main()
     you_are_player(game);
     the_card_you_were_dealt(game);
     
-
-
     while(game_running())
     {
         player_t * player  = &players[game->current_player];
