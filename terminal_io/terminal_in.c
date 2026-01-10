@@ -32,9 +32,3 @@ int get_player_number()
 
 }
 
-void get_num_players(game_t * game)
-{
-    int num_players = 5;
-
-    game->num_players = num_players;
-}

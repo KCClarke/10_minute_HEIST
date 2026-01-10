@@ -6,7 +6,6 @@
 #include "turn/turn.h"
 
 void get_turn_input(turn_t * turn);
-int get_player_number();
 void get_num_players();
 
 #endif
