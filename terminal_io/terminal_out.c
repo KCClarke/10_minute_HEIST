@@ -10,10 +10,10 @@
 
 
 // Helper function prototypes
-static inline void print_player(const player_t * player);
-static inline void print_floor(const char floor);
-static inline void print_awards(player_t * player);
-static inline void print_winner(game_t * game);
+static void print_player(const player_t * player);
+static void print_floor(const char floor);
+static void print_awards(player_t * player);
+static void print_winner(game_t * game);
 
 
 // Function Definitions
@@ -31,10 +31,10 @@ void room_prompt()
 
 void floor_prompt()
 {
-    printf("floor? ");
+    printf("(x to exit) floor? ");
 }
 
-static inline void print_winner(game_t * game)
+static void print_winner(game_t * game)
 {
     int high_score = 0;
     int high_score_player = 0;
@@ -94,7 +94,7 @@ void print_all_hauls(game_t * game)
     }
 }
 
-static inline void print_awards(player_t * player)
+static void print_awards(player_t * player)
 {
     const char * award_names[] = 
     {
@@ -159,7 +159,8 @@ void print_score(game_t * game)
 void print_haul(game_t * game)
 {
     printf("whose haul would you like to see? ");
-    int player_number = get_player_number();
+    int player_number;
+    scanf("%d", &player_number);
 
     printf("player %d's haul\n", player_number);
 
@@ -205,7 +206,7 @@ void you_are_player(game_t * game)
     }
 }
 
-static inline void print_player(const player_t * player)
+static void print_player(const player_t * player)
 {
     const int player_number = player->player_number + 1;
     printf("player_%d", player_number);
@@ -219,7 +220,7 @@ static inline void print_player(const player_t * player)
     putchar('\n');
 }
 
-static inline void print_floor(const char floor)
+static void print_floor(const char floor)
 {
     const int floor_marker = 80;
     for (int index = 0; index < floor_marker; ++index)
