@@ -26,7 +26,7 @@ void the_card_you_were_dealt(game_t * game)
 }
 void room_prompt()
 {
-    printf("room? ");
+    printf("(x to exit)  room? ");
 }
 
 void floor_prompt()
