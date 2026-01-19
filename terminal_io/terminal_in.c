@@ -8,91 +8,46 @@
 #include <ctype.h>
 #include <stdbool.h>
 
-static char get_floor();
-static char get_room();
-static bool valid_floor(const char input);
-static bool valid_room(const char input);
 
+static char get_input();
+static bool is_room(const char input);
+static bool is_floor_or_exit(const char input);
 
-/* checks if the player entered a valid room or x for exit*/
-static bool valid_room(const char input)
+static bool is_floor_or_exit(const char input)
 {
-    bool valid_room = false;
+    const bool is_floor = input >= 'a' && input <= 'a' + TOWER_HEIGHT;
+    const bool is_exit  = 'x' == input;
 
-    for (int index = 0; index < TOWER_WIDTH; ++index)
-    {
-        if ('1' + index == input)
-        {
-            valid_room = true;
-            break;
-        }
-    }
-
-    if ('x' == input)
-    {
-        valid_room = true;
-    }
-
-    return (valid_room);
+    return (is_floor || is_exit);
 }
 
-
-/* checks if the player entered a valid floor or x for exit*/
-static bool valid_floor(const char input)
+static bool is_room(const char input)
 {
-    bool valid_floor = false;
+    const bool is_room = input >= '1' && input <= '1' + TOWER_WIDTH;
 
-    for (int index = 0; index < TOWER_HEIGHT; ++index)
-    {
-        if ('a' + index == input)
-        {
-            valid_floor = true;
-            break;
-        }
-    }
-
-    if ('x' == input)
-    {
-        valid_floor = true;
-    }
-
-    return (valid_floor);
+    return (is_room);
 }
 
-static char get_floor()
+static char get_input(bool (* criteria)(const char input), const char * prompt)
 {
     char input;
+
     for(;;)
     {
-        floor_prompt();
+        printf("%s ", prompt);
 
         input = tolower(getchar());
 
-        if(valid_floor(input))
+        if ('\n' == input)
+        {
+            continue;
+        }
+
+        if(criteria(input))
         {
             break;
         }
-        while(getchar() != '\n') {/* clear buffer */};    
-    }
 
-    while(getchar() != '\n') {/* clear buffer */};
-
-    return(input);
-}
-
-static char get_room()
-{
-    char input;
-    for(;;)
-    {
-        room_prompt();
-
-        input = tolower(getchar());
-
-        if(valid_room(input))
-        {
-            break;
-        }
         while(getchar() != '\n') {/* clear buffer */};
     }
 
@@ -101,15 +56,25 @@ static char get_room()
     return(input);
 }
 
+
 void get_turn_input(turn_t * turn)
 {
-    char floor = get_floor();
-    turn->location.floor = floor;
+    char * message = "(x to exit) enter floor";
+    const char floor_or_exit = get_input(is_floor_or_exit, message);
+    turn->location.floor = floor_or_exit;
 
-    char room = get_room();
-    turn->location.room = room;
+    if ('x' == floor_or_exit)
+    {
+        turn->location.room = floor_or_exit;
+    }
+    else
+    {
+        message =    "            enter room ";
+        turn->location.room = get_input(is_room, message);;
+    }
 
 }
+
 
 int get_player_number()
 {
