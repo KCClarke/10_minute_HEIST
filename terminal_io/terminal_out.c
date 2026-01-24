@@ -5,6 +5,7 @@
 #include "constants.h"
 #include "scoring/scoring.h"
 #include "cards/cards.h"
+#include "location/location.h"
 
 #include <stdio.h>
 
@@ -19,9 +20,10 @@ static void print_winner(game_t * game);
 // Function Definitions
 void the_card_you_were_dealt(game_t * game)
 {
-    printf("you have in your haul the ");
+    printf("The card you were dealt:\n   ");
     card_t * card = game->player_list[game->your_player_number].haul[0];
     print_a_card(card);
+    putchar('\n');
     
 }
 void room_prompt()
@@ -85,7 +87,9 @@ void print_all_hauls(game_t * game)
 
     for (int index = 0; index < game->num_players; ++index)
     {
-        printf("\nplayer %d's haul\n", index + 1);
+        putchar('\n');
+        printf("The haul for ");
+        print_player(&players[index]);
         for (int card_n = 0; card_n < players[index].cards_in_haul; ++card_n)
         {
             print_a_card(players[index].haul[card_n]);
@@ -145,11 +149,10 @@ void print_score(game_t * game)
         }
         else
         {
-            printf( "your");
+            printf( "      your");
         }
 
         printf(" points %d", players[index].points);
-        putchar('\n');
         print_awards(&players[index]);
     }
 
@@ -215,8 +218,6 @@ static void print_player(const player_t * player)
     {
         printf(" (you)");
     }
-
-    putchar('\n');
     putchar('\n');
 }
 
@@ -236,6 +237,7 @@ void print_a_row_of_the_tower(const char floor, const room_t * tower)
 
     for (int index = 0; index < TOWER_WIDTH; ++index)
     {
+
         const int room_number = index + 1;
         printf("%d) ", room_number);
 
@@ -256,19 +258,44 @@ void print_a_row_of_the_tower(const char floor, const room_t * tower)
             putchar('\n');
         }
     }
+
+    print_floor('b');
+
+    for (int index = TOWER_WIDTH; index < TOWER_WIDTH * 2; ++index)
+    {
+
+        const int room_number = index + 1;
+        printf("%d) ", (1 + room_number) % (TOWER_WIDTH + 1));
+
+        card_t * card = tower[index].p_card;
+        if(NULL != card)
+        {
+            print_a_card(card);
+        }
+
+        player_t * player = tower[index].p_player;
+        if (NULL != player)
+        {
+            print_player(player);
+        }
+
+        if (NULL == player && NULL == card)
+        {
+            putchar('\n');
+        }
+    }
+
+    putchar('\n');
 }
 
 void print_a_card(card_t * card)
 {
     const char ** suit_names = get_suit_names();
 
-    printf("%s", card->name);
-    putchar('\n');
-
-    putchar('\t');
-    printf("%s", suit_names[card->suit]);
-    printf(" %d", card->value);
-    putchar('\n');
+    printf("%-9s", suit_names[card->suit]);
+    printf("%d", card->value);
+    printf(" %s", card->name);
+    
     putchar('\n');
 }
 

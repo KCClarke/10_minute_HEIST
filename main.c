@@ -24,11 +24,11 @@ int main()
     
     while(game_running())
     {
-        player_t * player  = &players[game->current_player];
+        player_t * player = &players[game->current_player];
 
         initialize_turn(&turn);
 
-        if (player->is_you && player->has_exited == false)
+        if (player->is_you && false == player->has_exited)
         {
             print_a_row_of_the_tower('a', tower);
             get_player_turn(&turn, game);
@@ -58,8 +58,8 @@ int main()
 
     }
 
-    // print_all_hauls(game);
-    // score(game);
+    print_all_hauls(game);
+    score(game);
     print_score(game);
 
 }

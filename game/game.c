@@ -96,7 +96,7 @@ bool game_running()
 // Private function definitions.
 static inline void deal_to_first_floor(const card_t * card_list)
 {
-    for (int tower_index = 0; tower_index < TOWER_WIDTH; ++tower_index)
+    for (int tower_index = 0; tower_index < TOWER_WIDTH * 2; ++tower_index)
     {
         card_t * card = get_card(card_list, light_card_range);
         g_game.tower[tower_index].p_card = card;
