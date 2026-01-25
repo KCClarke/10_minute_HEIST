@@ -57,4 +57,4 @@ run: $(TARGET)
 # Clean
 clean:
 	rm -rf build
-	clear
+	

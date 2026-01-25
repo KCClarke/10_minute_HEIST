@@ -18,6 +18,8 @@ int main()
     room_t   * tower = game->tower;
     turn_t     turn;
 
+    // print_all_hauls(game);
+
     print_a_row_of_the_tower('a', game->tower);
     you_are_player(game);
     the_card_you_were_dealt(game);

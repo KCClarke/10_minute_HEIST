@@ -126,7 +126,7 @@ static void print_awards(player_t * player)
     {
         if (player->awards[index] == true)
         {
-            printf("\t%s ", award_names[index]);
+            printf("\t%-14s ", award_names[index]);
             printf("%d", points[index]);
             putchar('\n');
         }
@@ -152,7 +152,7 @@ void print_score(game_t * game)
             printf( "      your");
         }
 
-        printf(" points %d", players[index].points);
+        printf(" points %d\n", players[index].points);
         print_awards(&players[index]);
     }
 
