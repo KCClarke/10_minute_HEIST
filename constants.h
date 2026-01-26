@@ -3,12 +3,12 @@
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 
-#define NUM_PLAYERS 2
+#define NUM_PLAYERS  5
 
 #define NUM_LIGHT_CARDS 17
-#define TOTAL_CARDS 57
+#define TOTAL_CARDS     57
 #define MAX_HAUL TOTAL_CARDS
-#define TOWER_WIDTH 5
+#define TOWER_WIDTH  5
 #define TOWER_HEIGHT 8
 #define TOTAL_ROOMS TOWER_HEIGHT * TOWER_WIDTH
 

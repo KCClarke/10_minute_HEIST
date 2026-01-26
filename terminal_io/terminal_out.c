@@ -72,10 +72,10 @@ static void print_winner(game_t * game)
     {
         if(game->player_list[high_score_player].is_you)
         {
-            printf("you win!\n");
+            printf("You win!\n");
         }
         else{
-            printf("player %d wins!\n", high_score_player + 1);
+            printf("Player %d wins.\n", high_score_player + 1);
         }
     }
     
@@ -88,7 +88,7 @@ void print_all_hauls(game_t * game)
     for (int index = 0; index < game->num_players; ++index)
     {
         putchar('\n');
-        printf("The haul for ");
+        printf("Haul: ");
         print_player(&players[index]);
         for (int card_n = 0; card_n < players[index].cards_in_haul; ++card_n)
         {
@@ -137,23 +137,15 @@ static void print_awards(player_t * player)
 
 void print_score(game_t * game)
 {
-    printf("final score\n");
+    printf("Final score:\n");
 
     player_t * players = game->player_list;
     for(int index = 0; index < game->num_players; ++index)
     {
-
-        if (players[index].is_you ==  false)
-        {
-            printf("player %d's", index + 1);
-        }
-        else
-        {
-            printf( "      your");
-        }
-
-        printf(" points %d\n", players[index].points);
+        printf("%d points ", players[index].points);
+        print_player(&players[index]);
         print_awards(&players[index]);
+
     }
 
     print_winner(game);
@@ -223,16 +215,18 @@ static void print_player(const player_t * player)
 
 static void print_floor(const char floor)
 {
-    const int floor_marker = 80;
+    
+    const int floor_marker = 40;
     for (int index = 0; index < floor_marker; ++index)
     {
-        putchar(floor);
+        putchar('-');
     }
     putchar('\n');
 }
 
 void print_a_row_of_the_tower(const char floor, const room_t * tower)
 {
+    putchar('a');
     print_floor(floor);
 
     for (int index = 0; index < TOWER_WIDTH; ++index)
@@ -259,6 +253,7 @@ void print_a_row_of_the_tower(const char floor, const room_t * tower)
         }
     }
 
+    putchar('b');
     print_floor('b');
 
     for (int index = TOWER_WIDTH; index < TOWER_WIDTH * 2; ++index)
@@ -284,7 +279,7 @@ void print_a_row_of_the_tower(const char floor, const room_t * tower)
             putchar('\n');
         }
     }
-
+    print_floor('z');
     putchar('\n');
 }
 
