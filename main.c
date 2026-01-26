@@ -23,12 +23,19 @@ int main()
     print_a_row_of_the_tower('a', game->tower);
     you_are_player(game);
     the_card_you_were_dealt(game);
-    
+
+
     while(game_running())
     {
         player_t * player = &players[game->current_player];
 
         initialize_turn(&turn);
+
+        if (player->has_exited)
+        {
+            next_player();
+            continue;
+        }
 
         if (player->is_you && false == player->has_exited)
         {
