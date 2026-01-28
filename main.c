@@ -21,6 +21,7 @@ int main()
     // print_all_hauls(game);
 
     print_a_row_of_the_tower('a', game->tower);
+    how_many_players();
     you_are_player(game);
     the_card_you_were_dealt(game);
 

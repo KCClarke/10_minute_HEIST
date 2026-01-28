@@ -6,18 +6,15 @@
 #include "scoring/scoring.h"
 #include "cards/cards.h"
 #include "location/location.h"
-
 #include <stdio.h>
 
 
-// Helper function prototypes
 static void print_player(const player_t * player);
 static void print_floor(const char floor);
 static void print_awards(player_t * player);
 static void print_winner(game_t * game);
 
 
-// Function Definitions
 void the_card_you_were_dealt(game_t * game)
 {
     printf("The card you were dealt:\n   ");
@@ -85,9 +82,10 @@ void print_all_hauls(game_t * game)
 {
     player_t * players = game->player_list;
 
+    putchar('\n');
+
     for (int index = 0; index < game->num_players; ++index)
     {
-        putchar('\n');
         printf("Haul: ");
         print_player(&players[index]);
         for (int card_n = 0; card_n < players[index].cards_in_haul; ++card_n)
@@ -120,11 +118,11 @@ static void print_awards(player_t * player)
         "LEAST_CURSES",
     };
 
-    int * points = get_points();
+    const int * points = get_points();
 
     for (int index = 0; index < NUM_SCORING_TILES; ++index)
     {
-        if (player->awards[index] == true)
+        if (player->awards[index])
         {
             printf("\t%-14s ", award_names[index]);
             printf("%d", points[index]);
@@ -196,7 +194,7 @@ void you_are_player(game_t * game)
     {
         if (game->player_list[index].is_you)
         {
-            printf("You are player %d,\n", 1 + index);
+            printf("You are player %d\n", 1 + index);
         }
     }
 }
@@ -205,7 +203,6 @@ static void print_player(const player_t * player)
 {
     const int player_number = player->player_number + 1;
     printf("player_%d", player_number);
-
     if (player->is_you)
     {
         printf(" (you)");
@@ -215,9 +212,8 @@ static void print_player(const player_t * player)
 
 static void print_floor(const char floor)
 {
-    
-    const int floor_marker = 40;
-    for (int index = 0; index < floor_marker; ++index)
+    const int num_dashes = 40;
+    for (int index = 0; index < num_dashes; ++index)
     {
         putchar('-');
     }
@@ -301,5 +297,5 @@ void welcome()
 
 void how_many_players()
 {
-    printf("%s?\n", __func__);
+    printf("There are %d players\n", NUM_PLAYERS);
 }
