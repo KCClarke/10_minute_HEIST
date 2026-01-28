@@ -7,6 +7,7 @@
 
 #define NUM_LIGHT_CARDS 17
 #define TOTAL_CARDS     57
+#define NUM_BASIC_SUITS 5
 #define MAX_HAUL TOTAL_CARDS
 #define TOWER_WIDTH  5
 #define TOWER_HEIGHT 8
@@ -32,8 +33,8 @@ typedef enum
     FEWEST_CURSES,
 
     NUM_SCORING_TILES
-
 } score_t;
+
 
 typedef enum
 {
@@ -42,12 +43,10 @@ typedef enum
     ARTIFACT,
     JEWEL,
     TOME,
-
-    NUM_BASIC_SUITS,
     WILD,
     NO_SUIT
-
 } suit_t;
+
 
 typedef enum
 {
@@ -55,7 +54,6 @@ typedef enum
     FOURS,
     FIVES,
     NUM_VALUES
-    
 } value_t;
 
 typedef enum

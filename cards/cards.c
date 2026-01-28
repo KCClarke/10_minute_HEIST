@@ -8,6 +8,7 @@
 #include <stddef.h>
 
 static card_t g_master_card_list[TOTAL_CARDS] = {};
+static const int g_non_wild_light_cards = NUM_LIGHT_CARDS - 2;
 
 static inline void initialize_default_card_properties();
 static inline void initialize_light_cards();
@@ -27,6 +28,7 @@ const card_t * get_master_card_list()
 
 }
 
+
 const char * suit_names[] = 
 {
     "potion",
@@ -34,14 +36,15 @@ const char * suit_names[] =
     "artifact",
     "jewel",
     "tome",
-    "ERROR: 'NUM_BASIC_SUITS' sent",
     "wild"
 };
+
 
 const char ** get_suit_names()
 {
     return (suit_names);
 }
+
 
 static inline void initialize_default_card_properties()
 {
@@ -55,6 +58,7 @@ static inline void initialize_default_card_properties()
     }
 
 }
+
 
 static inline void name_cards()
 {
@@ -98,9 +102,9 @@ static inline void name_cards()
     g_master_card_list[INFERNAL_TAROT].name = 
         "Infernal Tarot";
     
-        /* End of the light card list. */
-    
+        /* End of the light card list. */    
 }
+
 
 static inline void initialize_light_cards()
 {
@@ -110,54 +114,50 @@ static inline void initialize_light_cards()
     connect_light_card_powers();
 }
 
+
 static inline void initialize_light_card_suits()
 {
-    const int non_wild_light_cards = 15;
     const int cards_per_suit = 3;
 
-    for (int index = 0; index < non_wild_light_cards; ++index)
+    for (int index = 0; index < g_non_wild_light_cards; ++index)
     {
         g_master_card_list[index].suit = POTION + (index / cards_per_suit);
     }
 
     g_master_card_list[CELESTIAL_TAROT].suit = WILD;
-    g_master_card_list[INFERNAL_TAROT].suit  = WILD;
-
+    g_master_card_list[INFERNAL_TAROT ].suit = WILD;
 }
+
 
 static inline void initialize_light_card_values()
 {
-    const int non_wild_light_cards = 15;
     const int values[] = {3, 4, 5};
     const int possible_values = 3;
 
-    for (int index = 0; index < non_wild_light_cards; ++index)
+    for (int index = 0; index < g_non_wild_light_cards; ++index)
     {
         g_master_card_list[index].value = values[index % possible_values];
     }
 
     g_master_card_list[CELESTIAL_TAROT].value = 2;
-    g_master_card_list[INFERNAL_TAROT].value  = 2;
-
+    g_master_card_list[INFERNAL_TAROT ].value = 2;
 }
+
 
 static inline void initialize_light_cards_curse()
 {
     g_master_card_list[CELESTIAL_TAROT].curse = 1;
-    g_master_card_list[INFERNAL_TAROT].curse  = 1;
-
+    g_master_card_list[INFERNAL_TAROT ].curse = 1;
 }
+
 
 static inline void connect_light_card_powers()
 {
-    const int non_wild_light_cards = 15;
-
-    for (int index = 0; index < non_wild_light_cards; ++index)
+    for (int index = 0; index < g_non_wild_light_cards; ++index)
     {
         g_master_card_list[index].power = basic_power;
     }
 
     g_master_card_list[CELESTIAL_TAROT].power = wild_power;
-    g_master_card_list[INFERNAL_TAROT].power = wild_power;
-
+    g_master_card_list[INFERNAL_TAROT ].power = wild_power;
 }

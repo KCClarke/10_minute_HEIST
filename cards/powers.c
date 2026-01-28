@@ -1,21 +1,21 @@
 /* powers.c */
 
 #include "powers.h"
-
 #include "constants.h"
 #include "game/game.h"
-
 #include <stdio.h>
 
-static inline void update_player_suits(const card_t * card, game_t * game);
-static inline void update_player_values(const card_t * card, game_t * game);
+
+static void update_player_suits(const card_t * card, game_t * game);
+static void update_player_values(const card_t * card, game_t * game);
+
 
 void basic_power(const card_t * card, game_t * game)
 {
     update_player_values(card, game);
     update_player_suits(card, game);
-
 }
+
 
 void wild_power(const card_t * card, game_t * game)
 {
@@ -29,10 +29,10 @@ void wild_power(const card_t * card, game_t * game)
     {
         player_list[curr].num_suits[index] += card->value;
     }
-    
 }
 
-static inline void update_player_values(const card_t * card, game_t * game)
+
+static void update_player_values(const card_t * card, game_t * game)
 {
     const int index = game->current_player;
     player_t * player_list = game->player_list;
@@ -42,8 +42,8 @@ static inline void update_player_values(const card_t * card, game_t * game)
         case 3:
         {
             player_list[index].num_values[THREES]++;
-        break;
         }
+        break;
 
         case 4:
         {
@@ -58,17 +58,18 @@ static inline void update_player_values(const card_t * card, game_t * game)
         }
 
         default:
+        {
+        }
         break;
 
     }
-
 }
 
-static inline void update_player_suits(const card_t * card, game_t * game)
+
+static void update_player_suits(const card_t * card, game_t * game)
 {
     const int index = game->current_player;
     player_t * player_list = game->player_list;
     
     player_list[index].num_suits[card->suit] +=card->value;
-
 }
