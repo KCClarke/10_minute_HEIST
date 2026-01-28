@@ -45,7 +45,7 @@ typedef enum
 
     NUM_BASIC_SUITS,
     WILD,
-    NONE
+    NO_SUIT
 
 } suit_t;
 
@@ -94,8 +94,8 @@ typedef enum
     PLAYER_3,
     PLAYER_4,
     PLAYER_5,
-
-    MAX_PLAYERS
+    MAX_PLAYERS,
+    NO_PLAYER
 
 } player_ID_t;
 

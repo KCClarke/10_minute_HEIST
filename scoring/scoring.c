@@ -8,24 +8,23 @@
 
 int g_points[NUM_SCORING_TILES];
 
-static inline int highest_num_suit(game_t * game, suit_t suit, int * player_index);
-static inline bool suit_tied(game_t * game, suit_t suit, int num);
-static inline void score_suits(game_t * game);
+static int highest_num_suit(game_t * game, suit_t suit, int * player_index);
+static bool suit_tied(game_t * game, suit_t suit, int num);
+static void score_suits(game_t * game);
 
-static inline int highest_num_value(game_t * game, value_t value, int * player_index);
-static inline bool value_tied(game_t * game, value_t value, int num);
-static inline void score_values(game_t * game);
+static int highest_num_value(game_t * game, value_t value, int * player_index);
+static bool value_tied(game_t * game, value_t value, int num);
+static void score_values(game_t * game);
 
-static inline int lowest_curses(game_t * game, int * player_index);
-static inline int highest_curses(game_t * game, int * player_index);
-static inline bool curse_tied(game_t * game, int curses);
-static inline void least_curses(game_t * game);
-static inline void score_curses(game_t * game);
+static int lowest_curses(game_t * game, int * player_index);
+static int highest_curses(game_t * game, int * player_index);
+static bool curse_tied(game_t * game, int curses);
+static void least_curses(game_t * game);
+static void score_curses(game_t * game);
 
-static inline void first_exit(game_t * game);
-static inline void other_exit(game_t * game);
-static inline void score_exit(game_t * game);
-
+static void first_exit(game_t * game);
+static void other_exit(game_t * game);
+static void score_exit(game_t * game);
 
 
 void score(game_t * game)
@@ -39,7 +38,31 @@ void score(game_t * game)
     
 }
 
-static inline void score_exit(game_t * game)
+
+int * get_points()
+{
+    g_points[MOST_POTIONS]   = 3;
+    g_points[MOST_FOSSILS]   = 4;
+    g_points[MOST_ARTIFACTS] = 4;
+    g_points[MOST_JEWELS]    = 5;
+    g_points[MOST_TOMES]     = 6;
+
+    g_points[MOST_THREES]    = 5;
+    g_points[MOST_FOURS]     = 4;
+    g_points[MOST_FIVES]     = 3;
+
+    g_points[FIRST_EXIT]     = 2;
+    g_points[SECOND_EXIT]    = 1;
+    g_points[LAST_EXIT]      = -1;
+
+    g_points[MOST_CURSES]    = -3;
+    g_points[FEWEST_CURSES]  = 1;
+
+    return (g_points);
+}
+
+
+static void score_exit(game_t * game)
 {
     first_exit(game);
     if (game->num_players > 2)
@@ -48,7 +71,7 @@ static inline void score_exit(game_t * game)
     }
 }
 
-static inline void first_exit(game_t * game)
+static void first_exit(game_t * game)
 {
     player_t * players = game->player_list;
 
@@ -66,7 +89,7 @@ static inline void first_exit(game_t * game)
 
 }
 
-static inline void other_exit(game_t * game)
+static void other_exit(game_t * game)
 {
     player_t * players = game->player_list;
 
@@ -90,7 +113,7 @@ static inline void other_exit(game_t * game)
 
 }
 
-static inline void score_curses(game_t * game)
+static void score_curses(game_t * game)
 {
     int player_index;
     int num_curses = highest_curses(game, &player_index);
@@ -108,7 +131,7 @@ static inline void score_curses(game_t * game)
 
 }
 
-static inline void least_curses(game_t * game)
+static void least_curses(game_t * game)
 {
     int player_index;
     int num_curses = lowest_curses(game, &player_index);
@@ -121,7 +144,7 @@ static inline void least_curses(game_t * game)
 
 }
 
-static inline bool curse_tied(game_t * game, int curses)
+static bool curse_tied(game_t * game, int curses)
 {
     player_t * players = game->player_list;
     int players_at_curses = 0;
@@ -138,7 +161,7 @@ static inline bool curse_tied(game_t * game, int curses)
     return (players_at_curses > 1);
 }
 
-static inline int lowest_curses(game_t * game, int * player_index)
+static int lowest_curses(game_t * game, int * player_index)
 {
     player_t * players = game->player_list;
     int lowest_curses = 256;
@@ -157,7 +180,7 @@ static inline int lowest_curses(game_t * game, int * player_index)
     return (lowest_curses);
 }
 
-static inline int highest_curses(game_t * game, int * player_index)
+static int highest_curses(game_t * game, int * player_index)
 {
     player_t * players = game->player_list;
     int highest_curses = 0;
@@ -176,7 +199,7 @@ static inline int highest_curses(game_t * game, int * player_index)
     return (highest_curses);
 }
 
-static inline void score_values(game_t * game)
+static void score_values(game_t * game)
 {
 
     int award_index = MOST_THREES;
@@ -204,7 +227,7 @@ static inline void score_values(game_t * game)
 
 }
 
-static inline void score_suits(game_t * game)
+static void score_suits(game_t * game)
 {
     suit_t first_suit = POTION;
     suit_t last_suit = TOME;
@@ -229,7 +252,7 @@ static inline void score_suits(game_t * game)
 
 }
 
-static inline bool suit_tied(game_t * game, suit_t suit, int num)
+static bool suit_tied(game_t * game, suit_t suit, int num)
 {
     player_t * players = game->player_list;
     int players_at_score = 0;
@@ -245,7 +268,7 @@ static inline bool suit_tied(game_t * game, suit_t suit, int num)
     return (players_at_score > 1);
 }
 
-static inline bool value_tied(game_t * game, value_t value, int num)
+static bool value_tied(game_t * game, value_t value, int num)
 {
     player_t * players = game->player_list;
     int players_at_score = 0;
@@ -261,7 +284,7 @@ static inline bool value_tied(game_t * game, value_t value, int num)
     return (players_at_score > 1);
 }
 
-static inline int highest_num_suit(game_t * game, suit_t suit, int * player_index)
+static int highest_num_suit(game_t * game, suit_t suit, int * player_index)
 {
     player_t * players = game->player_list;
     int most_in_suit = 0;
@@ -280,7 +303,7 @@ static inline int highest_num_suit(game_t * game, suit_t suit, int * player_inde
     return (most_in_suit);
 }
 
-static inline int highest_num_value(game_t * game, value_t value, int * player_index)
+static int highest_num_value(game_t * game, value_t value, int * player_index)
 {
     player_t * players = game->player_list;
     int most_in_value = 0;
@@ -294,30 +317,7 @@ static inline int highest_num_value(game_t * game, value_t value, int * player_i
             most_in_value = curr_num;
             *player_index = player;
         }
-
     }
 
     return (most_in_value);
-}
-
-int * get_points()
-{
-    g_points[MOST_POTIONS]   = 3;
-    g_points[MOST_FOSSILS]   = 4;
-    g_points[MOST_ARTIFACTS] = 4;
-    g_points[MOST_JEWELS]    = 5;
-    g_points[MOST_TOMES]     = 6;
-
-    g_points[MOST_THREES] = 5;
-    g_points[MOST_FOURS]  = 4;
-    g_points[MOST_FIVES]  = 3;
-
-    g_points[FIRST_EXIT]  =  2;
-    g_points[SECOND_EXIT] =  1;
-    g_points[LAST_EXIT]   = -1;
-
-    g_points[MOST_CURSES]  = -3;
-    g_points[FEWEST_CURSES] =  1;
-
-    return (g_points);
 }

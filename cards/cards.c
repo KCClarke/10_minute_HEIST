@@ -49,7 +49,7 @@ static inline void initialize_default_card_properties()
     {
         g_master_card_list[index].name  = "";
         g_master_card_list[index].value = 0;
-        g_master_card_list[index].suit  = NONE;
+        g_master_card_list[index].suit  = NO_SUIT;
         g_master_card_list[index].curse = 0;
         g_master_card_list[index].power = NULL;
     }
