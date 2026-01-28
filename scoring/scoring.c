@@ -115,8 +115,8 @@ static inline void least_curses(game_t * game)
 
     if (false == curse_tied(game, num_curses))
     {
-        game->player_list[player_index].points += g_points[LEAST_CURSES];
-        game->player_list[player_index].awards[LEAST_CURSES] = true;
+        game->player_list[player_index].points += g_points[FEWEST_CURSES];
+        game->player_list[player_index].awards[FEWEST_CURSES] = true;
     }
 
 }
@@ -317,7 +317,7 @@ int * get_points()
     g_points[LAST_EXIT]   = -1;
 
     g_points[MOST_CURSES]  = -3;
-    g_points[LEAST_CURSES] =  1;
+    g_points[FEWEST_CURSES] =  1;
 
     return (g_points);
 }

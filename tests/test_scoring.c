@@ -74,7 +74,7 @@ static inline void curse_tests()
     game_t * game = blank_slate_setup();
     player_t * players = game->player_list;
 
-    // Set up ties for most and least curses
+    // Set up ties for most and fewest curses
     players[PLAYER_1].num_curses = 1;
     players[PLAYER_2].num_curses = 2;
     players[PLAYER_3].num_curses = 2;
@@ -95,11 +95,11 @@ static inline void curse_tests()
     assert(false == players[PLAYER_4].awards[MOST_CURSES]);
     assert(false == players[PLAYER_5].awards[MOST_CURSES]);
 
-    assert(false == players[PLAYER_1].awards[LEAST_CURSES]);
-    assert(false == players[PLAYER_2].awards[LEAST_CURSES]);
-    assert(false == players[PLAYER_3].awards[LEAST_CURSES]);
-    assert(false == players[PLAYER_4].awards[LEAST_CURSES]);
-    assert(false == players[PLAYER_5].awards[LEAST_CURSES]);
+    assert(false == players[PLAYER_1].awards[FEWEST_CURSES]);
+    assert(false == players[PLAYER_2].awards[FEWEST_CURSES]);
+    assert(false == players[PLAYER_3].awards[FEWEST_CURSES]);
+    assert(false == players[PLAYER_4].awards[FEWEST_CURSES]);
+    assert(false == players[PLAYER_5].awards[FEWEST_CURSES]);
     // Assert nothing happened
 
     // Reset game
@@ -119,7 +119,7 @@ static inline void curse_tests()
     assert(true == players[PLAYER_5].awards[MOST_CURSES]);
 
     assert(1 == players[PLAYER_1].points);
-    assert(true == players[PLAYER_1].awards[LEAST_CURSES]);
+    assert(true == players[PLAYER_1].awards[FEWEST_CURSES]);
 
     // Reset.
     game = blank_slate_setup();

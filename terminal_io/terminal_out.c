@@ -6,7 +6,6 @@
 #include "constants.h"
 #include "scoring/scoring.h"
 #include "cards/cards.h"
-#include "location/location.h"
 #include <stdio.h>
 
 
@@ -110,7 +109,7 @@ static void print_awards(player_t * player)
         "LAST_EXIT",
 
         "MOST_CURSES",
-        "LEAST_CURSES",
+        "FEWEST_CURSES",
     };
 
     const int * points = get_points();
