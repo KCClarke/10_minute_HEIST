@@ -13,6 +13,7 @@ static char get_input();
 static bool is_room(const char input);
 static bool is_floor_or_exit(const char input);
 
+
 static bool is_floor_or_exit(const char input)
 {
     const bool is_floor = input >= 'a' && input <= 'a' + TOWER_HEIGHT;
@@ -21,12 +22,14 @@ static bool is_floor_or_exit(const char input)
     return (is_floor || is_exit);
 }
 
+
 static bool is_room(const char input)
 {
     const bool is_room = input >= '1' && input <= '1' + TOWER_WIDTH;
 
     return (is_room);
 }
+
 
 static char get_input(bool (* criteria)(const char input), const char * prompt)
 {
@@ -61,6 +64,7 @@ void get_turn_input(turn_t * turn)
 {
     char * message = "(x to exit) enter floor";
     const char floor_or_exit = get_input(is_floor_or_exit, message);
+    
     turn->location.floor = floor_or_exit;
 
     if ('x' == floor_or_exit)
@@ -69,19 +73,8 @@ void get_turn_input(turn_t * turn)
     }
     else
     {
-        message =    "            enter room ";
-        turn->location.room = get_input(is_room, message);;
+        message = "            enter room ";
+        turn->location.room = get_input(is_room, message);
     }
 
 }
-
-
-int get_player_number()
-{
-    int player_number;
-    scanf("%d", &player_number);
-    
-    return(player_number);
-
-}
-

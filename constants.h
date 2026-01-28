@@ -3,7 +3,7 @@
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 
-#define NUM_PLAYERS  5
+#define NUM_PLAYERS  3
 
 #define NUM_LIGHT_CARDS 17
 #define TOTAL_CARDS     57

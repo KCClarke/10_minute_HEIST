@@ -1,5 +1,6 @@
 /* terminal_io.c */
 
+
 #include "terminal_out.h"
 #include "terminal_in.h"
 #include "constants.h"
@@ -17,21 +18,13 @@ static void print_winner(game_t * game);
 
 void the_card_you_were_dealt(game_t * game)
 {
-    printf("The card you were dealt:\n   ");
+    printf("You were dealt the:\n   ");
     card_t * card = game->player_list[game->your_player_number].haul[0];
     print_a_card(card);
     putchar('\n');
     
 }
-void room_prompt()
-{
-    printf("(x to exit)  room? ");
-}
 
-void floor_prompt()
-{
-    printf("(x to exit) floor? ");
-}
 
 static void print_winner(game_t * game)
 {
@@ -78,6 +71,7 @@ static void print_winner(game_t * game)
     
 }
 
+
 void print_all_hauls(game_t * game)
 {
     player_t * players = game->player_list;
@@ -95,6 +89,7 @@ void print_all_hauls(game_t * game)
         putchar('\n');
     }
 }
+
 
 static void print_awards(player_t * player)
 {
@@ -133,6 +128,7 @@ static void print_awards(player_t * player)
     putchar('\n');
 }
 
+
 void print_score(game_t * game)
 {
     printf("Final score:\n");
@@ -148,6 +144,7 @@ void print_score(game_t * game)
 
     print_winner(game);
 }
+
 
 void print_haul(game_t * game)
 {
@@ -176,7 +173,6 @@ void print_haul(game_t * game)
     if (!player->is_you && !player->first_card_revealed)
     {
         printf("????????\n");
-        printf("\t?????? ?\n");
     }
 
     for (int index = 1; index < player->cards_in_haul; ++index)
@@ -188,16 +184,19 @@ void print_haul(game_t * game)
     putchar('\n');
 }
 
+
 void you_are_player(game_t * game)
 {
+    printf("There are %d players ", NUM_PLAYERS);
     for (int index = 0; index < game->num_players; ++index)
     {
         if (game->player_list[index].is_you)
         {
-            printf("You are player %d\n", 1 + index);
+            printf("you are player %d\n", 1 + index);
         }
     }
 }
+
 
 static void print_player(const player_t * player)
 {
@@ -210,6 +209,7 @@ static void print_player(const player_t * player)
     putchar('\n');
 }
 
+
 static void print_floor(const char floor)
 {
     const int num_dashes = 40;
@@ -219,6 +219,7 @@ static void print_floor(const char floor)
     }
     putchar('\n');
 }
+
 
 void print_a_row_of_the_tower(const char floor, const room_t * tower)
 {
@@ -279,23 +280,12 @@ void print_a_row_of_the_tower(const char floor, const room_t * tower)
     putchar('\n');
 }
 
+
 void print_a_card(card_t * card)
 {
     const char ** suit_names = get_suit_names();
-
     printf("%-9s", suit_names[card->suit]);
     printf("%d", card->value);
     printf(" %s", card->name);
-    
     putchar('\n');
-}
-
-void welcome()
-{
-    printf("%s to Ten Minute Heist\n", __func__);
-}
-
-void how_many_players()
-{
-    printf("There are %d players\n", NUM_PLAYERS);
 }
