@@ -10,7 +10,6 @@
 int main()
 {
     seed_random();
-    
     all_tests();
     
     game_t   * game = get_game();
@@ -25,9 +24,7 @@ int main()
     while(game_running())
     {
         player_t * player = &players[game->current_player];
-
         initialize_turn(&turn);
-
         if (player->has_exited)
         {
             next_player();
@@ -61,11 +58,9 @@ int main()
         {
             next_player();
         }
-
     }
-
+    
     print_all_hauls(game);
     score(game);
     print_score(game);
-
 }
