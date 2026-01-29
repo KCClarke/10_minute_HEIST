@@ -13,6 +13,12 @@ static char get_input();
 static bool is_room(const char input);
 static bool is_floor_or_exit(const char input);
 
+void press_enter()
+{
+    printf("(press enter)\n");
+    while(getchar() != '\n') {/* clear buffer */};
+    
+}
 
 static bool is_floor_or_exit(const char input)
 {

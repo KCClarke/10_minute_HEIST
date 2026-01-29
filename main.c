@@ -7,10 +7,13 @@
 #include "turn/turn.h"
 #include "scoring/scoring.h"
 
+#include <stdio.h>
+
 int main()
 {
     seed_random();
     all_tests();
+    for (int count = 0; count < 10; ++count) {putchar('\n');}
     
     game_t   * game = get_game();
     player_t * players = game->player_list;
@@ -18,8 +21,10 @@ int main()
     turn_t     turn;
 
     print_a_row_of_the_tower('a', game->tower);
+    press_enter();
     you_are_player(game);
     the_card_you_were_dealt(game);
+    press_enter();
 
     while(game_running())
     {
@@ -59,7 +64,7 @@ int main()
             next_player();
         }
     }
-    
+
     print_all_hauls(game);
     score(game);
     print_score(game);

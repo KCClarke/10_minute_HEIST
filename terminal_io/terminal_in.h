@@ -6,5 +6,6 @@
 #include "turn/turn.h"
 
 void get_turn_input(turn_t * turn);
+void press_enter();
 
 #endif
