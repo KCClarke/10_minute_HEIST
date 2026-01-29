@@ -44,21 +44,17 @@ static inline void initialize_suit_counts()
         {
             g_players[player_index].num_suits[suit_index] = 0;
         }
-    }
 
-}
-
-static inline void initialize_value_counts()
-{
-    for (int player_index = 0; player_index < MAX_PLAYERS; ++player_index)
-    {
         for (int value = THREES; value <= FIVES; ++value)
         {
             g_players[player_index].num_values[value] = 0;
         }
+    
+
     }
 
 }
+
 
 static inline void initialize_players()
 {
