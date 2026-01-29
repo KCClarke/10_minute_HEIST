@@ -54,7 +54,9 @@ void get_bot_turn(turn_t * turn, game_t * game)
 
     for (int index = 0; index < TOWER_WIDTH * TOWER_HEIGHT; ++index)
     {
-        if (has_card_no_player(game->tower[index]))
+        const bool is_not_cursed != game->tower[index].p_card->curse;
+
+        if (has_card_no_player(game->tower[index]) && is_not_cursed)
         {
             turn->location.index = index;
             to_floor_room(&turn->location);
