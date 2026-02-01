@@ -16,6 +16,8 @@ typedef struct game_s
     room_t * tower;
     int players_exited;
     int your_player_number;
+    int high_score;
+    player_ID_t a_high_score_player;
     player_ID_t winner;
     bool tie_occured;
 

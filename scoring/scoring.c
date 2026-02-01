@@ -26,6 +26,8 @@ static void first_exit(game_t * game);
 static void other_exit(game_t * game);
 static void score_exit(game_t * game);
 
+static void determine_high_score(game_t *game);
+static void determine_winner_or_tie(game_t * game);
 
 void score(game_t * game)
 {
@@ -35,9 +37,49 @@ void score(game_t * game)
     score_values(game);
     score_curses(game);
     score_exit(game);
+    determine_high_score(game);
+    determine_winner_or_tie(game);
     
 }
 
+static void determine_high_score(game_t * game)
+{
+    player_t * players = game->player_list;
+
+    for (int index = 0; index < game->num_players; ++index)
+    {
+        const int curr_score = players[index].points;
+        if (curr_score > game->high_score)
+        {
+            game->high_score = curr_score;
+            game->a_high_score_player = index;
+        }
+    }
+}
+
+static void determine_winner_or_tie(game_t * game)
+{
+    int players_at_score = 0;
+    player_t * players = game->player_list;
+
+    for (int index = 0; index < game->num_players; ++index)
+    {
+        const int curr_score = players[index].points;
+        if (curr_score == game->high_score)
+        {
+            ++players_at_score;
+        }
+    }
+
+    if (players_at_score > 1)
+    {
+        game->tie_occured = true; 
+    }
+    else
+    {
+        game->winner = game->a_high_score_player;
+    }
+}
 
 int * get_points()
 {
@@ -252,6 +294,7 @@ static void score_suits(game_t * game)
 
 }
 
+
 static bool suit_tied(game_t * game, suit_t suit, int num)
 {
     player_t * players = game->player_list;
@@ -267,6 +310,7 @@ static bool suit_tied(game_t * game, suit_t suit, int num)
 
     return (players_at_score > 1);
 }
+
 
 static bool value_tied(game_t * game, value_t value, int num)
 {
@@ -302,6 +346,7 @@ static int highest_num_suit(game_t * game, suit_t suit, int * player_index)
 
     return (most_in_suit);
 }
+
 
 static int highest_num_value(game_t * game, value_t value, int * player_index)
 {

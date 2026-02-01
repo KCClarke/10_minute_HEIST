@@ -56,7 +56,9 @@ game_t * get_game()
     deal_to_players(card_list);
     deal_to_first_floor(card_list);
 
+    g_game.high_score = 0;
     g_game.winner = NO_PLAYER;
+    g_game.a_high_score_player = NO_PLAYER;
     g_game.tie_occured = false;
 
     return (&g_game);

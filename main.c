@@ -13,7 +13,7 @@ int main()
 {
     seed_random();
     all_tests();
-    for (int count = 0; count < 10; ++count) {putchar('\n');}
+    for (int count = 0; count < 12; ++count) {putchar('\n');}
     
     game_t   * game = get_game();
     player_t * players = game->player_list;
