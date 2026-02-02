@@ -69,7 +69,6 @@ void print_a_row_of_the_tower(const char floor, const room_t * tower)
         {
             print_player(player);
             print_player_haul_one_line(player);
-            
         }
 
         if (NULL == player && NULL == card)
@@ -254,7 +253,6 @@ static void print_player(const player_t * player)
     {
         printf("       ");
     }
-    
 }
 
 
@@ -264,5 +262,5 @@ void the_card_you_were_dealt(game_t * game)
     card_t * card = game->player_list[game->your_player_number].haul[0];
     print_a_card(card);
     putchar('\n');
-    
+   
 }

@@ -16,7 +16,7 @@ static int highest_num_value(game_t * game, value_t value, int * player_index);
 static bool value_tied(game_t * game, value_t value, int num);
 static void score_values(game_t * game);
 
-static int lowest_curses(game_t * game, int * player_index);
+static int fewest_curses (game_t * game, int * player_index);
 static int highest_curses(game_t * game, int * player_index);
 static bool curse_tied(game_t * game, int curses);
 static void least_curses(game_t * game);
@@ -33,7 +33,7 @@ void score(game_t * game)
 {
     (void) get_points();
     
-    score_suits(game);
+    score_suits (game);
     score_values(game);
     score_curses(game);
     score_exit(game);
@@ -176,7 +176,7 @@ static void score_curses(game_t * game)
 static void least_curses(game_t * game)
 {
     int player_index;
-    int num_curses = lowest_curses(game, &player_index);
+    int num_curses = fewest_curses(game, &player_index);
 
     if (false == curse_tied(game, num_curses))
     {
@@ -203,23 +203,23 @@ static bool curse_tied(game_t * game, int curses)
     return (players_at_curses > 1);
 }
 
-static int lowest_curses(game_t * game, int * player_index)
+static int fewest_curses(game_t * game, int * player_index)
 {
     player_t * players = game->player_list;
-    int lowest_curses = 256;
+    int fewest_curses = 256;
 
     for (int player = 0; player < game->num_players; ++player)
     {
         int curr_curses = players[player].num_curses;
 
-        if(curr_curses < lowest_curses)
+        if(curr_curses < fewest_curses)
         {
-            lowest_curses = curr_curses;
+            fewest_curses = curr_curses;
             *player_index = player;
         }
     }
 
-    return (lowest_curses);
+    return (fewest_curses);
 }
 
 static int highest_curses(game_t * game, int * player_index)
