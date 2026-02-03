@@ -17,10 +17,10 @@ int main()
     
     game_t   * game = get_game();
     player_t * players = game->player_list;
-    room_t   * tower = game->tower;
     turn_t     turn;
 
-    print_a_row_of_the_tower('a', game->tower);
+    print_tower(game);
+
     press_enter();
     you_are_player(game);
     the_card_you_were_dealt(game);
@@ -38,7 +38,8 @@ int main()
 
         if (player->is_you && false == player->has_exited)
         {
-            print_a_row_of_the_tower('a', tower);
+            print_tower(game);
+
             get_player_turn(&turn, game);
         }
         else

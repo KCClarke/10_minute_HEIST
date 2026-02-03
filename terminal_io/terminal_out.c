@@ -1,4 +1,7 @@
-/* terminal_io.c */
+/* terminal_io.c 
+ *
+ * Reviewed Feb 2
+*/
 
 
 #include "terminal_out.h"
@@ -6,105 +9,68 @@
 #include "constants.h"
 #include "scoring/scoring.h"
 #include "cards/cards.h"
+#include "location/location.h"
 #include <stdio.h>
 
 
 static void print_player(const player_t * player);
 static void print_player_haul_one_line(const player_t * player);
-static void print_a_card_no_name(card_t * card);
-static void print_floor(const char floor);
+static void print_card_suit_and_value(card_t * card);
 static void print_awards(player_t * player);
 static void print_winner(game_t * game);
+static void print_floor_name_and_seperator(const char floor_name);
+static void print_rooms_of_the_floor(const int floor_count, game_t * game);
+static void print_the_contentents_of_a_room(const int tower_index, game_t * game);
 
 
-static void print_winner(game_t * game)
+void print_tower(game_t * game)
 {
-    if (game->tie_occured)
+    const int floors = 2;
+    for (int floor = 0; floor < floors; ++floor)
     {
-        printf("a tie, nobody wins\n");
+        print_floor_name_and_seperator('a' + floor);
+        print_rooms_of_the_floor(floor, game);
     }
-    else
+    print_floor_name_and_seperator('-');
+}
+
+static void print_rooms_of_the_floor(const int floor, game_t * game)
+{
+    for (int room = 0; room < TOWER_WIDTH; ++room)
     {
-        if(game->player_list[game->winner].is_you)
-        {
-            printf("You win!\n");
-        }
-        else{
-            printf("Player %d wins.\n", game->winner + 1);
-        }
+        printf("%d)", room + 1);
+        const int tower_index = floor * TOWER_WIDTH + room;
+        print_the_contentents_of_a_room(tower_index, game);
+        putchar('\n');
     }
 }
 
 
-static void print_floor(const char floor)
+static void print_the_contentents_of_a_room(const int index, game_t * game)
 {
+    room_t room = game->tower[index];
+
+    if(NULL != room.p_card)
+    {
+        print_card_suit_and_value(room.p_card);
+    }
+
+    if (NULL != room.p_player)
+    {
+        print_player(room.p_player);
+        print_player_haul_one_line(room.p_player);
+    }
+}
+
+
+static void print_floor_name_and_seperator(const char floor_name)
+{
+    putchar(floor_name);
     const int num_dashes = 40;
     for (int index = 0; index < num_dashes; ++index)
     {
         putchar('-');
     }
-    putchar('\n');
-}
-
-
-void print_a_row_of_the_tower(const char floor, const room_t * tower)
-{
-    putchar('a');
-    print_floor(floor);
-
-    for (int index = 0; index < TOWER_WIDTH; ++index)
-    {
-
-        const int room_number = index + 1;
-        printf("%d) ", room_number);
-
-        card_t * card = tower[index].p_card;
-        if(NULL != card)
-        {
-            print_a_card(card);
-        }
-
-        player_t * player = tower[index].p_player;
-        if (NULL != player)
-        {
-            print_player(player);
-            print_player_haul_one_line(player);
-        }
-
-        if (NULL == player && NULL == card)
-        {
-            putchar('\n');
-        }
-    }
-
-    putchar('b');
-    print_floor('b');
-
-    for (int index = TOWER_WIDTH; index < TOWER_WIDTH * 2; ++index)
-    {
-
-        const int room_number = index + 1;
-        printf("%d) ", (1 + room_number) % (TOWER_WIDTH + 1));
-
-        card_t * card = tower[index].p_card;
-        if(NULL != card)
-        {
-            print_a_card(card);
-        }
-
-        player_t * player = tower[index].p_player;
-        if (NULL != player)
-        {
-            print_player(player);
-            print_player_haul_one_line(player);
-        }
-
-        if (NULL == player && NULL == card)
-        {
-            putchar('\n');
-        }
-    }
-    print_floor('-');
     putchar('\n');
 }
 
@@ -118,7 +84,7 @@ void print_player_haul_one_line(const player_t * player)
 
     if (player->is_you)
     {
-        print_a_card_no_name(player->haul[0]);
+        print_card_suit_and_value(player->haul[0]);
     }
     else
     {
@@ -127,27 +93,16 @@ void print_player_haul_one_line(const player_t * player)
 
     for (int index = 1; index < player->cards_in_haul; ++index)
     {
-        print_a_card_no_name(player->haul[index]);
+        print_card_suit_and_value(player->haul[index]);
     }
-    putchar('\n');
 }
 
 
-void print_a_card_no_name(card_t * card)
+void print_card_suit_and_value(card_t * card)
 {
     const char ** suit_names = get_suit_names();
     printf(" %-9s", suit_names[card->suit]);
     printf("%d", card->value);
-}
-
-
-void print_a_card(card_t * card)
-{
-    const char ** suit_names = get_suit_names();
-    printf("%-9s", suit_names[card->suit]);
-    printf("%d", card->value);
-    //printf(" %s", card->name);
-    putchar('\n');
 }
 
 
@@ -165,7 +120,9 @@ void print_all_hauls(game_t * game)
         putchar('\n');
         for (int card_n = 0; card_n < players[index].cards_in_haul; ++card_n)
         {
-            print_a_card(players[index].haul[card_n]);
+            card_t * p_card = players[index].haul[card_n];
+            print_card_suit_and_value(p_card);
+            printf(" %s\n", p_card->name);
         }
         
     }
@@ -244,7 +201,7 @@ void you_are_player(game_t * game)
 static void print_player(const player_t * player)
 {
     const int player_number = player->player_number + 1;
-    printf("player_%d", player_number);
+    printf("player_%d ", player_number);
     if (player->is_you)
     {
         printf(" (you) ");
@@ -260,7 +217,25 @@ void the_card_you_were_dealt(game_t * game)
 {
     printf("\n                  In your haul you have the: ");
     card_t * card = game->player_list[game->your_player_number].haul[0];
-    print_a_card(card);
-    putchar('\n');
-   
+    print_card_suit_and_value(card);
+    printf(" %s\n", card->name);   
+}
+
+
+static void print_winner(game_t * game)
+{
+    if (game->tie_occured)
+    {
+        printf("a tie, nobody wins\n");
+    }
+    else
+    {
+        if(game->player_list[game->winner].is_you)
+        {
+            printf("You win!\n");
+        }
+        else{
+            printf("Player %d wins.\n", game->winner + 1);
+        }
+    }
 }
