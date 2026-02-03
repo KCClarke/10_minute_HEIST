@@ -1,8 +1,8 @@
 /* location.c */
 
 #include "location.h"
-
 #include "constants.h"
+
 
 void to_index(location_t * location)
 {
@@ -14,6 +14,7 @@ void to_index(location_t * location)
 
     location->index = floor_number + room_number;
 }
+
 
 void to_floor_room(location_t * location)
 {

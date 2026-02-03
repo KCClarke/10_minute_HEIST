@@ -21,22 +21,15 @@ struct player_s
     suit_t num_suits[NUM_BASIC_SUITS];
     card_t * haul[MAX_HAUL];
     bool first_card_revealed;
-
     bool in_tower;
     location_t location;
-
     int exit_number;
     bool has_exited;
-    
     int cards_in_haul;
-    
     int points;
     bool awards[NUM_SCORING_TILES];
-
     bool is_you;
-
     int player_number;
-    
 };
 
 player_t * get_player_list();

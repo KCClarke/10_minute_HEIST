@@ -9,8 +9,7 @@ struct location_s
 {
     char floor;
     char room;
-    int index;
-    
+    int index; 
 };
 
 void to_index(location_t * location);

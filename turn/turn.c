@@ -10,6 +10,7 @@
 #include <stddef.h>
 #include <stdio.h>
 
+
 void move_player(turn_t * turn, game_t * game)
 {
     player_t * player = &game->player_list[game->current_player];
@@ -33,6 +34,7 @@ void move_player(turn_t * turn, game_t * game)
     player->in_tower = true;
 }
 
+
 void collect_card(turn_t * turn, game_t * game)
 {
     const int index = turn->location.index;
@@ -46,12 +48,11 @@ void collect_card(turn_t * turn, game_t * game)
     player->cards_in_haul++;
 
     game->tower[index].p_card = NULL;
-
 }
+
 
 void get_bot_turn(turn_t * turn, game_t * game)
 {
-
     for (int index = 0; index < TOWER_WIDTH * TOWER_HEIGHT; ++index)
     {
         if ( has_card_no_player(game->tower[index]))
@@ -67,8 +68,8 @@ void get_bot_turn(turn_t * turn, game_t * game)
     {
         turn->exited = true;
     }
-
 }
+
 
 void get_player_turn(turn_t * turn, game_t * game)
 {
@@ -89,8 +90,8 @@ void get_player_turn(turn_t * turn, game_t * game)
     {
         turn->exited = true;
     }
-
 }
+
 
 void initialize_turn(turn_t * turn)
 {
@@ -100,6 +101,7 @@ void initialize_turn(turn_t * turn)
     turn->exited = false;
     turn->success = false;
 }
+
 
 bool did_not_move_up(const location_t * location, const player_t * player)
 {

@@ -8,10 +8,11 @@
 
 static player_t g_players[MAX_PLAYERS];
 
-static inline void initialize_players();
-static inline void initialize_suit_and_value_counts_to_zero();
-static inline void initialize_hauls();
-static inline void initialize_awards();
+static void initialize_players();
+static void initialize_suit_and_value_counts_to_zero();
+static void initialize_hauls();
+static void initialize_awards();
+
 
 player_t * get_player_list()
 {
@@ -23,7 +24,8 @@ player_t * get_player_list()
     return (g_players);
 }
 
-static inline void initialize_awards()
+
+static void initialize_awards()
 {
     for (int player_count = 0; player_count < MAX_PLAYERS; ++player_count)
     {
@@ -35,7 +37,7 @@ static inline void initialize_awards()
 }
 
 
-static inline void initialize_players()
+static void initialize_players()
 {
     for(int player_count = 0; player_count < MAX_PLAYERS; ++player_count)
     {
@@ -51,12 +53,11 @@ static inline void initialize_players()
         
         g_players[player_count].player_number = player_count;
 
-    }
-    
+    } 
 }
 
 
-static inline void initialize_suit_and_value_counts_to_zero()
+static void initialize_suit_and_value_counts_to_zero()
 {
     for (int player_count = 0; player_count < MAX_PLAYERS; ++player_count)
     {
@@ -70,12 +71,11 @@ static inline void initialize_suit_and_value_counts_to_zero()
         {
             g_players[player_count].num_values[value_count] = 0;
         }
-
     }
-
 }
 
-static inline void initialize_hauls()
+
+static void initialize_hauls()
 {
     for(int player_count = 0; player_count < MAX_PLAYERS; ++player_count)
     {
@@ -84,5 +84,4 @@ static inline void initialize_hauls()
             g_players[player_count].haul[haul_player_count] = NULL;
         }
     }
-
 }
