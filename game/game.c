@@ -7,11 +7,8 @@
 #include "cards/cards.h"
 #include "constants.h"
 
-#include <assert.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include <stdio.h>
-
 
 
 static game_t g_game;
@@ -30,16 +27,17 @@ light_card_range = {.from = LOVE_POTION_8, .to = INFERNAL_TAROT};
 
 
 // Private function prototypes
-static inline void initialize_you();
-static inline void initialize_players();
-static inline void initialize_dealt();
-static inline void deal_to_players(const card_t * card_list);
-static inline void deal_to_first_floor(const card_t * card_list);
+static void initialize_you();
+static void initialize_players();
+static void initialize_dealt();
+static void initialize_final_scoring();
+static void deal_to_players(const card_t * card_list);
+static void deal_to_first_floor(const card_t * card_list);
 
-static inline card_t * 
+static card_t * 
 get_card(const card_t * card_list, const card_range_t range);
 
-static inline int 
+static int 
 get_undealt_card_index(const card_index_t first, const card_index_t last);
 
 
@@ -49,6 +47,7 @@ game_t * get_game()
     initialize_players();
     initialize_dealt();
     initialize_you();
+    initialize_final_scoring();
 
     g_game.tower = get_tower();
     
@@ -56,21 +55,26 @@ game_t * get_game()
     deal_to_players(card_list);
     deal_to_first_floor(card_list);
 
+    return (&g_game);
+}
+
+
+static void initialize_final_scoring()
+{
     g_game.high_score = 0;
     g_game.winner = NO_PLAYER;
     g_game.a_high_score_player = NO_PLAYER;
     g_game.tie_occured = false;
-
-    return (&g_game);
-
 }
 
-static inline void initialize_you()
+
+static void initialize_you()
 {
     const int random = random_number(g_game.num_players);
     g_game.player_list[random].is_you = true;
     g_game.your_player_number = random;
 }
+
 
 void exit_player()
 {
@@ -83,9 +87,9 @@ void exit_player()
     to_index(&g_game.player_list[g_game.current_player].location);
     const int index = g_game.player_list[g_game.current_player].location.index;
 
-    g_game.tower[index].p_player = NULL;
-    
+    g_game.tower[index].p_player = NULL;  
 }
+
 
 void next_player()
 {
@@ -93,13 +97,15 @@ void next_player()
     g_game.current_player %= g_game.num_players;
 }
 
+
 bool game_running()
 {
     return (g_game.num_players != (g_game.players_exited));
 }
 
+
 // Private function definitions.
-static inline void deal_to_first_floor(const card_t * card_list)
+static void deal_to_first_floor(const card_t * card_list)
 {
     for (int tower_index = 0; tower_index < TOWER_WIDTH * 2; ++tower_index)
     {
@@ -107,11 +113,10 @@ static inline void deal_to_first_floor(const card_t * card_list)
         g_game.tower[tower_index].p_card = card;
         
     }
-
 }
 
 
-static inline void deal_to_players(const card_t * card_list)
+static void deal_to_players(const card_t * card_list)
 {
     for (int player_index = 0; player_index < g_game.num_players; ++player_index)
     {
@@ -125,10 +130,10 @@ static inline void deal_to_players(const card_t * card_list)
     }
     
     g_game.current_player = 0;
-
 }
 
-static inline card_t * get_card(const card_t * card_list, card_range_t range)
+
+static card_t * get_card(const card_t * card_list, card_range_t range)
 {
     const int card_index = get_undealt_card_index(range.from, 1 + range.to);
     
@@ -136,10 +141,10 @@ static inline card_t * get_card(const card_t * card_list, card_range_t range)
     card_t * p_card = (card_t *) &card_list[card_index];
 
     return (p_card);
-
 }
 
-static inline int 
+
+static int 
 get_undealt_card_index(const card_index_t first, const card_index_t last)
 {
     int card_index;
@@ -158,19 +163,19 @@ get_undealt_card_index(const card_index_t first, const card_index_t last)
     }
 
     return (card_index);
-
 }
 
-static inline void initialize_players()
+
+static void initialize_players()
 {
     g_game.players_exited = 0;
     g_game.num_players = NUM_PLAYERS;
     g_game.current_player = PLAYER_1;
     g_game.player_list = get_player_list();
-
 }
 
-static inline void initialize_dealt()
+
+static void initialize_dealt()
 {
     for (int index = 0; index < TOTAL_CARDS; ++index)
     {

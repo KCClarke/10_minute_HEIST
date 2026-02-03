@@ -3,7 +3,6 @@
 #include "powers.h"
 #include "constants.h"
 #include "game/game.h"
-#include <stdio.h>
 
 
 static void update_player_suits(const card_t * card, game_t * game);

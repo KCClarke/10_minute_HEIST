@@ -20,7 +20,6 @@ typedef struct game_s
     player_ID_t a_high_score_player;
     player_ID_t winner;
     bool tie_occured;
-
 }game_t;
 
 game_t * get_game();

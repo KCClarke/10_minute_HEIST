@@ -39,7 +39,6 @@ int main()
         if (player->is_you && false == player->has_exited)
         {
             print_tower(game);
-
             get_player_turn(&turn, game);
         }
         else
