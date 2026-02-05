@@ -13,23 +13,19 @@ int main()
 {
     seed_random();
     all_tests();
-    for (int count = 0; count < 12; ++count) {putchar('\n');}
     
     game_t   * game = get_game();
     player_t * players = game->player_list;
     turn_t     turn;
 
-    print_tower(game);
-
-    press_enter();
-    you_are_player(game);
-    the_card_you_were_dealt(game);
-    press_enter();
+    TUI_start(game);
 
     while(game_running())
     {
         player_t * player = &players[game->current_player];
+
         initialize_turn(&turn);
+
         if (player->has_exited)
         {
             next_player();

@@ -102,8 +102,3 @@ void initialize_turn(turn_t * turn)
     turn->success = false;
 }
 
-
-bool did_not_move_up(const location_t * location, const player_t * player)
-{
-    return (true);
-}

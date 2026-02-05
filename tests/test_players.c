@@ -11,7 +11,6 @@
 static inline void test_player_initialization();
 static inline void test_haul_initialization();
 static inline void test_player_suit_counts();
-static inline void test_player_did_not_move_up();
 
 
 void test_players()
@@ -19,19 +18,9 @@ void test_players()
     test_player_initialization();
     test_haul_initialization();
     test_player_suit_counts();
-    test_player_did_not_move_up();
 
     printf("%s passed.\n", __func__);
     
-}
-
-static inline void test_player_did_not_move_up()
-{
-    game_t * game = get_game();
-    location_t location;
-    player_t * player = &game->player_list[game->current_player];
-    
-    did_not_move_up(&location, player);
 }
 
 static inline void test_player_suit_counts()

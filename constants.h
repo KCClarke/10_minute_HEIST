@@ -3,6 +3,8 @@
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 
+#include <stdbool.h>
+
 #define NUM_PLAYERS  3
 
 #define NUM_LIGHT_CARDS 17

@@ -23,6 +23,15 @@ static void print_rooms_of_the_floor(const int floor_count, game_t * game);
 static void print_the_contentents_of_a_room(const int tower_index, game_t * game);
 
 
+void TUI_start(game_t * game)
+{
+    print_tower(game);
+    press_enter();
+    you_are_player(game);
+    the_card_you_were_dealt(game);
+    press_enter();
+}
+
 void print_tower(game_t * game)
 {
     const int floors = 2;
@@ -38,7 +47,7 @@ static void print_rooms_of_the_floor(const int floor, game_t * game)
 {
     for (int room = 0; room < TOWER_WIDTH; ++room)
     {
-        printf("%d)", room + 1);
+        printf("%d) ", room + 1);
         const int tower_index = floor * TOWER_WIDTH + room;
         print_the_contentents_of_a_room(tower_index, game);
         putchar('\n');
@@ -88,7 +97,7 @@ void print_player_haul_one_line(const player_t * player)
     }
     else
     {
-        printf(" ???????? ?");
+        printf("???????? ? ");
     }
 
     for (int index = 1; index < player->cards_in_haul; ++index)
@@ -101,8 +110,8 @@ void print_player_haul_one_line(const player_t * player)
 void print_card_suit_and_value(card_t * card)
 {
     const char ** suit_names = get_suit_names();
-    printf(" %-9s", suit_names[card->suit]);
-    printf("%d", card->value);
+    printf("%-9s", suit_names[card->suit]);
+    printf("%d ", card->value);
 }
 
 
@@ -114,7 +123,6 @@ void print_all_hauls(game_t * game)
 
     for (int index = 0; index < game->num_players; ++index)
     {
-        
         printf("\n Haul: ");
         print_player(&players[index]);
         putchar('\n');
@@ -122,9 +130,8 @@ void print_all_hauls(game_t * game)
         {
             card_t * p_card = players[index].haul[card_n];
             print_card_suit_and_value(p_card);
-            printf(" %s\n", p_card->name);
-        }
-        
+            printf("%s\n", p_card->name);
+        }  
     }
 }
 
@@ -188,13 +195,7 @@ void print_score(game_t * game)
 void you_are_player(game_t * game)
 {
     printf(" There are %d players ", NUM_PLAYERS);
-    for (int index = 0; index < game->num_players; ++index)
-    {
-        if (game->player_list[index].is_you)
-        {
-            printf("you are player %d ", 1 + index);
-        }
-    }
+    printf("you are player %d ", 1 + game->your_player_number);
 }
 
 
@@ -204,7 +205,7 @@ static void print_player(const player_t * player)
     printf("player_%d ", player_number);
     if (player->is_you)
     {
-        printf(" (you) ");
+        printf("(you)  ");
     }
     else
     {
@@ -218,7 +219,7 @@ void the_card_you_were_dealt(game_t * game)
     printf("\n                  In your haul you have the: ");
     card_t * card = game->player_list[game->your_player_number].haul[0];
     print_card_suit_and_value(card);
-    printf(" %s\n", card->name);   
+    printf("%s\n", card->name);   
 }
 
 

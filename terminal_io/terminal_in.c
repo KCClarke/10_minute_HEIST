@@ -82,5 +82,4 @@ void get_turn_input(turn_t * turn)
         message = "            enter room ";
         turn->location.room = get_input(is_room, message);
     }
-
 }
